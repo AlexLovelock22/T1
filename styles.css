@@ -1,0 +1,90 @@
+.main-container {
+    max-width: 70%
+}
+
+.gold {
+    color: #AEA37D;
+}
+
+.orbitron {
+    font-family: 'Orbitron', sans-serif;
+}
+
+.trans-bg {
+    background-color: hsl(220, 13%, 91%, 0.3);
+}
+
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-in-left {
+    animation: fadeInLeft 0.4s ease forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.05s;
+}
+
+.delay-2 {
+    animation-delay: 0.1s;
+}
+
+.delay-3 {
+    animation-delay: 0.15s;
+}
+
+
+.link-hover-move {
+    transition: transform 0.4s ease;
+}
+
+.main-bg {
+    background: url('Images/McLaren.png') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+
+@keyframes hoverSlideRight {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(8px);
+    }
+  }
+  
+  .hover-move-right {
+    display: inline-block;
+    transition: transform 0.4s ease, border-bottom 0.3s ease;
+  }
+  .hover-move-right::after {
+    display: block;
+    transition: width 0.5s;
+    height: 2px;
+    content: "";
+    margin: auto;
+    width: 0;
+    background-color: #AEA37D;
+  }
+  
+  .hover-move-right:hover {
+    transform: translateX(8px);
+  }
+  .hover-move-right:hover::after {
+    width: 100%;
+  }
+  .nav-button {
+    transition: stroke 0.3s ease;
+  }
