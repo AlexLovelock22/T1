@@ -10,37 +10,79 @@
     font-family: 'Orbitron', sans-serif;
 }
 
+.exo2 {
+  font-family: 'Exo 2', sans-serif;
+  font-style: italic;
+}
+
 .trans-bg {
     background-color: hsl(220, 13%, 91%, 0.3);
 }
 
-
 @keyframes fadeInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .fade-in-left {
-    animation: fadeInLeft 0.4s ease forwards;
+  opacity: 0;
+  transform: translateX(-20px);
+  animation-name: fadeInLeft;
+  animation-duration: 0.4s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
 }
 
+/* === FADE IN RIGHT === */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(20px);
+  animation-name: fadeInRight;
+  animation-duration: 0.4s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+/* === UNIVERSAL DELAY CLASSES === */
 .delay-1 {
-    animation-delay: 0.05s;
+  animation-delay: 0.05s;
 }
-
 .delay-2 {
-    animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+.delay-3 {
+  animation-delay: 0.25s;
 }
 
-.delay-3 {
-    animation-delay: 0.15s;
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease forwards;
 }
 
 
@@ -85,6 +127,57 @@
   .hover-move-right:hover::after {
     width: 100%;
   }
+  
   .nav-button {
     transition: stroke 0.3s ease;
   }
+
+
+  .search-strip {
+    background: linear-gradient(to right, #f5f5f5, #d1c9c9, #c4ba91);
+    clip-path: polygon(3% 0%, 100% 0%, 97% 100%, 0% 100%);
+  }
+
+  .search-background {
+    background-color: transparent;
+  }
+
+  .bg-gold {
+    background: linear-gradient(135deg, #dcd3aa, #7a7560);
+  }
+
+  .clip-parallelogram {
+    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+    box-shadow: inset 1px 0 0 rgba(0, 0, 0, 0.03);
+    height: 80px;
+    width: 200px;
+    transition: all 0.2s ease;
+  }
+
+  .clip-parallelogram-outer {
+    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+    box-shadow: inset 1px 0 0 rgba(0, 0, 0, 0.03);
+    height: 80px;
+    width: 220px;
+    transition: all 0.2s ease;
+  }
+  
+  .clip-parallelogram:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #d4d4d4;
+  }
+
+  .clip-parallelogram-outer:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #d4d4d4;
+  }
+  
+  .bg-gold:hover {
+    background-color: #e4dfc7;
+  }
+
+  .overlap {
+  margin-left: -20px;
+}
