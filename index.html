@@ -18,7 +18,7 @@
         rel="stylesheet">
 </head>
 
-<body class="bg-black text-white font-sans">
+<body class="font-sans">
 
     <!-- Hero Section with Video Background -->
     <section class="relative w-full h-screen overflow-hidden">
@@ -67,58 +67,214 @@
           <span class="hover-move-right inline-block">Sell Your Car</span>
         </a>
       </div> -->
+        <section class="w-full py-128 flex justify-center">
+            <div
+                class="flex flex-col sm:flex-row items-center justify-between w-[90%] max-w-5xl px-6 py-2 bg-black/50 rounded-full backdrop-blur-md text-white space-y-4 sm:space-y-0 sm:space-x-4">
 
-        <!-- Search Filter Box -->
-        <div
-            class="absolute left-1/2 top-[80%] transform -translate-x-1/2 -translate-y-1/2 z-10 w-[90%] max-w-5xl search-strip">
-            <div class="flex">
-                <!-- Button 1 -->
+                <!-- Search (smaller) -->
                 <div
-                    class="clip-parallelogram-outer search-background flex items-center justify-center text-2xl text-black exo2 overlap z-10 cursor-pointer fade-in-left delay-3">
-                    Brand
+                    class="w-full sm:w-1/4 flex items-center justify-center space-x-2 hover:bg-white/10 py-1 rounded-full transition">
+                    <i data-lucide="search" class="w-5 h-5"></i>
+                    <span class="text-lg font-medium">Search</span>
+
                 </div>
 
-                <!-- Button 2 -->
+                <!-- Divider -->
+                <div class="hidden sm:block w-px h-6 bg-white/30"></div>
+
+                <!-- View Cars (main CTA) -->
                 <div
-                    class="clip-parallelogram search-background flex items-center justify-center text-2xl text-black exo2 overlap z-11 cursor-pointer overlap z-11 fade-in-left">
-                    Model
-                </div>
-                <div
-                    class="clip-parallelogram  search-background flex items-center justify-center text-2xl text-black exo2 overlap z-11 cursor-pointer overlap z-11 fade-in-right">
-                    Price
+                    class="w-full sm:w-2/4 flex items-center justify-center space-x-2 hover:bg-white/10 py-1 rounded-full transition font-semibold text-lg">
+                    <span>View Stock</span>
                 </div>
 
-                <!-- Search Button -->
+                <!-- Divider -->
+                <div class="hidden sm:block w-px h-6 bg-white/30"></div>
+
+                <!-- Sell (smaller) -->
                 <div
-                    class="clip-parallelogram-outer bg-gold flex items-center justify-center text-2xl text-black exo2 overlap z-12 cursor-pointer fade-in-right delay-3">
-                    Search
+                    class="w-full sm:w-1/4 flex items-center justify-center space-x-2 hover:bg-white/10 py-1 rounded-full transition">
+                    <span class="text-lg font-medium">Sell</span>
+                    <i data-lucide="upload" class="w-5 h-5"></i>
                 </div>
 
             </div>
-        </div>
+        </section>
+
 
     </section>
 
+    <section class="w-full bg-gray-200 pt-12 pb-24 px-4 exo2">
+        <h2 class="text-2xl font-semibold text-center pb-12">NEW ARRIVALS</h2>
 
-    <!-- Additional sections of your website could go here -->
+        <div
+            class="main-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-center place-items-start">
 
-    <script>
-        lucide.createIcons();
-    </script>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const icons = document.querySelectorAll(".nav-button");
-            icons.forEach((icon) => {
-                icon.addEventListener("mouseenter", function () {
-                    icon.style.stroke = "#AEA37D";
-                });
-                icon.addEventListener("mouseleave", function () {
-                    icon.style.stroke = "";
+            <!-- Car Card -->
+            <div class="bg-white shadow-md rounded overflow-hidden w-full max-w-lg">
+
+                <!-- Top: Image section -->
+                <div class="grid grid-cols-3 gap-1 h-48">
+                    <!-- Main Image -->
+                    <img src="https://img.cdn.dragon2000.net/C2846/U743/IMG_34760-medium.jpg" alt="Main"
+                        class="col-span-2 object-cover w-full h-full rounded-tl-md" />
+
+                    <!-- Thumbnails -->
+                    <div class="flex flex-col gap-1 h-full">
+                        <img src="https://img.cdn.dragon2000.net/C2846/U743/IMG_34730-medium.jpg" alt="Thumb 1"
+                            class="object-cover w-full h-1/2 rounded-tr-md" />
+                        <img src="https://img.cdn.dragon2000.net/C2846/U743/IMG_34749-medium.jpg" alt="Thumb 2"
+                            class="object-cover w-full h-1/2" />
+                    </div>
+                </div>
+
+                <!-- Info -->
+                <div class="p-4 pt-8 space-y-2">
+                    <h3 class="text-sm font-semibold uppercase truncate">Ferrari 458 Italia</h3>
+                    <div class="text-xs text-gray-500">4.5 Italia Coupe 2dr Petrol F1 DCT Euro 5 (570 bhp)</div>
+
+                    <div class="grid grid-cols-2 gap-2 text-sm mt-2">
+                        <div class="flex items-center space-x-2">
+                            <i data-lucide="calendar" class="w-4 h-4 text-gray-500"></i>
+                            <span>2013</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i data-lucide="gauge" class="w-4 h-4 text-gray-500"></i>
+                            <span>26,000</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i data-lucide="droplet" class="w-4 h-4 text-gray-500"></i>
+                            <span>Nero Daytona</span>
+                        </div>
+                    </div>
+
+                    <!-- Price & Button -->
+                    <div class="mt-4 flex items-center justify-between">
+                        <div class="text-lg font-bold">£114,980</div>
+                        <button
+                            class="px-4 py-1 border border-black text-sm font-medium rounded-md hover:bg-black hover:text-white transition">Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Car Card -->
+            <div class="bg-white shadow-md rounded overflow-hidden w-full max-w-lg ">
+
+                <!-- Top: Image section -->
+                <div class="grid grid-cols-3 gap-1 h-48">
+                    <!-- Main Image -->
+                    <img src="https://img.cdn.dragon2000.net/C2846/U740/IMG_34537-medium.jpg" alt="Main"
+                        class="col-span-2 object-cover w-full h-full rounded-tl-md" />
+
+                    <!-- Thumbnails -->
+                    <div class="flex flex-col gap-1 h-full">
+                        <img src="https://img.cdn.dragon2000.net/C2846/U740/IMG_34527-medium.jpg" alt="Thumb 1"
+                            class="object-cover w-full h-1/2 rounded-tr-md" />
+                        <img src="https://img.cdn.dragon2000.net/C2846/U740/IMG_34564-medium.jpg" alt="Thumb 2"
+                            class="object-cover w-full h-1/2" />
+                    </div>
+                </div>
+
+                <!-- Info -->
+                <div class="p-4 pt-8 space-y-2">
+                    <h3 class="text-sm font-semibold uppercase truncate">BMW 1M Coupe</h3>
+                    <div class="text-xs text-gray-500">3.0 M Coupe 2dr Petrol Manual Euro 5 (340 ps)</div>
+
+                    <div class="grid grid-cols-2 gap-2 text-sm mt-2">
+                        <div class="flex items-center space-x-2">
+                            <i data-lucide="calendar" class="w-4 h-4 text-gray-500"></i>
+                            <span>2011</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i data-lucide="gauge" class="w-4 h-4 text-gray-500"></i>
+                            <span>28,500</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i data-lucide="droplet" class="w-4 h-4 text-gray-500"></i>
+                            <span>Alpine White
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Price & Button -->
+                    <div class="mt-4 flex items-center justify-between">
+                        <div class="text-lg font-bold">£49,880</div>
+                        <button
+                            class="px-4 py-1 border border-black text-sm font-medium rounded-md hover:bg-black hover:text-white transition">Details</button>
+                    </div>
+                </div>
+            </div>
+
+
+             <!-- Car Card -->
+             <div class="bg-white shadow-md rounded overflow-hidden w-full max-w-lg">
+
+                <!-- Top: Image section -->
+                <div class="grid grid-cols-3 gap-1 h-48">
+                    <!-- Main Image -->
+                    <img src="https://img.cdn.dragon2000.net/C2846/U737/IMG_34382-medium.jpg" alt="Main"
+                        class="col-span-2 object-cover w-full h-full rounded-tl-md" />
+
+                    <!-- Thumbnails -->
+                    <div class="flex flex-col gap-1 h-full">
+                        <img src="https://img.cdn.dragon2000.net/C2846/U737/IMG_34375-medium.jpg" alt="Thumb 1"
+                            class="object-cover w-full h-1/2 rounded-tr-md" />
+                        <img src="https://img.cdn.dragon2000.net/C2846/U737/IMG_34372-medium.jpg" alt="Thumb 2"
+                            class="object-cover w-full h-1/2" />
+                    </div>
+                </div>
+
+                <!-- Info -->
+                <div class="p-4 pt-8 space-y-2">
+                    <h3 class="text-sm font-semibold uppercase truncate">Porsche Cayman 981 GT4</h3>
+                    <div class="text-xs text-gray-500">3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6 (385 ps)</div>
+
+                    <div class="grid grid-cols-2 gap-2 text-sm mt-2">
+                        <div class="flex items-center space-x-2">
+                            <i data-lucide="calendar" class="w-4 h-4 text-gray-500"></i>
+                            <span>2015</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i data-lucide="gauge" class="w-4 h-4 text-gray-500"></i>
+                            <span>29,500</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i data-lucide="droplet" class="w-4 h-4 text-gray-500"></i>
+                            <span>Guards Red</span>
+                        </div>
+                    </div>
+
+                    <!-- Price & Button -->
+                    <div class="mt-4 flex items-center justify-between">
+                        <div class="text-lg font-bold">£57,980</div>
+                        <button
+                            class="px-4 py-1 border border-black text-sm font-medium rounded-md hover:bg-black hover:text-white transition">Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Additional sections of your website could go here -->
+
+        <script>
+            lucide.createIcons();
+        </script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const icons = document.querySelectorAll(".nav-button");
+                icons.forEach((icon) => {
+                    icon.addEventListener("mouseenter", function () {
+                        icon.style.stroke = "#AEA37D";
+                    });
+                    icon.addEventListener("mouseleave", function () {
+                        icon.style.stroke = "";
+                    });
                 });
             });
-        });
-    </script>
+        </script>
 </body>
 
 </html>
