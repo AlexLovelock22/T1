@@ -24,7 +24,7 @@
   font-style: italic;
 }
 .trans-bg {
-  background-color: hsl(220, 13%, 91%, 0.3);
+  background-color: hsla(0, 0%, 100%, 0.9);
 }
 
 .link-hover-move {
@@ -44,6 +44,6 @@
 }
 
 .py-128{
-  padding-top: 40rem;
-  padding-bottom: 40rem;
+  padding-top: 44rem;
+  padding-bottom: 44rem;
 }

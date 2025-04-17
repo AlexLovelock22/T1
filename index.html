@@ -30,7 +30,7 @@
         </video>
 
         <!-- Navbar -->
-        <nav class="h-24 px-4 relative trans-bg z-10">
+        <nav class="h-28 px-4 relative trans-bg z-10">
             <div class="max-w-screen-lg mx-auto w-full h-full flex items-center justify-between relative">
 
                 <!-- Left icons -->
@@ -48,7 +48,7 @@
                 <!-- Centered logo -->
                 <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
                     <img src="https://d2465b52a51d8d05e9bb-6ab01a951f137332ea1d08f23dcb3881.ssl.cf3.rackcdn.com/2018/05/tier-one-logo-min.png"
-                        alt="TierOne Logo" class="h-16 object-contain" />
+                        alt="TierOne Logo" class="h-17 object-contain" />
                 </div>
             </div>
         </nav>
@@ -66,16 +66,16 @@
           <span class="hover-move-right inline-block">Sell Your Car</span>
         </a>
       </div> -->
-
-        <section class="w-full py-128 flex justify-center">
+        <div
+            class="absolute top-[65%] sm:top-[70%] md:top-[75%] lg:top-[78%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full px-4 z-10">
             <div
-                class="flex flex-col sm:flex-row items-center justify-between w-[90%] max-w-5xl px-6 py-2 bg-black/50 rounded-full backdrop-blur-md text-white space-y-4 sm:space-y-0 sm:space-x-4">
+                class="flex flex-col sm:flex-row items-center justify-between w-full max-w-5xl mx-auto px-8 py-3 bg-gradient-to-r from-white/30 via-white/20 to-white/30 backdrop-blur-xl rounded-md backdrop-blur-md text-white space-y-4 sm:space-y-0 sm:space-x-4">
 
                 <!-- Search (smaller) -->
                 <div
                     class="w-full sm:w-1/4 flex items-center justify-center space-x-2 hover:bg-white/10 py-1 rounded-full transition">
                     <i data-lucide="search" class="w-5 h-5"></i>
-                    <span class="text-lg font-medium">Search</span>
+                    <span class="text-lg font-medium">SEARCH</span>
 
                 </div>
 
@@ -85,7 +85,7 @@
                 <!-- View Cars (main CTA) -->
                 <div
                     class="w-full sm:w-2/4 flex items-center justify-center space-x-2 hover:bg-white/10 py-1 rounded-full transition font-semibold text-lg">
-                    <span>View Stock</span>
+                    <span>VIEW STOCK</span>
                 </div>
 
                 <!-- Divider -->
@@ -94,12 +94,12 @@
                 <!-- Sell (smaller) -->
                 <div
                     class="w-full sm:w-1/4 flex items-center justify-center space-x-2 hover:bg-white/10 py-1 rounded-full transition">
-                    <span class="text-lg font-medium">Sell</span>
+                    <span class="text-lg font-medium">SELL YOUR CAR</span>
                     <i data-lucide="upload" class="w-5 h-5"></i>
                 </div>
 
             </div>
-        </section>
+    </section>
 
 
     </section>
@@ -224,55 +224,54 @@
                         </div>
                     </div>
                 </div>
-                
+
 
                 <div class="bg-white shadow-md rounded overflow-hidden w-full max-w-lg flex flex-col relative">
 
                     <!-- Porsche Logo Overlay -->
-                    <img src="Images/PorscheLogoMasked.png"
-                         alt="Porsche Logo"
-                         class="absolute -bottom-6 -right-3 w-72  pointer-events-none z-100 select-none opacity-30" />
-                  
+                    <img src="Images/PorscheLogoMasked.png" alt="Porsche Logo"
+                        class="absolute -bottom-6 -right-3 w-72  pointer-events-none z-100 select-none opacity-40" />
+
                     <!-- Images -->
                     <div class="grid grid-cols-3 gap-1 h-48 z-10">
-                      <img src="https://img.cdn.dragon2000.net/C2846/U737/IMG_34382-medium.jpg" alt="Porsche Main"
-                           class="col-span-2 object-cover w-full h-full rounded-tl-md" />
-                      <div class="flex flex-col gap-1 h-full">
-                        <img src="https://img.cdn.dragon2000.net/C2846/U737/IMG_34375-medium.jpg" alt="Thumb 1"
-                             class="object-cover w-full h-1/2 rounded-tr-md" />
-                        <img src="https://img.cdn.dragon2000.net/C2846/U737/IMG_34372-medium.jpg" alt="Thumb 2"
-                             class="object-cover w-full h-1/2" />
-                      </div>
+                        <img src="https://img.cdn.dragon2000.net/C2846/U737/IMG_34382-medium.jpg" alt="Porsche Main"
+                            class="col-span-2 object-cover w-full h-full rounded-tl-md" />
+                        <div class="flex flex-col gap-1 h-full">
+                            <img src="https://img.cdn.dragon2000.net/C2846/U737/IMG_34375-medium.jpg" alt="Thumb 1"
+                                class="object-cover w-full h-1/2 rounded-tr-md" />
+                            <img src="https://img.cdn.dragon2000.net/C2846/U737/IMG_34372-medium.jpg" alt="Thumb 2"
+                                class="object-cover w-full h-1/2" />
+                        </div>
                     </div>
-                  
+
                     <!-- Info -->
                     <div class="p-4 pt-12 space-y-2 z-10">
-                      <h3 class="text-sm font-semibold uppercase truncate">Porsche Cayman 981 GT4</h3>
-                      <div class="text-xs text-gray-500">3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6 (385 ps)</div>
-                      <div class="grid grid-cols-2 gap-2 text-sm mt-2">
-                        <div class="flex items-center space-x-2">
-                          <i data-lucide="calendar" class="w-4 h-4 text-gray-500"></i>
-                          <span>2015</span>
+                        <h3 class="text-sm font-semibold uppercase truncate">Porsche Cayman 981 GT4</h3>
+                        <div class="text-xs text-gray-500">3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6 (385 ps)</div>
+                        <div class="grid grid-cols-2 gap-2 text-sm mt-2">
+                            <div class="flex items-center space-x-2">
+                                <i data-lucide="calendar" class="w-4 h-4 text-gray-500"></i>
+                                <span>2015</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i data-lucide="gauge" class="w-4 h-4 text-gray-500"></i>
+                                <span>29,500</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i data-lucide="droplet" class="w-4 h-4 text-gray-500"></i>
+                                <span>Guards Red</span>
+                            </div>
                         </div>
-                        <div class="flex items-center space-x-2">
-                          <i data-lucide="gauge" class="w-4 h-4 text-gray-500"></i>
-                          <span>29,500</span>
+                        <div class="mt-4 flex items-center justify-between">
+                            <div class="text-lg font-bold">£57,980</div>
+                            <button
+                                class="px-4 py-1 border border-black text-sm font-medium rounded-md hover:bg-black hover:text-white transition">
+                                Details
+                            </button>
                         </div>
-                        <div class="flex items-center space-x-2">
-                          <i data-lucide="droplet" class="w-4 h-4 text-gray-500"></i>
-                          <span>Guards Red</span>
-                        </div>
-                      </div>
-                      <div class="mt-4 flex items-center justify-between">
-                        <div class="text-lg font-bold">£57,980</div>
-                        <button
-                          class="px-4 py-1 border border-black text-sm font-medium rounded-md hover:bg-black hover:text-white transition">
-                          Details
-                        </button>
-                      </div>
                     </div>
-                  </div>
-                  
+                </div>
+
 
             </div>
         </div>
