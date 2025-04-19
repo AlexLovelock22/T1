@@ -1,12 +1,3 @@
-.main-container {
-  max-width: 90%; /* or use 90% if you prefer */
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
 .gold {
   color: #AEA37D;
 }
@@ -23,6 +14,7 @@
   font-family: 'Exo 2', sans-serif;
   font-style: italic;
 }
+
 .trans-bg {
   background-color: hsla(0, 0%, 100%, 0.9);
 }
@@ -43,7 +35,11 @@
   transition: stroke 0.3s ease;
 }
 
-.py-128{
+.py-128 {
   padding-top: 44rem;
   padding-bottom: 44rem;
+}
+
+.clipped-img {
+  clip-path: polygon(28% 20%, 100% 20%, 100% 100%, 0 100%);
 }
