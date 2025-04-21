@@ -30,138 +30,196 @@
         </video>
 
         <!-- Navbar -->
-        <nav class="h-28 px-4 relative trans-bg z-10">
-            <div class="max-w-screen-lg mx-auto w-full h-full flex items-center justify-between relative">
+        <!-- NAVBAR -->
+        <nav
+            class="h-24 px-4 sm:px-8 sticky top-0 z-50 bg-black/40 backdrop-blur-md border-b border-white/10 shadow-lg">
+            <div class="max-w-screen-xl mx-auto h-full flex items-center justify-between relative">
 
-                <!-- Left icons -->
-                <div class="flex items-center space-x-4 h-full">
-                    <button><i data-lucide="phone" class="w-6 h-6 nav-button"></i></button>
-                    <button><i data-lucide="mail" class="w-6 h-6 nav-button"></i></button>
+                <!-- Left Icons -->
+                <div class="flex items-center gap-4">
+                    <button class="p-2 rounded-full hover:bg-white/10 transition-colors" aria-label="Call">
+                        <i data-lucide="phone" class="w-5 h-5 text-white"></i>
+                    </button>
+                    <button class="p-2 rounded-full hover:bg-white/10 transition-colors" aria-label="Email">
+                        <i data-lucide="mail" class="w-5 h-5 text-white"></i>
+                    </button>
                 </div>
 
-                <!-- Right icons -->
-                <div class="flex items-center space-x-4 h-full">
-                    <button><i data-lucide="search" class="w-6 h-6 nav-button"></i></button>
-                    <button><i data-lucide="filter" class="w-6 h-6 nav-button"></i></button>
+                <!-- Right Icons -->
+                <div class="flex items-center gap-4">
+                    <button class="p-2 rounded-full hover:bg-white/10 transition-colors" aria-label="Search">
+                        <i data-lucide="search" class="w-5 h-5 text-white"></i>
+                    </button>
+                    <button class="p-2 rounded-full hover:bg-white/10 transition-colors" aria-label="Filter">
+                        <i data-lucide="filter" class="w-5 h-5 text-white"></i>
+                    </button>
                 </div>
 
-                <!-- Centered logo -->
+                <!-- Center Logo -->
                 <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                    <img src="https://d2465b52a51d8d05e9bb-6ab01a951f137332ea1d08f23dcb3881.ssl.cf3.rackcdn.com/2018/05/tier-one-logo-min.png"
-                        alt="TierOne Logo" class="h-20 object-contain" />
+                    <a href="/" aria-label="Home">
+                        <img src="https://d2465b52a51d8d05e9bb-6ab01a951f137332ea1d08f23dcb3881.ssl.cf3.rackcdn.com/2018/05/tier-one-logo-min.png"
+                            alt="TierOne Logo"
+                            class="h-16 sm:h-20 object-contain hover:opacity-90 transition-opacity duration-200" />
+                    </a>
                 </div>
             </div>
         </nav>
 
-        <!-- Hero Content -->
-        <!-- <div class="relative z-10 w-full h-full flex flex-col justify-center px-6 md:px-12 lg:px-24 space-y-6">
-      <div class="orbitron gold space-y-6">
-        <a href="#" class="text-5xl font-semibold no-underline fade-in-left delay-1">
-          <span class="hover-move-right inline-block">View Stock</span>
-        </a>
-        <a href="#" class="text-5xl font-semibold no-underline fade-in-left delay-2">
-          <span class="hover-move-right inline-block">Finance Options</span>
-        </a>
-        <a href="#" class="text-5xl font-semibold no-underline fade-in-left delay-3">
-          <span class="hover-move-right inline-block">Sell Your Car</span>
-        </a>
-      </div> -->
+        <!-- CTA BUTTON GROUP -->
         <div
-            class="absolute top-[65%] sm:top-[70%] md:top-[75%] lg:top-[78%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[60%] z-10">
+            class="absolute top-[78%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90%] md:w-[70%] z-40 text-lg">
             <div
-                class="flex flex-col sm:flex-row items-center justify-between w-full max-w-5xl mx-auto px-8 py-2 bg-gradient-to-r from-white/30 via-white/20 to-white/30 backdrop-blur-xl rounded-md backdrop-blur-md text-white space-y-4 sm:space-y-0 sm:space-x-4">
+                class="flex flex-col sm:flex-row items-center justify-between max-w-5xl mx-auto px-4 sm:px-8 py-4 
+                rounded-xl bg-black/40 backdrop-blur-md border border-white/10 shadow-lg space-y-2 sm:space-y-0 sm:space-x-4">
 
-                <!-- Search (smaller) -->
-                <div
-                    class="w-full sm:w-1/4 flex items-center justify-center space-x-2 hover:bg-white/10 py-1 rounded-full transition">
-                    <i data-lucide="search" class="w-5 h-5"></i>
-                    <span class="text-lg font-medium">SEARCH</span>
-
-                </div>
+                <!-- SEARCH -->
+                <button class="flex items-center justify-center gap-2 w-full sm:w-1/3 py-3 px-4 rounded-lg 
+               text-white font-medium tracking-wide hover:bg-white/10 transition-all group">
+                    <i data-lucide="search" class="w-5 h-5 group-hover:scale-105 transition-transform"></i>
+                    <span>Search</span>
+                </button>
 
                 <!-- Divider -->
-                <div class="hidden sm:block w-px h-6 bg-white/30"></div>
+                <div class="hidden sm:block h-6 w-px bg-white/20"></div>
 
-                <!-- View Cars (main CTA) -->
-                <div
-                    class="w-full sm:w-2/4 flex items-center justify-center space-x-2 hover:bg-white/10 py-1 rounded-full transition font-semibold text-lg">
-                    <span>VIEW STOCK</span>
-                </div>
-                
+                <!-- VIEW STOCK -->
+                <button class="flex items-center justify-center gap-2 w-full sm:w-1/3 py-3 px-4 rounded-lg 
+               text-white font-medium tracking-wide hover:bg-white/10 transition-all group">
+                    <span>View Stock</span>
+                </button>
+
                 <!-- Divider -->
-                <div class="hidden sm:block w-px h-6 bg-white/30"></div>
+                <div class="hidden sm:block h-6 w-px bg-white/20"></div>
 
-                <!-- Sell (smaller) -->
-                <div
-                    class="w-full sm:w-1/4 flex items-center justify-center space-x-2 hover:bg-white/10 py-1 rounded-full transition">
-                    <span class="text-lg font-medium">SELL YOUR CAR</span>
-                    <i data-lucide="upload" class="w-5 h-5"></i>
-                </div>
-
+                <!-- SELL YOUR CAR -->
+                <button class="flex items-center justify-center gap-2 w-full sm:w-1/3 py-3 px-4 rounded-lg 
+               text-white font-medium tracking-wide hover:bg-white/10 transition-all group">
+                    <span>Sell Your Car</span>
+                    <i data-lucide="upload" class="w-5 h-5 group-hover:scale-105 transition-transform"></i>
+                </button>
             </div>
+        </div>
     </section>
 
+    <section class="bg-gold text-white py-12 text-center text-lg tracking-wide">
+        <p>“Driven by passion. Defined by precision.”</p>
+    </section>
+    <section class="relative w-full bg-white text-black pt-28 pb-40 overflow-hidden">
+        <!-- Optional Background Texture -->
+        <div class="absolute inset-0 bg-[url('/Images/texture-light.png')] bg-no-repeat bg-center bg-cover opacity-5 pointer-events-none z-0"></div>
+      
+        <!-- Content Wrapper -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 items-center relative z-10">
+      
+          <!-- Left Column: Intro + Stats -->
+          <div class="relative px-6 sm:px-12 lg:px-20">
+            <div class="max-w-xl space-y-6 border-l-4 border-[#b6a26c] pl-6 bg-white/90  py-8 px-6">
+              
+              <h2 class="text-5xl font-bold text-black leading-tight">
+                Precision. Performance. <br class="hidden md:block">Prestige.
+              </h2>
+              
+              <p class="text-lg text-gray-700">
+                Tier One Automotive was founded by Alex Pope after over a decade of experience in one of the UK’s most respected independent dealerships.
+              </p>
+              
+              <p class="text-lg text-gray-700">
+                Our curated range is hand-selected and obsessively prepared — tailored for discerning clients who value service, excellence, and discretion.
+              </p>
+              
+              <p class="text-lg font-semibold text-black">
+                Kings Langley showroom — 5 minutes off the M25. Nationwide delivery available.
+              </p>
+            </div>
+      
+            <!-- Trust Stats: Centered on Larger Screens -->
+            <div class="mt-12 flex flex-col sm:flex-row sm:justify-start lg:justify-left gap-8 text-center text-sm text-gray-600">
+              <div>
+                <div class="text-2xl font-semibold text-black">320+</div>
+                <div class="mt-1">Vehicles in Stock</div>
+              </div>
+              <div>
+                <div class="text-2xl font-semibold text-black">12 Years</div>
+                <div class="mt-1">Industry Expertise</div>
+              </div>
+              <div>
+                <div class="text-2xl font-semibold text-black">5★</div>
+                <div class="mt-1">Customer Satisfaction</div>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Right Column: Image -->
+          <div class="clipped-img overflow-hidden relative">
+            <img src="Images/T1-Jag.png" alt="Tier One Jaguar"
+              class="w-full h-full object-cover object-center shadow-xl rounded-md" />
+          </div>
+        </div>
+      </section>
+      
 
-    <section class="w-full exo2 text-md overflow-hidden pt-20">
-        <div class="grid grid-cols-2 gap-0 ">
-            <div class="text-left grid place-content-center">
-                <div class="pl-24">
-                    <div class="text-xl exo2-italic">Welcome to Tier One Automotive</div>
-                    <div class="py-2 font-bold">
-                        Tier One Automotive was started by company director Alex Pope after 11 years at one of the UK's
-                        leading
-                        independent dealerships.
-                    </div>
-                    <div class="py-2">
-                        We pride ourselves on our exemplary levels of customer service coupled with our in-depth
-                        knowledge
-                        of
-                        the sport and prestige used car market, all tailored towards providing a relaxed and enjoyable
-                        experience for every customer. All our vehicles are hand-picked and prepared to our exacting
-                        standard,
-                        ensuring that all important peace of mind when making your purchase.
-                    </div>
-                    <div class="py-2 font-bold">
-                        All vehicles are housed at our Kings Langley indoor showroom just 5 minutes from Junction 20 off
-                        the
-                        M25.
-                    </div>
-                    <div class="py-2">
-                        For those with demanding work schedules, we offer a delivery service to ensure you don't miss
-                        out on
-                        that special car you've been searching for.
-                    </div>
+    <!-- Services / Features -->
+    <section class="bg-[#111111] text-white py-28">
+        <div class="max-w-7xl mx-auto px-6 sm:px-12 lg:px-20">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-semibold tracking-tight text-white">What Sets Us Apart</h2>
+                <p class="mt-4 text-lg text-gray-400">
+                    Bespoke automotive services — engineered for precision, defined by service.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Feature -->
+                <div class="border border-gray-800 rounded-xl p-6 bg-[#181818] hover:scale-[1.02] transition">
+                    <i data-lucide="target" class="w-6 h-6 text-[#c8af72] mb-4"></i>
+                    <h3 class="text-xl font-semibold text-white mb-2">Bespoke Sourcing</h3>
+                    <p class="text-gray-400 text-sm">
+                        Tap into exclusive inventory via our UK and international partner network.
+                    </p>
+                </div>
+
+                <div class="border border-gray-800 rounded-xl p-6 bg-[#181818] hover:scale-[1.02] transition">
+                    <i data-lucide="map-pin" class="w-6 h-6 text-[#c8af72] mb-4"></i>
+                    <h3 class="text-xl font-semibold text-white mb-2">Nationwide Delivery</h3>
+                    <p class="text-gray-400 text-sm">
+                        White-glove logistics. Secure, insured handover — delivered to your door.
+                    </p>
+                </div>
+
+                <div class="border border-gray-800 rounded-xl p-6 bg-[#181818] hover:scale-[1.02] transition">
+                    <i data-lucide="award" class="w-6 h-6 text-[#c8af72] mb-4"></i>
+                    <h3 class="text-xl font-semibold text-white mb-2">Expert Advisory</h3>
+                    <p class="text-gray-400 text-sm">
+                        Industry veterans with decades of insight guiding every purchase and part-exchange.
+                    </p>
+                </div>
+
+                <div class="border border-gray-800 rounded-xl p-6 bg-[#181818] hover:scale-[1.02] transition">
+                    <i data-lucide="user-check" class="w-6 h-6 text-[#c8af72] mb-4"></i>
+                    <h3 class="text-xl font-semibold text-white mb-2">Personalised Service</h3>
+                    <p class="text-gray-400 text-sm">
+                        From sourcing to financing — one-to-one support tailored to your lifestyle.
+                    </p>
+                </div>
+
+                <div class="border border-gray-800 rounded-xl p-6 bg-[#181818] hover:scale-[1.02] transition">
+                    <i data-lucide="shield-check" class="w-6 h-6 text-[#c8af72] mb-4"></i>
+                    <h3 class="text-xl font-semibold text-white mb-2">Peace of Mind</h3>
+                    <p class="text-gray-400 text-sm">
+                        Each car is fully inspected, detailed, and presented to the highest standard.
+                    </p>
+                </div>
+
+                <div class="border border-gray-800 rounded-xl p-6 bg-[#181818] hover:scale-[1.02] transition">
+                    <i data-lucide="car" class="w-6 h-6 text-[#c8af72] mb-4"></i>
+                    <h3 class="text-xl font-semibold text-white mb-2">Over 320+ in Stock</h3>
+                    <p class="text-gray-400 text-sm">
+                        Access one of the UK’s most expansive selections of prestige and performance vehicles.
+                    </p>
                 </div>
             </div>
-            <div class="text-left clipped-img overflow-hidden relative">
-                <img src="Images/T1-Jag.png" class="w-screen h-full object-cover object-center rounded-md" />
-            </div>
         </div>
-
-
-        <div class="grid grid-cols-2 gap-0 pt-20">
-            <!-- Left image, clipped -->
-            <div class="clipped-img-left mb-24 overflow-hidden relative">
-                <img
-                src="Images/T1-Jag-2.png"
-                class="w-screen h-full object-cover object-left-30 rounzed-md"
-              />
-            </div>
-
-            <!-- Right-aligned text with padding -->
-            <div class="text-left grid place-content-center">
-                <div class="pr-24">
-                    <div class="text-5xl font-bold leading-tight">320+</div>
-                    <div class="text-xl exo2-italic pt-1 pb-4">THE FINEST CURATED VEHICLES</div>
-                    <div class="text-base">
-                        Years of experience, attention to detail and our little black book allow us to present the
-                        finest stock
-                        available in the UK.
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </section>
 
 
