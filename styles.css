@@ -1,3 +1,8 @@
+.main-container {
+  max-width: 90%;
+  margin: 0 auto; /* Centers the container horizontally */
+}
+
 .gold {
   color: #AEA37D;
 }
@@ -40,8 +45,18 @@
   padding-bottom: 44rem;
 }
 
+.object-left-30 {
+  object-position: 30% center;
+}
+
 .clipped-img {
-  clip-path: polygon(28% 20%, 100% 20%, 100% 100%, 0 100%);
+  clip-path: polygon(28% 0%, 100% 0%, 100% 100%, 0 100%);
   overflow: hidden;
+  width: 100%;
+}
+
+.clipped-img-left {
+  clip-path: polygon(0 0, 90% 0, 62% 100%, 0% 100%);
+    overflow: hidden;
   width: 100%;
 }
