@@ -52,14 +52,15 @@
   object-position: 30% center;
 }
 
-.clipped-img {
+/* .clipped-img {
   clip-path: polygon(28% 0%, 100% 0%, 100% 100%, 0 100%);
   overflow: hidden;
   width: 100%;
-}
+} */
 
 .clipped-img-left {
   clip-path: polygon(0 0, 90% 0, 62% 100%, 0% 100%);
     overflow: hidden;
   width: 100%;
 }
+
