@@ -69,14 +69,18 @@
 .embla {
   overflow: hidden;
 }
+
 .embla__container {
   display: flex;
+  gap: 1rem;
 }
+
 .embla__slide {
   flex: 0 0 20%;
   min-width: 0;
-  padding: 1rem;
-  margin-right:20px;
-  margin-left: 10px;
+  transition: box-shadow 0.3s ease-in-out;
 }
-
+ 
+.embla__slide:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
