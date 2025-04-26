@@ -84,3 +84,27 @@
 .embla__slide:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3); /* overlay color */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 0; /* 👈 Make the overlay sit BEHIND the text */
+}
+
+.card:hover::after {
+  opacity: 1;
+}
+
+.card > * {
+  position: relative;
+  z-index: 10; /* 👈 Ensure all children (like your <span>) are ABOVE the overlay */
+}
