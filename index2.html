@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tier One Automotive</title>
+    <link href="output.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://cdn.jsdelivr.net/npm/embla-carousel/embla-carousel.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body class="font-sans exo2 bg-white">
+
+    <!-- Hero Section with Video Background -->
+    <section class="relative w-full h-screen overflow-hidden">
+        <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-[-1]">
+            <source src="Videos/Mclaren2.mp4" type="video/mp4" />
+        </video>
+
+        <!-- Navbar -->
+        <nav
+            class="h-24 px-4 sm:px-8 sticky top-0 z-50 bg-black/40 backdrop-blur-md border-b border-white/10 shadow-lg">
+            <div class="max-w-screen-xl mx-auto h-full flex items-center justify-between relative">
+                <!-- Left Icons -->
+                <div class="flex items-center gap-4">
+                    <button class="p-2 rounded-full hover:bg-white/10 transition-colors" aria-label="Call">
+                        <i data-lucide="phone" class="w-5 h-5 text-white"></i>
+                    </button>
+                    <button class="p-2 rounded-full hover:bg-white/10 transition-colors" aria-label="Email">
+                        <i data-lucide="mail" class="w-5 h-5 text-white"></i>
+                    </button>
+                </div>
+
+                <!-- Right Icons -->
+                <div class="flex items-center gap-4">
+                    <button class="p-2 rounded-full hover:bg-white/10 transition-colors" aria-label="Search">
+                        <i data-lucide="search" class="w-5 h-5 text-white"></i>
+                    </button>
+                    <button class="p-2 rounded-full hover:bg-white/10 transition-colors" aria-label="Filter">
+                        <i data-lucide="filter" class="w-5 h-5 text-white"></i>
+                    </button>
+                </div>
+
+                <!-- Center Logo -->
+                <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    <a href="/" aria-label="Home">
+                        <img src="Images/T1White.png" alt="TierOne Logo"
+                            class="h-16 sm:h-20 object-contain hover:opacity-90 transition-opacity duration-200" />
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- CTA BUTTON GROUP -->
+        <div
+            class="absolute top-[78%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90%] md:w-[70%] z-40 text-lg">
+            <div
+                class="flex flex-col sm:flex-row items-center justify-between max-w-5xl mx-auto px-4 sm:px-8 py-4 
+          rounded-xl bg-black/40 backdrop-blur-md border border-white/10 shadow-lg space-y-2 sm:space-y-0 sm:space-x-4">
+                <button class="flex items-center justify-center gap-2 w-full sm:w-1/3 py-3 px-4 rounded-lg 
+          text-white font-medium tracking-wide hover:bg-white/10 transition-all group">
+                    <i data-lucide="search" class="w-5 h-5 group-hover:scale-105 transition-transform"></i>
+                    <span>Search</span>
+                </button>
+                <div class="hidden sm:block h-6 w-px bg-white/20"></div>
+                <button class="flex items-center justify-center gap-2 w-full sm:w-1/3 py-3 px-4 rounded-lg 
+          text-white font-medium tracking-wide hover:bg-white/10 transition-all group">
+                    <span>View Stock</span>
+                </button>
+                <div class="hidden sm:block h-6 w-px bg-white/20"></div>
+                <button class="flex items-center justify-center gap-2 w-full sm:w-1/3 py-3 px-4 rounded-lg 
+          text-white font-medium tracking-wide hover:bg-white/10 transition-all group">
+                    <span>Sell Your Car</span>
+                    <i data-lucide="upload" class="w-5 h-5 group-hover:scale-105 transition-transform"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tagline -->
+    <section class="bg-gold text-white py-12 text-center text-2xl tracking-[.25em]">
+        <p>DRIVEN BY PASSION. DEFINED BY PRECISION.</p>
+    </section>
+
+
+    <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-4 px-4 py-4 bg-[#29343D]">
+        <!-- Finance Card -->
+        <div class="relative h-[800px] overflow-hidden rounded-lg shadow-lg">
+            <img src="Images/red.png" class="w-full h-full object-cover" alt="Finance" />
+            <div class="absolute inset-0 bg-black bg-opacity-10 flex flex-col justify-end items-center p-6 space-y-2">
+                <div data-lucide="handshake" class="text-white w-8 h-8"></div>
+                <div class="text-white text-2xl font-semibold">Finance</div>
+                <a href="#" class="text-white text-sm underline">See More</a>
+            </div>
+        </div>
+
+        <!-- Sell Your Car Card -->
+        <div class="relative h-[800px] overflow-hidden rounded-lg shadow-lg">
+            <img src="Images/yellow.png" class="w-full h-full object-cover" alt="Sell Your Car" />
+            <div class="absolute inset-0 bg-black bg-opacity-10 flex flex-col justify-end items-center p-6 space-y-2">
+                <div data-lucide="hand-coins" class="text-white w-8 h-8"></div>
+                <div class="text-white text-2xl font-semibold">Sell Your Car</div>
+                <a href="#" class="text-white text-sm underline">See More</a>
+            </div>
+        </div>
+
+        <!-- Preparation Card -->
+        <div class="relative h-[800px] overflow-hidden rounded-lg shadow-lg">
+            <img src="Images/blue.png" class="w-full h-full object-cover" alt="Preparation" />
+            <div class="absolute inset-0 bg-black bg-opacity-10 flex flex-col justify-end items-center p-6 space-y-2">
+                <div data-lucide="wrench" class="text-white w-8 h-8"></div>
+                <div class="text-white text-2xl font-semibold">Preparation</div>
+                <a href="#" class="text-white text-sm underline">See More</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <section class="relative w-full bg-white text-black overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-2 items-center relative z-10">
+            <!-- Text Content -->
+            <div class="relative px-6 sm:px-12 lg:px-20 flex gap-10 items-start">
+                <div class="hidden lg:flex flex-col gap-8 pt-8 text-xl text-gray-600">
+                    <div class="text-left">
+                        <div class="text-xl font-semibold text-black">320+</div>
+                        <div class="mt-1">Vehicles in Stock</div>
+                    </div>
+                    <div class="text-left">
+                        <div class="text-xl font-semibold text-black">12 Years</div>
+                        <div class="mt-1">Industry Expertise</div>
+                    </div>
+                    <div class="text-left">
+                        <div class="text-xl font-semibold text-black">5★</div>
+                        <div class="mt-1">Customer Satisfaction</div>
+                    </div>
+                </div>
+                <div class="max-w-xl space-y-6 border-l-4 border-[#b6a26c] pl-6 bg-white/90 py-8 px-6">
+                    <h2 class="text-4xl font-bold text-black leading-tight">
+                        Precision. Performance. <br class="hidden md:block" />Prestige.
+                    </h2>
+                    <p class="text-xl text-gray-700">
+                        Tier One Automotive was founded by Alex Pope after over a decade of experience in one of
+                        the
+                        UK’s most respected independent dealerships.
+                    </p>
+                    <p class="text-xl text-gray-700">
+                        Our curated range is hand-selected and obsessively prepared — tailored for discerning
+                        clients
+                        who value service, excellence, and discretion.
+                    </p>
+                    <p class="text-xl font-semibold text-black">
+                        Kings Langley showroom — 5 minutes off the M25. Nationwide delivery available.
+                    </p>
+                </div>
+            </div>
+            <!-- Image -->
+            <div class="clipped-img overflow-hidden relative">
+                <img src="Images/McLaren.png" alt="Tier One Jaguar"
+                    class="w-full h-full object-cover object-center -mb-1" />
+            </div>
+        </div>
+    </section>
+</body>
+
+<!-- Carousel Markup -->
+<div class="bg-[#29343D] pt-6 pb-24">
+    <!-- Centered heading container -->
+    <div class="flex justify-center items-center h-24">
+        <h2 class="text-white text-3xl font-light tracking-[0.4em]">FEATURED STOCK</h2>
+    </div>
+
+    <div class="embla">
+        <div class="embla__viewport">
+            <div class="embla__container">
+                <div class="embla__slide">
+                    <div class="card flex flex-col  rounded-lg shadow-md overflow-hidden">
+                        <!-- Top Half: Car Image -->
+                        <div class="h-[240px] ">
+                            <img src="https://img.cdn.dragon2000.net/C2846/U737/IMG_34382-medium.jpg"
+                                alt="Porsche Cayman GT4" class="w-full h-full object-cover object-[center_-110px]" />
+                        </div>
+
+                        <!-- Bottom Half: Info Panel -->
+                        <div class="h-[185px] bg-[#36434F] text-white flex flex-col justify-between p-4 text-md">
+                            <div>
+                                <div class="text-xl font-semibold leading-tight text-left">PORSCHE CAYMAN 981 GT4</div>
+                                <div class="text-lg text-gray-300 text-left">3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6
+                                    (385ps)</div>
+
+                                <div class="flex justify-between text-lg mt-3">
+                                    <div class="flex items-center gap-1">
+                                        <i data-lucide="calendar" class="w-4 h-4"></i> 2015
+                                    </div>
+                                    <div class="flex items-center gap-1">
+                                        <i data-lucide="gauge" class="w-4 h-4"></i> 29,500
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-1 mt-1">
+                                    <i data-lucide="droplet" class="w-4 h-4"></i> Guards Red
+                                </div>
+                            </div>
+
+                            <div class="flex justify-between items-center mt-1">
+                                <div class="text-lg font-bold text-white">£57,980</div>
+                                <button
+                                    class="text-xs border border-white px-5 py-2 rounded hover:bg-white hover:text-[#2E3A44] transition">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="embla__slide">
+                    <div class="card flex flex-col  rounded-lg shadow-md overflow-hidden">
+                        <!-- Top Half: Car Image -->
+                        <div class="h-[240px] ">
+                            <img src="https://img.cdn.dragon2000.net/C2846/U737/IMG_34382-medium.jpg"
+                                alt="Porsche Cayman GT4" class="w-full h-full object-cover object-[center_-110px]" />
+                        </div>
+
+                        <!-- Bottom Half: Info Panel -->
+                        <div class="h-[185px] bg-[#36434F] text-white flex flex-col justify-between p-4 text-md">
+                            <div>
+                                <div class="text-xl font-semibold leading-tight text-left">PORSCHE CAYMAN 981 GT4</div>
+                                <div class="text-lg text-gray-300 text-left">3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6
+                                    (385ps)</div>
+
+                                <div class="flex justify-between text-lg mt-3">
+                                    <div class="flex items-center gap-1">
+                                        <i data-lucide="calendar" class="w-4 h-4"></i> 2015
+                                    </div>
+                                    <div class="flex items-center gap-1">
+                                        <i data-lucide="gauge" class="w-4 h-4"></i> 29,500
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-1 mt-1">
+                                    <i data-lucide="droplet" class="w-4 h-4"></i> Guards Red
+                                </div>
+                            </div>
+
+                            <div class="flex justify-between items-center mt-1">
+                                <div class="text-lg font-bold text-white">£57,980</div>
+                                <button
+                                    class="text-xs border border-white px-5 py-2 rounded hover:bg-white hover:text-[#2E3A44] transition">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="embla__slide">
+                    <div class="card flex flex-col  rounded-lg shadow-md overflow-hidden">
+                        <!-- Top Half: Car Image -->
+                        <div class="h-[240px] ">
+                            <img src="https://img.cdn.dragon2000.net/C2846/U737/IMG_34382-medium.jpg"
+                                alt="Porsche Cayman GT4" class="w-full h-full object-cover object-[center_-110px]" />
+                        </div>
+
+                        <!-- Bottom Half: Info Panel -->
+                        <div class="h-[185px] bg-[#36434F] text-white flex flex-col justify-between p-4 text-md">
+                            <div>
+                                <div class="text-xl font-semibold leading-tight text-left">PORSCHE CAYMAN 981 GT4</div>
+                                <div class="text-lg text-gray-300 text-left">3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6
+                                    (385ps)</div>
+
+                                <div class="flex justify-between text-lg mt-3">
+                                    <div class="flex items-center gap-1">
+                                        <i data-lucide="calendar" class="w-4 h-4"></i> 2015
+                                    </div>
+                                    <div class="flex items-center gap-1">
+                                        <i data-lucide="gauge" class="w-4 h-4"></i> 29,500
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-1 mt-1">
+                                    <i data-lucide="droplet" class="w-4 h-4"></i> Guards Red
+                                </div>
+                            </div>
+
+                            <div class="flex justify-between items-center mt-1">
+                                <div class="text-lg font-bold text-white">£57,980</div>
+                                <button
+                                    class="text-xs border border-white px-5 py-2 rounded hover:bg-white hover:text-[#2E3A44] transition">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="embla__slide">
+                    <div class="card flex flex-col  rounded-lg shadow-md overflow-hidden">
+                        <!-- Top Half: Car Image -->
+                        <div class="h-[240px] ">
+                            <img src="https://img.cdn.dragon2000.net/C2846/U737/IMG_34382-medium.jpg"
+                                alt="Porsche Cayman GT4" class="w-full h-full object-cover object-[center_-110px]" />
+                        </div>
+
+                        <!-- Bottom Half: Info Panel -->
+                        <div class="h-[185px] bg-[#36434F] text-white flex flex-col justify-between p-4 text-md">
+                            <div>
+                                <div class="text-xl font-semibold leading-tight text-left">PORSCHE CAYMAN 981 GT4</div>
+                                <div class="text-lg text-gray-300 text-left">3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6
+                                    (385ps)</div>
+
+                                <div class="flex justify-between text-lg mt-3">
+                                    <div class="flex items-center gap-1">
+                                        <i data-lucide="calendar" class="w-4 h-4"></i> 2015
+                                    </div>
+                                    <div class="flex items-center gap-1">
+                                        <i data-lucide="gauge" class="w-4 h-4"></i> 29,500
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-1 mt-1">
+                                    <i data-lucide="droplet" class="w-4 h-4"></i> Guards Red
+                                </div>
+                            </div>
+
+                            <div class="flex justify-between items-center mt-1">
+                                <div class="text-lg font-bold text-white">£57,980</div>
+                                <button
+                                    class="text-xs border border-white px-5 py-2 rounded hover:bg-white hover:text-[#2E3A44] transition">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="embla__slide">
+                    <div class="card flex flex-col  rounded-lg shadow-md overflow-hidden">
+                        <!-- Top Half: Car Image -->
+                        <div class="h-[240px] ">
+                            <img src="https://img.cdn.dragon2000.net/C2846/U737/IMG_34382-medium.jpg"
+                                alt="Porsche Cayman GT4" class="w-full h-full object-cover object-[center_-110px]" />
+                        </div>
+
+                        <!-- Bottom Half: Info Panel -->
+                        <div class="h-[185px] bg-[#36434F] text-white flex flex-col justify-between p-4 text-md">
+                            <div>
+                                <div class="text-xl font-semibold leading-tight text-left">PORSCHE CAYMAN 981 GT4</div>
+                                <div class="text-lg text-gray-300 text-left">3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6
+                                    (385ps)</div>
+
+                                <div class="flex justify-between text-lg mt-3">
+                                    <div class="flex items-center gap-1">
+                                        <i data-lucide="calendar" class="w-4 h-4"></i> 2015
+                                    </div>
+                                    <div class="flex items-center gap-1">
+                                        <i data-lucide="gauge" class="w-4 h-4"></i> 29,500
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-1 mt-1">
+                                    <i data-lucide="droplet" class="w-4 h-4"></i> Guards Red
+                                </div>
+                            </div>
+
+                            <div class="flex justify-between items-center mt-1">
+                                <div class="text-lg font-bold text-white">£57,980</div>
+                                <button
+                                    class="text-xs border border-white px-5 py-2 rounded hover:bg-white hover:text-[#2E3A44] transition">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="embla__slide">
+                    <div class="card flex flex-col  rounded-lg shadow-md overflow-hidden">
+                        <!-- Top Half: Car Image -->
+                        <div class="h-[240px] ">
+                            <img src="https://img.cdn.dragon2000.net/C2846/U737/IMG_34382-medium.jpg"
+                                alt="Porsche Cayman GT4" class="w-full h-full object-cover object-[center_-110px]" />
+                        </div>
+
+                        <!-- Bottom Half: Info Panel -->
+                        <div class="h-[185px] bg-[#36434F] text-white flex flex-col justify-between p-4 text-md">
+                            <div>
+                                <div class="text-xl font-semibold leading-tight text-left">PORSCHE CAYMAN 981 GT4</div>
+                                <div class="text-lg text-gray-300 text-left">3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6
+                                    (385ps)</div>
+
+                                <div class="flex justify-between text-lg mt-3">
+                                    <div class="flex items-center gap-1">
+                                        <i data-lucide="calendar" class="w-4 h-4"></i> 2015
+                                    </div>
+                                    <div class="flex items-center gap-1">
+                                        <i data-lucide="gauge" class="w-4 h-4"></i> 29,500
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-1 mt-1">
+                                    <i data-lucide="droplet" class="w-4 h-4"></i> Guards Red
+                                </div>
+                            </div>
+
+                            <div class="flex justify-between items-center mt-1">
+                                <div class="text-lg font-bold text-white">£57,980</div>
+                                <button
+                                    class="text-xs border border-white px-5 py-2 rounded hover:bg-white hover:text-[#2E3A44] transition">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Embla Script -->
+<script src="https://cdn.jsdelivr.net/npm/embla-carousel@8/embla-carousel.umd.js"></script>
+<script>
+    const embla = EmblaCarousel(document.querySelector('.embla__viewport'), {
+        loop: true,
+        align: 'start',
+        slidesToScroll: 1,
+        containScroll: 'trimSnaps',
+    });
+
+    setInterval(() => {
+        embla.scrollNext();
+    }, 4000);
+</script>
+
+<script>
+    lucide.createIcons();
+</script>

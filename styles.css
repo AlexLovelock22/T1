@@ -66,45 +66,32 @@
   width: 100%;
 }
 
+
 .embla {
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
   overflow: hidden;
+}
+
+.embla__viewport {
+  overflow: hidden;
+  width: 100%;
 }
 
 .embla__container {
   display: flex;
-  gap: 1rem;
 }
 
 .embla__slide {
-  flex: 0 0 20%;
-  min-width: 0;
-  transition: box-shadow 0.3s ease-in-out;
-}
- 
-.embla__slide:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  min-width: 25%; /* 4 cards per view */
 }
 
 .card {
-  position: relative;
-  overflow: hidden;
-}
-
-.card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.3); /* overlay color */
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-  z-index: 0; /* 👈 Make the overlay sit BEHIND the text */
-}
-
-.card:hover::after {
-  opacity: 1;
-}
-
-.card > * {
-  position: relative;
-  z-index: 10; /* 👈 Ensure all children (like your <span>) are ABOVE the overlay */
+  margin: 10px;
+  background: #36434F;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  box-sizing: border-box;
 }
