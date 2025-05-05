@@ -777,14 +777,6 @@ video {
   height: 100vh;
 }
 
-.h-\[780px\] {
-  height: 780px;
-}
-
-.h-\[700px\] {
-  height: 700px;
-}
-
 .min-h-\[36rem\] {
   min-height: 36rem;
 }
@@ -860,17 +852,6 @@ video {
 
 .-translate-y-1\/2 {
   --tw-translate-y: -50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.scale-110 {
-  --tw-scale-x: 1.1;
-  --tw-scale-y: 1.1;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.-scale-x-100 {
-  --tw-scale-x: -1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1061,14 +1042,14 @@ video {
   border-color: rgb(255 255 255 / 0.1);
 }
 
-.bg-\[\#1e2a32\] {
+.bg-\[\#16181c\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(30 42 50 / var(--tw-bg-opacity));
+  background-color: rgb(22 24 28 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#29343D\] {
+.bg-\[\#1a1c21\] {
   --tw-bg-opacity: 1;
-  background-color: rgb(41 52 61 / var(--tw-bg-opacity));
+  background-color: rgb(26 28 33 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#36434F\] {
@@ -1125,6 +1106,11 @@ video {
 
 .bg-white\/90 {
   background-color: rgb(255 255 255 / 0.9);
+}
+
+.bg-\[\#202329\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(32 35 41 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-30 {
@@ -1207,6 +1193,11 @@ video {
   padding-bottom: 0.25rem;
 }
 
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
 .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -1282,12 +1273,16 @@ video {
   padding-top: 2rem;
 }
 
-.pt-20 {
-  padding-top: 5rem;
+.pb-14 {
+  padding-bottom: 3.5rem;
 }
 
-.pt-10 {
-  padding-top: 2.5rem;
+.pb-28 {
+  padding-bottom: 7rem;
+}
+
+.pb-2 {
+  padding-bottom: 0.5rem;
 }
 
 .text-left {
@@ -1364,10 +1359,6 @@ video {
 
 .leading-tight {
   line-height: 1.25;
-}
-
-.tracking-\[\.25em\] {
-  letter-spacing: .25em;
 }
 
 .tracking-\[0\.2em\] {
