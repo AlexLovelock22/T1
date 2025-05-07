@@ -98,16 +98,14 @@
     </section>
 
     <!-- Tagline -->
-
-
-    <div class="flex justify-center items-center pt-16 pb-8 bg-[#16181c]">
+    <div class="flex justify-center items-center pt-16 pb-8 bg-dark-blue">
         <h2 class="text-white text-3xl font-light tracking-[0.4em]">SERVICES</h2>
     </div>
-    <div class="w-full grid grid-cols-1 md:grid-cols-4 px-6 gap-8 py-8 bg-[#16181c]">
+    <div class="w-full grid grid-cols-1 md:grid-cols-4 px-6 gap-8 py-8 bg-dark-blue">
 
         <!-- Finance Card -->
-        <div class="relative h-[800px] overflow-hidden shadow-lg">
-            <img src="Images/red.png" class="w-full h-full object-cover" alt="Finance" />
+        <div class="relative max-h-[600px] overflow-hidden shadow-lg group">
+            <img src="Images/red.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Finance" />
             <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-end items-center p-6 space-y-2">
                 <div data-lucide="handshake" class="text-white w-10 h-10"></div>
                 <div class="text-white text-4xl font-semibold">Finance</div>
@@ -116,8 +114,8 @@
         </div>
 
         <!-- Sell Your Car Card -->
-        <div class="relative h-[800px] overflow-hidden  shadow-lg">
-            <img src="Images/yellow.png" class="w-full h-full object-cover" alt="Sell Your Car" />
+        <div class="relative max-h-[600px] overflow-hidden shadow-lg group">
+            <img src="Images/yellow.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Sell Your Car" />
             <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-end items-center p-6 space-y-2">
                 <div data-lucide="hand-coins" class="text-white w-10 h-10"></div>
                 <div class="text-white text-4xl font-semibold">Sell Your Car</div>
@@ -126,16 +124,16 @@
         </div>
 
         <!-- Preparation Card -->
-        <div class="relative h-[800px] overflow-hidden shadow-lg">
-            <img src="Images/blue.png" class="w-full h-full object-cover" alt="Preparation" />
+        <div class="relative max-h-[600px] overflow-hidden shadow-lg group">
+            <img src="Images/blue.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Preparation" />
             <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-end items-center p-6 space-y-2">
                 <div data-lucide="wrench" class="text-white w-10 h-10"></div>
                 <div class="text-white text-4xl font-semibold">Preparation</div>
                 <a href="#" class="text-white text-lg underline">See More</a>
             </div>
         </div>
-        <div class="relative h-[800px] overflow-hidden shadow-lg">
-            <img src="Images/green.png" class="w-full h-full object-cover" alt="Finance" />
+        <div class="relative max-h-[600px] overflow-hidden shadow-lg group">
+            <img src="Images/green.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Finance" />
             <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-end items-center p-6 space-y-2">
                 <div data-lucide="handshake" class="text-white w-10 h-10"></div>
                 <div class="text-white text-4xl font-semibold">Warranty</div>
@@ -146,7 +144,7 @@
 
 
 
-    <section class="relative w-full bg-[#202329] text-gray-300 overflow-hidden">
+    <section class="relative w-full bg-dark-blue-light text-gray-300 overflow-hidden">
         <div class="grid grid-cols-1 lg:grid-cols-2 items-center relative z-10">
             <!-- Text Content -->
             <div class="relative px-6 sm:px-12 lg:px-20 flex gap-10 items-start">
@@ -193,25 +191,24 @@
 </body>
 
 <!-- Carousel Markup -->
-<div class="bg-[#16181c] pt-6 pb-16">
+<div class="bg-dark-blue pt-6 pb-16">
     <!-- Centered heading container -->
     <div class="flex justify-center items-center h-24 pb-4">
         <h2 class="text-white text-3xl font-light tracking-[0.4em]">FEATURED STOCK</h2>
     </div>
 
     <div class="embla">
-        <div class="embla__viewport">
+        <div class="embla__viewport text-white">
             <div class="embla__container">
                 <div class="embla__slide">
                     <div class="card flex flex-col  rounded-lg shadow-md overflow-hidden">
-                        <!-- Top Half: Car Image -->
-                        <div class="h-[240px] bg-[#202329]">
+                        
+                        <div class="h-[240px]">
                             <img src="https://img.cdn.dragon2000.net/C2846/U737/IMG_34382-medium.jpg"
                                 alt="Porsche Cayman GT4" class="w-full h-full object-cover object-[center_-110px]" />
                         </div>
 
-                        <!-- Bottom Half: Info Panel -->
-                        <div class="h-[195px] bg-[#202329] text-white flex flex-col justify-between p-4 text-md">
+                        <div class="h-[195px] flex flex-col justify-between p-4 text-md">
                             <div>
                                 <div class="text-xl font-semibold leading-tight text-left">PORSCHE CAYMAN 981 GT4</div>
                                 <div class="text-lg text-gray-300 text-left">3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6
@@ -234,7 +231,7 @@
                             <div class="flex justify-between items-center mt-1">
                                 <div class="text-lg font-bold text-white">£57,980</div>
                                 <button
-                                    class="text-xs border border-white px-5 py-2 rounded hover:bg-white hover:text-[#2E3A44] transition">
+                                    class="text-md border border-white px-5 py-2 rounded hover:bg-white hover:text-[#2E3A44] transition">
                                     Details
                                 </button>
                             </div>
@@ -244,14 +241,12 @@
 
                 <div class="embla__slide">
                     <div class="card flex flex-col  rounded-lg shadow-md overflow-hidden">
-                        <!-- Top Half: Car Image -->
-                        <div class="h-[240px] bg-[#202329]">
+                        <div class="h-[240px]">
                             <img src="https://img.cdn.dragon2000.net/C2846/U737/IMG_34382-medium.jpg"
                                 alt="Porsche Cayman GT4" class="w-full h-full object-cover object-[center_-110px]" />
                         </div>
 
-                        <!-- Bottom Half: Info Panel -->
-                        <div class="h-[195px] bg-[#202329] text-white flex flex-col justify-between p-4 text-md">
+                        <div class="h-[195px] flex flex-col justify-between p-4 text-md">
                             <div>
                                 <div class="text-xl font-semibold leading-tight text-left">PORSCHE CAYMAN 981 GT4</div>
                                 <div class="text-lg text-gray-300 text-left">3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6
@@ -272,9 +267,9 @@
                             </div>
 
                             <div class="flex justify-between items-center mt-1">
-                                <div class="text-lg font-bold text-white">£57,980</div>
+                                <div class="text-lg font-bold">£57,980</div>
                                 <button
-                                    class="text-xs border border-white px-5 py-2 rounded hover:bg-white hover:text-[#2E3A44] transition">
+                                    class="text-md border border-white px-5 py-2 rounded hover:bg-white hover:text-[#2E3A44] transition">
                                     Details
                                 </button>
                             </div>
@@ -283,14 +278,12 @@
                 </div>
                 <div class="embla__slide">
                     <div class="card flex flex-col  rounded-lg shadow-md overflow-hidden">
-                        <!-- Top Half: Car Image -->
-                        <div class="h-[240px] bg-[#202329]">
+                        <div class="h-[240px]">
                             <img src="https://img.cdn.dragon2000.net/C2846/U737/IMG_34382-medium.jpg"
                                 alt="Porsche Cayman GT4" class="w-full h-full object-cover object-[center_-110px]" />
                         </div>
 
-                        <!-- Bottom Half: Info Panel -->
-                        <div class="h-[195px] bg-[#202329] text-white flex flex-col justify-between p-4 text-md">
+                        <div class="h-[195px] flex flex-col justify-between p-4 text-md">
                             <div>
                                 <div class="text-xl font-semibold leading-tight text-left">PORSCHE CAYMAN 981 GT4</div>
                                 <div class="text-lg text-gray-300 text-left">3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6
@@ -311,9 +304,9 @@
                             </div>
 
                             <div class="flex justify-between items-center mt-1">
-                                <div class="text-lg font-bold text-white">£57,980</div>
+                                <div class="text-lg font-bold">£57,980</div>
                                 <button
-                                    class="text-xs border border-white px-5 py-2 rounded hover:bg-white hover:text-[#2E3A44] transition">
+                                    class="text-md border border-white px-5 py-2 rounded hover:bg-white hover:text-[#2E3A44] transition">
                                     Details
                                 </button>
                             </div>
@@ -322,14 +315,12 @@
                 </div>
                 <div class="embla__slide">
                     <div class="card flex flex-col  rounded-lg shadow-md overflow-hidden">
-                        <!-- Top Half: Car Image -->
-                        <div class="h-[240px] bg-[#202329]">
+                        <div class="h-[240px]">
                             <img src="https://img.cdn.dragon2000.net/C2846/U737/IMG_34382-medium.jpg"
                                 alt="Porsche Cayman GT4" class="w-full h-full object-cover object-[center_-110px]" />
                         </div>
 
-                        <!-- Bottom Half: Info Panel -->
-                        <div class="h-[195px] bg-[#202329] text-white flex flex-col justify-between p-4 text-md">
+                        <div class="h-[195px] text-white flex flex-col justify-between p-4 text-md">
                             <div>
                                 <div class="text-xl font-semibold leading-tight text-left">PORSCHE CAYMAN 981 GT4</div>
                                 <div class="text-lg text-gray-300 text-left">3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6
@@ -350,9 +341,9 @@
                             </div>
 
                             <div class="flex justify-between items-center mt-1">
-                                <div class="text-lg font-bold text-white">£57,980</div>
+                                <div class="text-lg font-bold">£57,980</div>
                                 <button
-                                    class="text-xs border border-white px-5 py-2 rounded hover:bg-white hover:text-[#2E3A44] transition">
+                                    class="text-md border border-white px-5 py-2 rounded hover:bg-white hover:text-[#2E3A44] transition">
                                     Details
                                 </button>
                             </div>
@@ -361,14 +352,12 @@
                 </div>
                 <div class="embla__slide">
                     <div class="card flex flex-col  rounded-lg shadow-md overflow-hidden">
-                        <!-- Top Half: Car Image -->
-                        <div class="h-[240px] bg-[#202329]">
+                        <div class="h-[240px]">
                             <img src="https://img.cdn.dragon2000.net/C2846/U737/IMG_34382-medium.jpg"
                                 alt="Porsche Cayman GT4" class="w-full h-full object-cover object-[center_-110px]" />
                         </div>
 
-                        <!-- Bottom Half: Info Panel -->
-                        <div class="h-[195px] bg-[#202329] text-white flex flex-col justify-between p-4 text-md">
+                        <div class="h-[195px] flex flex-col justify-between p-4 text-md">
                             <div>
                                 <div class="text-xl font-semibold leading-tight text-left">PORSCHE CAYMAN 981 GT4</div>
                                 <div class="text-lg text-gray-300 text-left">3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6
@@ -389,9 +378,9 @@
                             </div>
 
                             <div class="flex justify-between items-center mt-1">
-                                <div class="text-lg font-bold text-white">£57,980</div>
+                                <div class="text-lg font-bold">£57,980</div>
                                 <button
-                                    class="text-xs border border-white px-5 py-2 rounded hover:bg-white hover:text-[#2E3A44] transition">
+                                    class="text-md border border-white px-5 py-2 rounded hover:bg-white hover:text-[#2E3A44] transition">
                                     Details
                                 </button>
                             </div>
@@ -400,14 +389,12 @@
                 </div>
                 <div class="embla__slide">
                     <div class="card flex flex-col  rounded-lg shadow-md overflow-hidden">
-                        <!-- Top Half: Car Image -->
-                        <div class="h-[240px] bg-[#202329]">
+                        <div class="h-[240px]">
                             <img src="https://img.cdn.dragon2000.net/C2846/U737/IMG_34382-medium.jpg"
                                 alt="Porsche Cayman GT4" class="w-full h-full object-cover object-[center_-110px]" />
                         </div>
 
-                        <!-- Bottom Half: Info Panel -->
-                        <div class="h-[195px] bg-[#202329] text-white flex flex-col justify-between p-4 text-md">
+                        <div class="h-[195px] flex flex-col justify-between p-4 text-md">
                             <div>
                                 <div class="text-xl font-semibold leading-tight text-left">PORSCHE CAYMAN 981 GT4</div>
                                 <div class="text-lg text-gray-300 text-left">3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6
@@ -428,9 +415,9 @@
                             </div>
 
                             <div class="flex justify-between items-center mt-1">
-                                <div class="text-lg font-bold text-white">£57,980</div>
+                                <div class="text-lg font-bold">£57,980</div>
                                 <button
-                                    class="text-xs border border-white px-5 py-2 rounded hover:bg-white hover:text-[#2E3A44] transition">
+                                    class="text-md border border-white px-5 py-2 rounded hover:bg-white hover:text-[#2E3A44] transition">
                                     Details
                                 </button>
                             </div>

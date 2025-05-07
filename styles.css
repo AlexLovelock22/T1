@@ -12,9 +12,6 @@
   background-color: #AEA37D;
 }
 
-.orbitron {
-  font-family: 'Orbitron', sans-serif;
-}
 
 .exo2 {
   font-family: 'Exo 2', sans-serif;
@@ -54,12 +51,6 @@
   object-position: 30% center;
 }
 
-/* .clipped-img {
-  clip-path: polygon(28% 0%, 100% 0%, 100% 100%, 0 100%);
-  overflow: hidden;
-  width: 100%;
-} */
-
 .clipped-img-left {
   clip-path: polygon(0 0, 90% 0, 62% 100%, 0% 100%);
   overflow: hidden;
@@ -89,9 +80,18 @@
 
 .card {
   margin: 10px;
-  background: #36434F;
+  background-color:#202329;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   box-sizing: border-box;
+}
+
+
+.bg-dark-blue {
+  background-color:#16181c;
+}
+
+.bg-dark-blue-light {
+  background-color:#202329;
 }
