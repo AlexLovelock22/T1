@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tier One Automotive</title>
+    <link href="output.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://cdn.jsdelivr.net/npm/embla-carousel/embla-carousel.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body class="bg-[#202329] text-white exo2">
+
+    <!-- Navbar -->
+    <nav class="h-24 w-full absolute top-0 left-0 z-50 bg-black/40 backdrop-blur-md border-b border-white/10 shadow-lg">
+        <div class="max-w-screen-xl mx-auto h-full flex items-center justify-between px-4 sm:px-8 relative">
+            <!-- Left Icons -->
+            <div class="flex items-center gap-4">
+                <button class="p-2 rounded-full hover:bg-white/10 transition-colors" aria-label="Call">
+                    <i data-lucide="phone" class="w-5 h-5 text-white"></i>
+                </button>
+                <button class="p-2 rounded-full hover:bg-white/10 transition-colors" aria-label="Email">
+                    <i data-lucide="mail" class="w-5 h-5 text-white"></i>
+                </button>
+            </div>
+
+            <!-- Right Icons -->
+            <div class="flex items-center gap-4">
+                <button class="p-2 rounded-full hover:bg-white/10 transition-colors" aria-label="Search">
+                    <i data-lucide="search" class="w-5 h-5 text-white"></i>
+                </button>
+                <button class="p-2 rounded-full hover:bg-white/10 transition-colors" aria-label="Filter">
+                    <i data-lucide="filter" class="w-5 h-5 text-white"></i>
+                </button>
+            </div>
+
+            <!-- Center Logo -->
+            <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                <a href="index2.html" aria-label="Home">
+                    <img src="Images/T1White.png" alt="TierOne Logo"
+                        class="h-16 sm:h-20 object-contain hover:opacity-90 transition-opacity duration-200" />
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Full-Width Banner Image 
+    Do we like the shadow?
+    -->
+    <section class="relative h-[48vh] w-full overflow-hidden z-0 large-shadow">
+        <img src="Images/Sell.png" alt="Vehicle Preparation Banner"
+            class="absolute inset-0 w-full h-full object-cover z-[-1]" />
+
+        <!-- Dark Overlay (optional for legibility) -->
+        <div class="absolute inset-0 bg-black/50 z-0"></div>
+
+        <!-- Centered Heading -->
+        <div class="absolute inset-0 flex flex-col items-center justify-center z-10 pt-28">
+            <h1 class="text-3xl md:text-5xl font-light tracking-[0.25em] text-white text-center uppercase">
+                SELL YOUR CAR
+            </h1>
+            <h1 class="text-xl md:text-xl font-light text-white text-center max-w-4xl mt-12">
+                Here at Tier One, we understand that selling your car is an important decision. That’s why we offer a
+                seamless, professional service that puts your needs first. Whether you’re looking for a quick sale or
+                seeking the best possible value, our expert team ensures that the entire process is efficient, secure,
+                and hassle-free. With a focus on providing the highest level of customer satisfaction, we make sure your
+                car is treated with the care and attention it deserves.
+            </h1>
+        </div>
+    </section>
+
+    <h1 class="text-3xl md:text-4xl font-light tracking-[0.25em] text-white text-center uppercase pt-16">
+        Sale Process
+    </h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1400px] mx-auto px-6 mt-16 mb-16">
+        <!-- Card 1 -->
+        <div class="bg-[#2A2E35] text-white text-center px-10 py-12 rounded-lg shadow-md">
+            <div
+                class="w-14 h-14 mx-auto mb-6 rounded-full border-2 border-[#A2926C] flex items-center justify-center text-xl font-medium">
+                1
+            </div>
+            <h3 class="uppercase tracking-[0.2em] text-xl font-light mb-4">Outright Purchase</h3>
+            <p class="text-base text-gray-300 leading-relaxed tracking-wide">
+                Our Outright Purchase service offers a quick, hassle-free way to sell your car. After a fast evaluation,
+                we arrange a viewing and instantly transfer the funds, including clearing any outstanding finance. This
+                service ensures a smooth, same-day transaction, leaving you with cleared funds and no complications.
+            </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-[#2A2E35] text-white text-center px-10 py-12 rounded-lg shadow-md">
+            <div
+                class="w-14 h-14 mx-auto mb-6 rounded-full border-2 border-[#A2926C] flex items-center justify-center text-xl font-medium">
+                2
+            </div>
+            <h3 class="uppercase tracking-[0.2em] text-xl font-light mb-4">Sale or return</h3>
+            <p class="text-base text-gray-300 leading-relaxed tracking-wide">
+                For those seeking a higher return or who prefer selling privately, our brokerage service handles
+                everything. We provide advertising, finance options, and after-sales care, ensuring a quick, secure
+                sale.
+            </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-[#2A2E35] text-white text-center px-10 py-12 rounded-lg shadow-md">
+            <div
+                class="w-14 h-14 mx-auto mb-6 rounded-full border-2 border-[#A2926C] flex items-center justify-center text-xl font-medium">
+                3
+            </div>
+            <h3 class="uppercase tracking-[0.2em] text-xl font-light mb-4">Brokerage Service</h3>
+            <p class="text-base text-gray-300 leading-relaxed tracking-wide">
+                Our competitive commission structure ensures you get the best deal. We prepare your car to the highest
+                standard and advertise it on top platforms like Auto-Trader and Facebook Marketplace for maximum
+                exposure.
+            </p>
+        </div>
+    </div>
+
+
+    <section class="bg-dark-blue-light text-white py-28 px-6">
+        <div class="bg-dark-blue max-w-screen-xl mx-auto px-6 py-12 rounded-md">
+            <h2 class="text-center text-3xl tracking-[0.25em] font-light uppercase mb-8">
+                Car Valuation Quote
+                <div class="mx-auto w-16 h-px bg-gray-400 mt-2"></div>
+            </h2>
+
+            <form class="max-w-5xl mx-auto">
+                <!-- Vehicle Info -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pb-6">
+                    <input type="text" placeholder="Registration Number"
+                        class="w-full px-4 py-2 bg-[#1f2937] border border-[#383e4a] rounded-md placeholder-gray-400 focus:ring focus:ring-[#B3A177]" />
+                    <input type="text" placeholder="Mileage"
+                        class="w-full px-4 py-2 bg-[#1f2937] border border-[#383e4a] rounded-md placeholder-gray-400 focus:ring focus:ring-[#B3A177]" />
+                </div>
+
+                <div class="">
+                    <input type="text" placeholder="Asking Price"
+                        class="w-full px-4 py-2 bg-[#1f2937] border border-[#383e4a] rounded-md placeholder-gray-400 focus:ring focus:ring-[#B3A177]" />
+                    <div class="pt-6">
+                        <textarea placeholder="Additional Details" rows="4"
+                            class="w-full px-4  bg-[#1f2937] border border-[#383e4a] rounded-md placeholder-gray-400 focus:ring focus:ring-[#B3A177]"></textarea>
+                    </div>
+                </div>
+
+                <!-- Sale Option -->
+                <div class="mb-6">
+                    <p class="text-sm font-light uppercase tracking-wider mb-1">Please select which option of sale you
+                        are interested in</p>
+                    <div class="flex flex-wrap gap-6 text-sm">
+                        <label class="inline-flex items-center gap-2">
+                            <input type="checkbox" class="form-checkbox accent-[#B3A177]" />
+                            Outright
+                        </label>
+                        <label class="inline-flex items-center gap-2">
+                            <input type="checkbox" class="form-checkbox accent-[#B3A177]" />
+                            Part Exchange
+                        </label>
+                        <label class="inline-flex items-center gap-2">
+                            <input type="checkbox" class="form-checkbox accent-[#B3A177]" />
+                            Commission Sale
+                        </label>
+                    </div>
+                </div>
+                <hr class="border-t border-[#383e4a] w-full my-6" />
+                <!-- Contact Info -->
+                <div>
+                    <p class="text-sm font-light uppercase tracking-wider mb-3">Contact Information (Required)</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <input type="text" placeholder="First Name"
+                            class="w-full px-4 py-2 bg-[#1f2937] border border-[#383e4a] rounded-md placeholder-gray-400 focus:ring focus:ring-[#B3A177]" />
+                        <input type="text" placeholder="Last Name"
+                            class="w-full px-4 py-2 bg-[#1f2937] border border-[#383e4a] rounded-md placeholder-gray-400 focus:ring focus:ring-[#B3A177]" />
+                        <input type="email" placeholder="Email"
+                            class="w-full px-4 py-2 bg-[#1f2937] border border-[#383e4a] rounded-md placeholder-gray-400 focus:ring focus:ring-[#B3A177]" />
+                        <input type="tel" placeholder="Phone Number"
+                            class="w-full px-4 py-2 bg-[#1f2937] border border-[#383e4a] rounded-md placeholder-gray-400 focus:ring focus:ring-[#B3A177]" />
+                    </div>
+                </div>
+
+                <!-- Contact Method -->
+                <div>
+                    <p class="text-sm font-light uppercase tracking-wider mb-1 mt-2">Preferred Contact Methods</p>
+                    <div class="flex flex-wrap gap-6 text-sm">
+                        <label class="inline-flex items-center gap-2">
+                            <input type="checkbox" class="form-checkbox accent-[#B3A177]" />
+                            Email
+                        </label>
+                        <label class="inline-flex items-center gap-2">
+                            <input type="checkbox" class="form-checkbox accent-[#B3A177]" />
+                            Phone Call
+                        </label>
+                        <label class="inline-flex items-center gap-2">
+                            <input type="checkbox" class="form-checkbox accent-[#B3A177]" />
+                            WhatsApp/Text
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Submit -->
+                <div class="text-center pt-4">
+                    <button type="submit"
+                        class="bg-white text-black font-semibold uppercase tracking-widest px-8 py-3 hover:bg-gray-200 transition">
+                        Get My Valuation
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+<footer class="bg-[#16181c] text-[#333] text-sm pt-16 pb-8 text-white">
+    <div class="max-w-screen-xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-10">
+
+        <!-- Social -->
+        <div>
+            <img src="Images/T1White.png" alt="Tier One Logo" class="h-20 mb-4">
+
+            <div class="space-y-3 text-sm">
+                <!-- Facebook -->
+                <a href="https://facebook.com" target="_blank"
+                    class="flex items-center gap-2 hover:opacity-80 transition">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+                        alt="Facebook" class="w-5 h-5" />
+                    <span>Facebook</span>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://instagram.com" target="_blank"
+                    class="flex items-center gap-2 hover:opacity-80 transition">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"
+                        class="w-5 h-5 rounded-md" />
+                    <span>Instagram</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- About -->
+        <div>
+            <h4 class="font-semibold text-lg mb-3">About</h4>
+            <ul class="space-y-2">
+                <li><a href="#" class="hover:text-gold transition">Our Story</a></li>
+                <li><a href="#" class="hover:text-gold transition">The Team</a></li>
+                <li><a href="#" class="hover:text-gold transition">Our Values</a></li>
+                <li><a href="#" class="hover:text-gold transition">The History</a></li>
+            </ul>
+        </div>
+
+        <!-- Top Brands -->
+        <div>
+            <h4 class="font-semibold text-lg mb-3">Useful Links</h4>
+            <ul class="space-y-2">
+                <li><a href="#" class="hover:text-gold transition">Privacy Policy</a></li>
+                <li><a href="#" class="hover:text-gold transition">Insurance</a></li>
+                <li><a href="#" class="hover:text-gold transition">Terms & Conditions</a></li>
+                <li><a href="#" class="hover:text-gold transition">Cookies</a></li>
+                <li><a href="#" class="hover:text-gold transition">Complaints</a></li>
+                <li><a href="#" class="hover:text-gold transition">FAQ</a></li>
+            </ul>
+        </div>
+
+        <!-- Opening Times -->
+        <div>
+            <h4 class="flex items-center gap-2 font-semibold text-lg mb-4">
+                Opening Times
+            </h4>
+            <ul class="space-y-1 font-medium text-sm">
+                <li class="flex justify-between">
+                    <span>Monday</span><span>08:00 - 18:00</span>
+                </li>
+                <li class="flex justify-between">
+                    <span>Tuesday</span><span>08:00 - 18:00</span>
+                </li>
+                <li class="flex justify-between">
+                    <span>Wednesday</span><span>08:00 - 18:00</span>
+                </li>
+                <li class="flex justify-between">
+                    <span>Thursday</span><span>08:00 - 18:00</span>
+                </li>
+                <li class="flex justify-between">
+                    <span>Friday</span><span>08:00 - 18:00</span>
+                </li>
+                <li class="flex justify-between">
+                    <span>Saturday</span><span>08:00 - 18:00</span>
+                </li>
+                <li class="flex justify-between">
+                    <span>Sunday</span><span class="text-neutral-500">Appointment Only</span>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="border-t border-neutral-300 pt-6 mt-8 bg">
+        <div
+            class="max-w-screen-xl mx-auto px-6 flex flex-col sm:flex-row justify-between text-xs text-neutral-500 gap-4">
+
+            <!-- Left Side (Legal Text) -->
+            <div class="space-y-1">
+                <p>Tier One Automotive Ltd is a company registered in England and Wales.</p>
+                <p>Company registration number: 08879100</p>
+                <p>
+                    <a href="#" class="underline hover:text-[#b59f61] transition">Cookies</a> |
+                    <a href="#" class="underline hover:text-[#b59f61] transition">Privacy Policy</a>
+                </p>
+            </div>
+
+            <!-- Right Side (Credit) -->
+            <div class="text-sm font-medium">
+                © 2025 Designed & Powered by
+                <a href="https://alexlovelock.dev" class="underline hover:text-[#b59f61] transition">Alex
+                    Lovelock</a>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+<script>
+    lucide.createIcons();
+</script>
+
+</html>
