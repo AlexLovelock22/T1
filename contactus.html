@@ -8,6 +8,7 @@
     <link href="output.css" rel="stylesheet" />
     <link href="styles.css" rel="stylesheet" />
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="navbar.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script src="https://cdn.jsdelivr.net/npm/embla-carousel/embla-carousel.umd.js"></script>
@@ -22,7 +23,7 @@
 <body class="bg-[#202329] text-white exo2">
 
     <!-- Navbar -->
-    <nav class="h-24 w-full absolute top-0 left-0 z-50 bg-black/40 backdrop-blur-md border-b border-white/10 shadow-lg">
+    <nav class="h-24 w-full absolute top-0 left-0 bg-black/40 backdrop-blur-md border-b border-white/10 shadow-lg">
         <div class="max-w-screen-xl mx-auto h-full flex items-center justify-between px-4 sm:px-8 relative">
             <!-- Left Icons -->
             <div class="flex items-center gap-4">
@@ -44,7 +45,7 @@
                     <i data-lucide="search" class="w-5 h-5 text-white"></i>
                 </button>
                 <button class="p-2 rounded-full hover:bg-white/10 transition-colors" aria-label="Filter">
-                    <i data-lucide="filter" class="w-5 h-5 text-white"></i>
+                    <i data-lucide="menu" class="w-5 h-5 text-white"></i>
                 </button>
             </div>
 
@@ -57,6 +58,59 @@
             </div>
         </div>
     </nav>
+
+    <!-- Overlay -->
+    <div id="menu-overlay" class="fixed inset-0 bg-black/70 z-90 hidden"></div>
+
+    <!-- Slide-in Menu -->
+    <div id="side-menu"
+        class="fixed top-0 right-0 h-full w-96 bg-[#0f1012] text-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out shadow-lg">
+        <div class="flex items-center justify-between px-6 h-24 border-b border-white/10">
+            <img src="Images/T1White.png" alt="Tier One Logo" class="h-16 object-contain" />
+            <button id="close-menu" class="text-white" aria-label="Close">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <ul class="pl-3 pt-4 tracking-wide uppercase text-lg tracking-[0.15rem]">
+            <li><a href="index2.html"
+                    class="block px-3 py-2 rounded transition duration-200 transform hover:translate-x-2 hover:bg-[#1a1b1e] hover:text-gold">Home</a>
+            </li>
+            <li><a href="stock.html"
+                    class="block px-3 py-2 rounded transition duration-200 transform hover:translate-x-2 hover:bg-[#1a1b1e] hover:text-gold">View
+                    Stock</a></li>
+            <li><a href="sellyourcar.html"
+                    class="block px-3 py-2 rounded transition duration-200 transform hover:translate-x-2 hover:bg-[#1a1b1e] hover:text-gold">Sell
+                    My Car</a></li>
+            <li><a href="preparation.html"
+                    class="block px-3 py-2 rounded transition duration-200 transform hover:translate-x-2 hover:bg-[#1a1b1e] hover:text-gold">Preparation</a>
+            </li>
+            <li><a href="finance.html"
+                    class="block px-3 py-2 rounded transition duration-200 transform hover:translate-x-2 hover:bg-[#1a1b1e] hover:text-gold">Finance</a>
+            </li>
+            <li><a href="warranty.html"
+                    class="block px-3 py-2 rounded transition duration-200 transform hover:translate-x-2 hover:bg-[#1a1b1e] hover:text-gold">Warranty</a>
+            </li>
+            <li><a href="previouslysold.html"
+                    class="block px-3 py-2 rounded transition duration-200 transform hover:translate-x-2 hover:bg-[#1a1b1e] hover:text-gold">Previously
+                    Sold</a></li>
+            <li><a href="sourcing.html"
+                    class="block px-3 py-2 rounded transition duration-200 transform hover:translate-x-2 hover:bg-[#1a1b1e] hover:text-gold">Vehicle
+                    Sourcing</a></li>
+        </ul>
+
+        <!-- Social Links -->
+        <div class="absolute bottom-6 left-0 w-full px-6 border-t border-white/10 pt-6 flex gap-4 justify-start">
+            <a href="https://instagram.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"
+                    class="w-7 h-7 rounded-md">
+            </a>
+            <a href="https://facebook.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+                    alt="Facebook" class="w-7 h-7">
+            </a>
+        </div>
+    </div>
+
 
     <section class="text-white pt-52 px-4 mb-16">
         <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 px-6">
@@ -184,6 +238,8 @@
             </div>
         </div>
     </section>
+
+
 
 
 

@@ -2,410 +2,471 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tier One Automotive</title>
-    <link href="output.css" rel="stylesheet" />
-    <link href="styles.css" rel="stylesheet" />
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <script src="https://cdn.jsdelivr.net/npm/embla-carousel/embla-carousel.umd.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tier One Automotive</title>
+  <link href="output.css" rel="stylesheet" />
+  <link href="styles.css" rel="stylesheet" />
+  <script src="navbar.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script src="https://cdn.jsdelivr.net/npm/embla-carousel/embla-carousel.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
 </head>
 
 <body class="bg-[#202329] text-white exo2">
 
-    <!-- Navbar -->
-    <nav class="h-24 w-full absolute top-0 left-0 z-50 bg-black/40 backdrop-blur-md border-b border-white/10 shadow-lg">
-        <div class="max-w-screen-xl mx-auto h-full flex items-center justify-between px-4 sm:px-8 relative">
-            <!-- Left Icons -->
-            <div class="flex items-center gap-4">
-              <a href="contactus.html" aria-label="Call">
-                  <button class="p-2 rounded-full hover:bg-white/10 transition-colors">
-                      <i data-lucide="phone" class="w-5 h-5 text-white"></i>
-                  </button>
-              </a>
-              <a href="contactus.html" aria-label="Email">
-                  <button class="p-2 rounded-full hover:bg-white/10 transition-colors">
-                      <i data-lucide="mail" class="w-5 h-5 text-white"></i>
-                  </button>
-              </a>
+  <!-- Navbar -->
+  <nav class="h-24 w-full absolute top-0 left-0 bg-black/40 backdrop-blur-md border-b border-white/10 shadow-lg">
+    <div class="max-w-screen-xl mx-auto h-full flex items-center justify-between px-4 sm:px-8 relative">
+      <!-- Left Icons -->
+      <div class="flex items-center gap-4">
+        <a href="contactus.html" aria-label="Call">
+          <button class="p-2 rounded-full hover:bg-white/10 transition-colors">
+            <i data-lucide="phone" class="w-5 h-5 text-white"></i>
+          </button>
+        </a>
+        <a href="contactus.html" aria-label="Email">
+          <button class="p-2 rounded-full hover:bg-white/10 transition-colors">
+            <i data-lucide="mail" class="w-5 h-5 text-white"></i>
+          </button>
+        </a>
+      </div>
+
+      <!-- Right Icons -->
+      <div class="flex items-center gap-4">
+        <button class="p-2 rounded-full hover:bg-white/10 transition-colors" aria-label="Search">
+          <i data-lucide="search" class="w-5 h-5 text-white"></i>
+        </button>
+        <button class="p-2 rounded-full hover:bg-white/10 transition-colors" aria-label="Filter">
+          <i data-lucide="menu" class="w-5 h-5 text-white"></i>
+        </button>
+      </div>
+
+      <!-- Center Logo -->
+      <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <a href="index2.html" aria-label="Home">
+          <img src="Images/T1White.png" alt="TierOne Logo"
+            class="h-16 sm:h-20 object-contain hover:opacity-90 transition-opacity duration-200" />
+        </a>
+      </div>
+    </div>
+
+
+  </nav>
+
+  <!-- Overlay -->
+  <div id="menu-overlay" class="fixed inset-0 bg-black/70 z-90 hidden"></div>
+
+  <!-- Slide-in Menu -->
+  <div id="side-menu"
+    class="fixed top-0 right-0 h-full w-96 bg-[#0f1012] text-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out shadow-lg">
+    <div class="flex items-center justify-between px-6 h-24 border-b border-white/10">
+      <img src="Images/T1White.png" alt="Tier One Logo" class="h-16 object-contain" />
+      <button id="close-menu" class="text-white" aria-label="Close">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+    </div>
+    <ul class="pl-3 pt-4 tracking-wide uppercase text-lg tracking-[0.15rem]">
+      <li><a href="index2.html"
+          class="block px-3 py-2 rounded transition duration-200 transform hover:translate-x-2 hover:bg-[#1a1b1e] hover:text-gold">Home</a>
+      </li>
+      <li><a href="stock.html"
+          class="block px-3 py-2 rounded transition duration-200 transform hover:translate-x-2 hover:bg-[#1a1b1e] hover:text-gold">View
+          Stock</a></li>
+      <li><a href="sellyourcar.html"
+          class="block px-3 py-2 rounded transition duration-200 transform hover:translate-x-2 hover:bg-[#1a1b1e] hover:text-gold">Sell
+          My Car</a></li>
+      <li><a href="preparation.html"
+          class="block px-3 py-2 rounded transition duration-200 transform hover:translate-x-2 hover:bg-[#1a1b1e] hover:text-gold">Preparation</a>
+      </li>
+      <li><a href="finance.html"
+          class="block px-3 py-2 rounded transition duration-200 transform hover:translate-x-2 hover:bg-[#1a1b1e] hover:text-gold">Finance</a>
+      </li>
+      <li><a href="warranty.html"
+          class="block px-3 py-2 rounded transition duration-200 transform hover:translate-x-2 hover:bg-[#1a1b1e] hover:text-gold">Warranty</a>
+      </li>
+      <li><a href="previouslysold.html"
+          class="block px-3 py-2 rounded transition duration-200 transform hover:translate-x-2 hover:bg-[#1a1b1e] hover:text-gold">Previously
+          Sold</a></li>
+      <li><a href="sourcing.html"
+          class="block px-3 py-2 rounded transition duration-200 transform hover:translate-x-2 hover:bg-[#1a1b1e] hover:text-gold">Vehicle
+          Sourcing</a></li>
+    </ul>
+    <div class="absolute bottom-6 left-0 w-full px-6 border-t border-white/10 pt-6 flex gap-4 justify-start">
+      <a href="https://instagram.com" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"
+          class="w-7 h-7 rounded-md">
+      </a>
+      <a href="https://facebook.com" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"
+          class="w-7 h-7">
+      </a>
+    </div>
+  </div>
+
+  <div class="mt-40 mb-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h1 class="text-3xl md:text-5xl font-light tracking-[0.25em] uppercase mb-4">WARRANTY</h1>
+      <p class="text-2xl font-light">
+        As piece of mind for you, all of our vehicles up to 10 years at purchase date will automatically include
+        a
+        comprehensive Gold level warranty cover with no annual millage restrictions. You will be able to make
+        unlimited number of claims for duration of your policy. The policy will also include a labour charge
+        cover
+        of £80 per hour as standard.
+        <br />
+        This policy can be used at any VAT registered garage within the UK and Northern Island.
+      </p>
+    </div>
+  </div>
+
+  <div class="w-full px-4 sm:px-8 mb-24">
+    <div class="max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-8">
+      <!-- Left Column: What's Covered -->
+      <div>
+        <div class="inline-block">
+          <h2 class="text-xl font-light uppercase tracking-[0.25em] mb-2">WHAT'S COVERED</h2>
+          <div class="h-px bg-white/50 w-full"></div>
+        </div>
+        <div class="w-full max-w-screen-xl mx-auto">
+          <div class="space-y-2 mt-3">
+
+            <!-- Row template -->
+            <div class="grid w-full grid-cols-[2%_16%_82%] items-center gap-4 bg-[#2A2E35] px-4 py-3 pr-16">
+              <i data-lucide="check-circle" class="w-5 h-5 text-red-600 mt-1 shrink-0"></i>
+              <div class="text-white">Electrics</div>
+              <div class="text-gray-400 break-words overflow-hidden">
+                Alternator, electric window motors, engine cooling fan motors, horn, indicator flasher relay, starter
+                motor & sunroof motor/hydraulics.
+              </div>
+            </div>
+
+            <div class="grid w-full grid-cols-[2%_16%_82%] items-center gap-4 bg-[#24272D] px-4 py-3 pr-16">
+              <i data-lucide="check-circle" class="w-5 h-5 text-red-600 mt-1 shrink-0"></i>
+              <div class="text-white">Electronic Control Units</div>
+              <div class="text-gray-400 break-words overflow-hidden">
+                The engine management ECU – engine ECU only.
+                <span class="text-white">(Not covered:</span> Upgraded or revised software & firmware, including
+                software patches or retro-fitted ECUs/computers.)
+              </div>
+            </div>
+
+            <div class="grid w-full grid-cols-[2%_16%_82%] items-center gap-4 bg-[#2A2E35] px-4 py-3 pr-16">
+              <i data-lucide="check-circle" class="w-5 h-5 text-red-600 mt-1 shrink-0"></i>
+              <div class="text-white">Braking System</div>
+              <div class="text-gray-400 break-words overflow-hidden">
+                ABS pump & control unit, calipers, master & wheel cylinders, pressure reducing & proportioning valves &
+                vacuum.
+              </div>
+            </div>
+
+            <div class="grid w-full grid-cols-[2%_16%_82%] items-center gap-4 bg-[#24272D] px-4 py-3 pr-16">
+              <i data-lucide="check-circle" class="w-5 h-5 text-red-600 mt-1 shrink-0"></i>
+              <div class="text-white">Casings</div>
+              <div class="text-gray-400 break-words overflow-hidden">
+                Covers are included only if damage results directly from the failure of a covered component.
+              </div>
+            </div>
+
+            <div class="grid w-full grid-cols-[2%_16%_82%] items-center gap-4 bg-[#2A2E35] px-4 py-3 pr-16">
+              <i data-lucide="check-circle" class="w-5 h-5 text-red-600 mt-1 shrink-0"></i>
+              <div class="text-white">Clutch</div>
+              <div class="text-gray-400 break-words overflow-hidden">
+                Clutch cable, master & slave hydraulic cylinders, and pedal assembly.
+              </div>
+            </div>
+
+            <div class="grid w-full grid-cols-[2%_16%_82%] items-center gap-4 bg-[#24272D] px-4 py-3 pr-16">
+              <i data-lucide="check-circle" class="w-5 h-5 text-red-600 mt-1 shrink-0"></i>
+              <div class="text-white">Cooling System</div>
+              <div class="text-gray-400 break-words overflow-hidden">
+                Water radiator, heater radiator, thermostat, housing, viscous cooling fan couplings, and water pump.
+              </div>
+            </div>
+
+            <div class="grid w-full grid-cols-[2%_16%_82%] items-center gap-4 bg-[#2A2E35] px-4 py-3 pr-16">
+              <i data-lucide="check-circle" class="w-5 h-5 text-red-600 mt-1 shrink-0"></i>
+              <div class="text-white">Engine</div>
+              <div class="text-gray-400 break-words overflow-hidden">
+                All internally lubricated parts including camshafts, followers, rockers, crankshaft, bearings, pistons,
+                rings, gears, valves, chains, guides, and seals.
+                <span class="text-white">(Excludes burnt/pitted valves and valve seats.)</span>
+              </div>
+            </div>
+
+            <div class="grid w-full grid-cols-[2%_16%_82%] items-center gap-4 bg-[#24272D] px-4 py-3 pr-16">
+              <i data-lucide="check-circle" class="w-5 h-5 text-red-600 mt-1 shrink-0"></i>
+              <div class="text-white">Flywheels & Drive Plates</div>
+              <div class="text-gray-400 break-words overflow-hidden">
+                Flexible drive plate for automatic transmission torque converter, solid & dual mass flywheels & starter
+                ring.
+                <span class="text-white">Flywheels damaged by clutch friction not covered.</span>
+              </div>
+            </div>
+
+            <div class="grid w-full grid-cols-[2%_16%_82%] items-center gap-4 bg-[#2A2E35] px-4 py-3 pr-16">
+              <i data-lucide="check-circle" class="w-5 h-5 text-red-600 mt-1 shrink-0"></i>
+              <div class="text-white">Fuel System</div>
+              <div class="text-gray-400 break-words overflow-hidden">
+                Airflow sensors, fuel gauge sender, pressure regulators, accumulators, fuel pumps (pre/low/high
+                pressure), and injectors (petrol, diesel, single-point).
+              </div>
+            </div>
+
+            <div class="grid w-full grid-cols-[2%_16%_82%] items-center gap-4 bg-[#24272D] px-4 py-3 pr-16">
+              <i data-lucide="check-circle" class="w-5 h-5 text-red-600 mt-1 shrink-0"></i>
+              <div class="text-white">Gearboxes</div>
+              <div class="text-gray-400 break-words overflow-hidden">
+                Manual, auto, hybrid, 4WD transfer, CVT, actuators, clutch packs, modulator valves, selector forks,
+                shafts, synchronisers, gears, valve blocks.
+              </div>
+            </div>
+
+            <div class="grid w-full grid-cols-[2%_16%_82%] items-center gap-4 bg-[#2A2E35] px-4 py-3 pr-16">
+              <i data-lucide="check-circle" class="w-5 h-5 text-red-600 mt-1 shrink-0"></i>
+              <div class="text-white">Ignition System</div>
+              <div class="text-gray-400 break-words overflow-hidden">
+                Camshaft sensors and crankshaft ignition.
+              </div>
+            </div>
+
+            <div class="grid w-full grid-cols-[2%_16%_82%] items-center gap-4 bg-[#24272D] px-4 py-3 pr-16">
+              <i data-lucide="check-circle" class="w-5 h-5 text-red-600 mt-1 shrink-0"></i>
+              <div class="text-white">Oil Seals & Gaskets</div>
+              <div class="text-gray-400 break-words overflow-hidden">
+                Crankshaft rear oil seal & main gearbox input shaft oil seal are covered. Other seals & gaskets only if
+                leak requires unit removal.
+                <span class="text-white font-semibold">(Not covered: Mist/leak not requiring removal.)</span>
+              </div>
+            </div>
+
+            <div class="grid w-full grid-cols-[2%_16%_82%] items-center gap-4 bg-[#2A2E35] px-4 py-3 pr-16">
+              <i data-lucide="check-circle" class="w-5 h-5 text-red-600 mt-1 shrink-0"></i>
+              <div class="text-white">Steering Column</div>
+              <div class="text-gray-400 break-words overflow-hidden">
+                Tilt mechanism & couplings, power steering pump, reservoir, pressure pipes, steering & idler boxes, rack
+                and pinion system.
+              </div>
+            </div>
+
+            <div class="grid w-full grid-cols-[2%_16%_82%] items-center gap-4 bg-[#24272D] px-4 py-3 pr-16">
+              <i data-lucide="check-circle" class="w-5 h-5 text-red-600 mt-1 shrink-0"></i>
+              <div class="text-white">Suspension</div>
+              <div class="text-gray-400 break-words overflow-hidden">
+                Wheel bearings.
+              </div>
+            </div>
+
+            <div class="grid w-full grid-cols-[2%_16%_82%] items-center gap-4 bg-[#2A2E35] px-4 py-3 pr-16">
+              <i data-lucide="check-circle" class="w-5 h-5 text-red-600 mt-1 shrink-0"></i>
+              <div class="text-white">Transmission</div>
+              <div class="text-gray-400 break-words overflow-hidden">
+                Differentials (front, rear, center), CV joints, shafts, constant velocity joints, crown wheels &
+                pinions, bearings, bushes, universal joints, propshafts.
+              </div>
+            </div>
+
+            <div class="grid w-full grid-cols-[2%_16%_82%] items-center gap-4 bg-[#24272D] px-4 py-3 pr-16">
+              <i data-lucide="check-circle" class="w-5 h-5 text-red-600 mt-1 shrink-0"></i>
+              <div class="text-white">Turbocharger</div>
+              <div class="text-gray-400 break-words overflow-hidden">
+                Turbocharger unit only.
+              </div>
+            </div>
+
+            <div class="grid w-full grid-cols-[2%_16%_82%] items-center gap-4 bg-[#2A2E35] px-4 py-3 pr-16">
+              <i data-lucide="check-circle" class="w-5 h-5 text-red-600 mt-1 shrink-0"></i>
+              <div class="text-white">Also Covered</div>
+              <div class="text-gray-400 break-words overflow-hidden">
+                Crankshaft pulley, cylinder head gasket, camshaft drive belts & tensioners (covered if last change was
+                per manufacturer’s service schedule).
+              </div>
+            </div>
+
           </div>
+        </div>
+      </div>
 
-            <!-- Right Icons -->
-            <div class="flex items-center gap-4">
-                <button class="p-2 rounded-full hover:bg-white/10 transition-colors" aria-label="Search">
-                    <i data-lucide="search" class="w-5 h-5 text-white"></i>
-                </button>
-                <button class="p-2 rounded-full hover:bg-white/10 transition-colors" aria-label="Filter">
-                    <i data-lucide="filter" class="w-5 h-5 text-white"></i>
-                </button>
+      <div>
+        <div class="inline-block">
+          <h2 class="text-xl font-light uppercase tracking-[0.25em] mb-2">WARRANTY EXTENSION</h2>
+          <div class="h-px bg-white/50 w-full"></div>
+        </div>
+        <div class="mt-3 bg-[#1E2126] text-white shadow-lg overflow-hidden">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="bg-[#24272D] text-left text-white uppercase text-xs tracking-widest">
+                <th class="px-6 py-3">Extend your 6 month warranty</th>
+                <th class="px-6 py-3">Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="">
+                <td class="px-6 py-4 text-gray-300">An additional 6 months</td>
+                <td class="px-6 py-4 text-gray-300">£150.00</td>
+              </tr>
+              <tr class="bg-[#2A2E35]">
+                <td class="px-6 py-4 text-gray-300">An additional 1 year</td>
+                <td class="px-6 py-4 text-gray-300">£250.00</td>
+              </tr>
+              <tr>
+                <td class="px-6 py-4 text-gray-300">An additional two years</td>
+                <td class="px-6 py-4 text-gray-300">£350.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+        <div class="inline-block mt-3">
+          <h2 class="text-xl font-light uppercase tracking-[0.25em] mb-2">FEATURED VEHICLE</h2>
+          <div class="h-px bg-white/50 w-full"></div>
+        </div>
+        <div class="bg-[#2A2E35] rounded-lg shadow-md overflow-hidden mt-3">
+          <!-- Vehicle Image -->
+          <img src="https://img.cdn.dragon2000.net/C2846/U737/IMG_34382-medium.jpg" alt="Porsche Cayman GT4"
+            class="w-full h-auto" />
+
+          <!-- Info Row -->
+          <div class="flex">
+            <!-- Left Text Block -->
+            <div class="flex-1 bg-[#2A2E35] p-4">
+              <h3 class="text-white font-semibold text-sm">PORSCHE CAYMAN 981 GT4</h3>
+              <p class="text-xs text-gray-400 leading-snug">
+                3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6 (385ps)
+              </p>
+              <p class="text-white mt-1 font-medium text-base">£57,980</p>
             </div>
 
-            <!-- Center Logo -->
-            <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <a href="index2.html" aria-label="Home">
-                    <img src="Images/T1White.png" alt="TierOne Logo"
-                        class="h-16 sm:h-20 object-contain hover:opacity-90 transition-opacity duration-200" />
-                </a>
+            <!-- Right Button Block -->
+            <div class="bg-[#1E2126] flex items-center justify-center p-4">
+              <button
+                class="text-sm border border-white text-white px-4 py-2 rounded hover:bg-white hover:text-black transition">
+                Details
+              </button>
             </div>
+          </div>
         </div>
-    </nav>
+      </div>
 
-    <div class="mt-40 mb-16 px-4">
-        <div class="max-w-4xl mx-auto text-center">
-            <h1 class="text-3xl md:text-5xl font-light tracking-[0.25em] uppercase mb-4">WARRANTY</h1>
-            <p class="text-2xl font-light">
-                As piece of mind for you, all of our vehicles up to 10 years at purchase date will automatically include
-                a
-                comprehensive Gold level warranty cover with no annual millage restrictions. You will be able to make
-                unlimited number of claims for duration of your policy. The policy will also include a labour charge
-                cover
-                of £80 per hour as standard.
-                <br />
-                This policy can be used at any VAT registered garage within the UK and Northern Island.
-            </p>
-        </div>
     </div>
-
-    <div class="w-full px-4 sm:px-8 mb-24">
-        <div class="max-w-[1600px] mx-auto grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-8">
-            <!-- Left Column: What's Covered -->
-            <div>
-                <div class="inline-block">
-                    <h2 class="text-xl font-light uppercase tracking-[0.25em] mb-2">WHAT'S COVERED</h2>
-                    <div class="h-px bg-white/50 w-full"></div>
-                </div>
-                <div class="w-full max-w-screen-xl mx-auto">
-                    <div class="space-y-2 mt-3">
-                  
-                      <!-- Row template -->
-                      <div class="grid w-full grid-cols-[2%_16%_82%] items-center gap-4 bg-[#2A2E35] px-4 py-3 pr-16">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-red-600 mt-1 shrink-0"></i>
-                        <div class="text-white">Electrics</div>
-                        <div class="text-gray-400 break-words overflow-hidden">
-                          Alternator, electric window motors, engine cooling fan motors, horn, indicator flasher relay, starter motor & sunroof motor/hydraulics.
-                        </div>
-                      </div>
-                  
-                      <div class="grid w-full grid-cols-[2%_16%_82%] items-center gap-4 bg-[#24272D] px-4 py-3 pr-16">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-red-600 mt-1 shrink-0"></i>
-                        <div class="text-white">Electronic Control Units</div>
-                        <div class="text-gray-400 break-words overflow-hidden">
-                          The engine management ECU – engine ECU only.
-                          <span class="text-white">(Not covered:</span> Upgraded or revised software & firmware, including software patches or retro-fitted ECUs/computers.)
-                        </div>
-                      </div>
-                  
-                      <div class="grid w-full grid-cols-[2%_16%_82%] items-center gap-4 bg-[#2A2E35] px-4 py-3 pr-16">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-red-600 mt-1 shrink-0"></i>
-                        <div class="text-white">Braking System</div>
-                        <div class="text-gray-400 break-words overflow-hidden">
-                          ABS pump & control unit, calipers, master & wheel cylinders, pressure reducing & proportioning valves & vacuum.
-                        </div>
-                      </div>
-                  
-                      <div class="grid w-full grid-cols-[2%_16%_82%] items-center gap-4 bg-[#24272D] px-4 py-3 pr-16">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-red-600 mt-1 shrink-0"></i>
-                        <div class="text-white">Casings</div>
-                        <div class="text-gray-400 break-words overflow-hidden">
-                          Covers are included only if damage results directly from the failure of a covered component.
-                        </div>
-                      </div>
-                  
-                      <div class="grid w-full grid-cols-[2%_16%_82%] items-center gap-4 bg-[#2A2E35] px-4 py-3 pr-16">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-red-600 mt-1 shrink-0"></i>
-                        <div class="text-white">Clutch</div>
-                        <div class="text-gray-400 break-words overflow-hidden">
-                          Clutch cable, master & slave hydraulic cylinders, and pedal assembly.
-                        </div>
-                      </div>
-                  
-                      <div class="grid w-full grid-cols-[2%_16%_82%] items-center gap-4 bg-[#24272D] px-4 py-3 pr-16">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-red-600 mt-1 shrink-0"></i>
-                        <div class="text-white">Cooling System</div>
-                        <div class="text-gray-400 break-words overflow-hidden">
-                          Water radiator, heater radiator, thermostat, housing, viscous cooling fan couplings, and water pump.
-                        </div>
-                      </div>
-                  
-                      <div class="grid w-full grid-cols-[2%_16%_82%] items-center gap-4 bg-[#2A2E35] px-4 py-3 pr-16">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-red-600 mt-1 shrink-0"></i>
-                        <div class="text-white">Engine</div>
-                        <div class="text-gray-400 break-words overflow-hidden">
-                          All internally lubricated parts including camshafts, followers, rockers, crankshaft, bearings, pistons, rings, gears, valves, chains, guides, and seals.
-                          <span class="text-white">(Excludes burnt/pitted valves and valve seats.)</span>
-                        </div>
-                      </div>
-                  
-                      <div class="grid w-full grid-cols-[2%_16%_82%] items-center gap-4 bg-[#24272D] px-4 py-3 pr-16">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-red-600 mt-1 shrink-0"></i>
-                        <div class="text-white">Flywheels & Drive Plates</div>
-                        <div class="text-gray-400 break-words overflow-hidden">
-                          Flexible drive plate for automatic transmission torque converter, solid & dual mass flywheels & starter ring.
-                          <span class="text-white">Flywheels damaged by clutch friction not covered.</span>
-                        </div>
-                      </div>
-                  
-                      <div class="grid w-full grid-cols-[2%_16%_82%] items-center gap-4 bg-[#2A2E35] px-4 py-3 pr-16">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-red-600 mt-1 shrink-0"></i>
-                        <div class="text-white">Fuel System</div>
-                        <div class="text-gray-400 break-words overflow-hidden">
-                          Airflow sensors, fuel gauge sender, pressure regulators, accumulators, fuel pumps (pre/low/high pressure), and injectors (petrol, diesel, single-point).
-                        </div>
-                      </div>
-                  
-                      <div class="grid w-full grid-cols-[2%_16%_82%] items-center gap-4 bg-[#24272D] px-4 py-3 pr-16">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-red-600 mt-1 shrink-0"></i>
-                        <div class="text-white">Gearboxes</div>
-                        <div class="text-gray-400 break-words overflow-hidden">
-                          Manual, auto, hybrid, 4WD transfer, CVT, actuators, clutch packs, modulator valves, selector forks, shafts, synchronisers, gears, valve blocks.
-                        </div>
-                      </div>
-                  
-                      <div class="grid w-full grid-cols-[2%_16%_82%] items-center gap-4 bg-[#2A2E35] px-4 py-3 pr-16">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-red-600 mt-1 shrink-0"></i>
-                        <div class="text-white">Ignition System</div>
-                        <div class="text-gray-400 break-words overflow-hidden">
-                          Camshaft sensors and crankshaft ignition.
-                        </div>
-                      </div>
-                  
-                      <div class="grid w-full grid-cols-[2%_16%_82%] items-center gap-4 bg-[#24272D] px-4 py-3 pr-16">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-red-600 mt-1 shrink-0"></i>
-                        <div class="text-white">Oil Seals & Gaskets</div>
-                        <div class="text-gray-400 break-words overflow-hidden">
-                          Crankshaft rear oil seal & main gearbox input shaft oil seal are covered. Other seals & gaskets only if leak requires unit removal.
-                          <span class="text-white font-semibold">(Not covered: Mist/leak not requiring removal.)</span>
-                        </div>
-                      </div>
-                  
-                      <div class="grid w-full grid-cols-[2%_16%_82%] items-center gap-4 bg-[#2A2E35] px-4 py-3 pr-16">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-red-600 mt-1 shrink-0"></i>
-                        <div class="text-white">Steering Column</div>
-                        <div class="text-gray-400 break-words overflow-hidden">
-                          Tilt mechanism & couplings, power steering pump, reservoir, pressure pipes, steering & idler boxes, rack and pinion system.
-                        </div>
-                      </div>
-                  
-                      <div class="grid w-full grid-cols-[2%_16%_82%] items-center gap-4 bg-[#24272D] px-4 py-3 pr-16">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-red-600 mt-1 shrink-0"></i>
-                        <div class="text-white">Suspension</div>
-                        <div class="text-gray-400 break-words overflow-hidden">
-                          Wheel bearings.
-                        </div>
-                      </div>
-                  
-                      <div class="grid w-full grid-cols-[2%_16%_82%] items-center gap-4 bg-[#2A2E35] px-4 py-3 pr-16">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-red-600 mt-1 shrink-0"></i>
-                        <div class="text-white">Transmission</div>
-                        <div class="text-gray-400 break-words overflow-hidden">
-                          Differentials (front, rear, center), CV joints, shafts, constant velocity joints, crown wheels & pinions, bearings, bushes, universal joints, propshafts.
-                        </div>
-                      </div>
-                  
-                      <div class="grid w-full grid-cols-[2%_16%_82%] items-center gap-4 bg-[#24272D] px-4 py-3 pr-16">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-red-600 mt-1 shrink-0"></i>
-                        <div class="text-white">Turbocharger</div>
-                        <div class="text-gray-400 break-words overflow-hidden">
-                          Turbocharger unit only.
-                        </div>
-                      </div>
-                  
-                      <div class="grid w-full grid-cols-[2%_16%_82%] items-center gap-4 bg-[#2A2E35] px-4 py-3 pr-16">
-                        <i data-lucide="check-circle" class="w-5 h-5 text-red-600 mt-1 shrink-0"></i>
-                        <div class="text-white">Also Covered</div>
-                        <div class="text-gray-400 break-words overflow-hidden">
-                          Crankshaft pulley, cylinder head gasket, camshaft drive belts & tensioners (covered if last change was per manufacturer’s service schedule).
-                        </div>
-                      </div>
-                  
-                    </div>
-                  </div>
-            </div>
-
-            <div>
-                <div class="inline-block">
-                    <h2 class="text-xl font-light uppercase tracking-[0.25em] mb-2">WARRANTY EXTENSION</h2>
-                    <div class="h-px bg-white/50 w-full"></div>
-                </div>
-                <div class="mt-3 bg-[#1E2126] text-white shadow-lg overflow-hidden">
-                  <table class="w-full text-sm">
-                    <thead>
-                      <tr class="bg-[#24272D] text-left text-white uppercase text-xs tracking-widest">
-                        <th class="px-6 py-3">Extend your 6 month warranty</th>
-                        <th class="px-6 py-3">Price</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr class="">
-                        <td class="px-6 py-4 text-gray-300">An additional 6 months</td>
-                        <td class="px-6 py-4 text-gray-300">£150.00</td>
-                      </tr>
-                      <tr class="bg-[#2A2E35]">
-                        <td class="px-6 py-4 text-gray-300">An additional 1 year</td>
-                        <td class="px-6 py-4 text-gray-300">£250.00</td>
-                      </tr>
-                      <tr>
-                        <td class="px-6 py-4 text-gray-300">An additional two years</td>
-                        <td class="px-6 py-4 text-gray-300">£350.00</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-
-
-                <div class="inline-block mt-3">
-                  <h2 class="text-xl font-light uppercase tracking-[0.25em] mb-2">FEATURED VEHICLE</h2>
-                  <div class="h-px bg-white/50 w-full"></div>
-              </div>
-              <div class="bg-[#2A2E35] rounded-lg shadow-md overflow-hidden mt-3">
-                  <!-- Vehicle Image -->
-                  <img src="https://img.cdn.dragon2000.net/C2846/U737/IMG_34382-medium.jpg" alt="Porsche Cayman GT4"
-                      class="w-full h-auto" />
-
-                  <!-- Info Row -->
-                  <div class="flex">
-                      <!-- Left Text Block -->
-                      <div class="flex-1 bg-[#2A2E35] p-4">
-                          <h3 class="text-white font-semibold text-sm">PORSCHE CAYMAN 981 GT4</h3>
-                          <p class="text-xs text-gray-400 leading-snug">
-                              3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6 (385ps)
-                          </p>
-                          <p class="text-white mt-1 font-medium text-base">£57,980</p>
-                      </div>
-
-                      <!-- Right Button Block -->
-                      <div class="bg-[#1E2126] flex items-center justify-center p-4">
-                          <button
-                              class="text-sm border border-white text-white px-4 py-2 rounded hover:bg-white hover:text-black transition">
-                              Details
-                          </button>
-                      </div>
-                  </div>
-              </div>
-            </div>
-
-        </div>
-    </div>
+  </div>
 
 
 </body>
 
 <footer class="bg-[#16181c] text-[#333] text-sm pt-16 pb-8 text-white">
-    <div class="max-w-screen-xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-10">
+  <div class="max-w-screen-xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-10">
 
-        <!-- Social -->
-        <div>
-            <img src="Images/T1White.png" alt="Tier One Logo" class="h-20 mb-4">
+    <!-- Social -->
+    <div>
+      <img src="Images/T1White.png" alt="Tier One Logo" class="h-20 mb-4">
 
-            <div class="space-y-3 text-sm">
-                <!-- Facebook -->
-                <a href="https://facebook.com" target="_blank"
-                    class="flex items-center gap-2 hover:opacity-80 transition">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
-                        alt="Facebook" class="w-5 h-5" />
-                    <span>Facebook</span>
-                </a>
+      <div class="space-y-3 text-sm">
+        <!-- Facebook -->
+        <a href="https://facebook.com" target="_blank" class="flex items-center gap-2 hover:opacity-80 transition">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"
+            class="w-5 h-5" />
+          <span>Facebook</span>
+        </a>
 
-                <!-- Instagram -->
-                <a href="https://instagram.com" target="_blank"
-                    class="flex items-center gap-2 hover:opacity-80 transition">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"
-                        class="w-5 h-5 rounded-md" />
-                    <span>Instagram</span>
-                </a>
-            </div>
-        </div>
-
-        <!-- About -->
-        <div>
-            <h4 class="font-semibold text-lg mb-3">About</h4>
-            <ul class="space-y-2">
-                <li><a href="#" class="hover:text-gold transition">Our Story</a></li>
-                <li><a href="#" class="hover:text-gold transition">The Team</a></li>
-                <li><a href="#" class="hover:text-gold transition">Our Values</a></li>
-                <li><a href="#" class="hover:text-gold transition">The History</a></li>
-            </ul>
-        </div>
-
-        <!-- Top Brands -->
-        <div>
-            <h4 class="font-semibold text-lg mb-3">Useful Links</h4>
-            <ul class="space-y-2">
-                <li><a href="#" class="hover:text-gold transition">Privacy Policy</a></li>
-                <li><a href="#" class="hover:text-gold transition">Insurance</a></li>
-                <li><a href="#" class="hover:text-gold transition">Terms & Conditions</a></li>
-                <li><a href="#" class="hover:text-gold transition">Cookies</a></li>
-                <li><a href="#" class="hover:text-gold transition">Complaints</a></li>
-                <li><a href="#" class="hover:text-gold transition">FAQ</a></li>
-            </ul>
-        </div>
-
-        <!-- Opening Times -->
-        <div>
-            <h4 class="flex items-center gap-2 font-semibold text-lg mb-4">
-                Opening Times
-            </h4>
-            <ul class="space-y-1 font-medium text-sm">
-                <li class="flex justify-between">
-                    <span>Monday</span><span>08:00 - 18:00</span>
-                </li>
-                <li class="flex justify-between">
-                    <span>Tuesday</span><span>08:00 - 18:00</span>
-                </li>
-                <li class="flex justify-between">
-                    <span>Wednesday</span><span>08:00 - 18:00</span>
-                </li>
-                <li class="flex justify-between">
-                    <span>Thursday</span><span>08:00 - 18:00</span>
-                </li>
-                <li class="flex justify-between">
-                    <span>Friday</span><span>08:00 - 18:00</span>
-                </li>
-                <li class="flex justify-between">
-                    <span>Saturday</span><span>08:00 - 18:00</span>
-                </li>
-                <li class="flex justify-between">
-                    <span>Sunday</span><span class="text-neutral-500">Appointment Only</span>
-                </li>
-            </ul>
-        </div>
-
+        <!-- Instagram -->
+        <a href="https://instagram.com" target="_blank" class="flex items-center gap-2 hover:opacity-80 transition">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"
+            class="w-5 h-5 rounded-md" />
+          <span>Instagram</span>
+        </a>
+      </div>
     </div>
 
-    <div class="border-t border-neutral-300 pt-6 mt-8 bg">
-        <div
-            class="max-w-screen-xl mx-auto px-6 flex flex-col sm:flex-row justify-between text-xs text-neutral-500 gap-4">
-
-            <!-- Left Side (Legal Text) -->
-            <div class="space-y-1">
-                <p>Tier One Automotive Ltd is a company registered in England and Wales.</p>
-                <p>Company registration number: 08879100</p>
-                <p>
-                    <a href="#" class="underline hover:text-[#b59f61] transition">Cookies</a> |
-                    <a href="#" class="underline hover:text-[#b59f61] transition">Privacy Policy</a>
-                </p>
-            </div>
-
-            <!-- Right Side (Credit) -->
-            <div class="text-sm font-medium">
-                © 2025 Designed & Powered by
-                <a href="https://alexlovelock.dev" class="underline hover:text-[#b59f61] transition">Alex
-                    Lovelock</a>
-            </div>
-
-        </div>
+    <!-- About -->
+    <div>
+      <h4 class="font-semibold text-lg mb-3">About</h4>
+      <ul class="space-y-2">
+        <li><a href="#" class="hover:text-gold transition">Our Story</a></li>
+        <li><a href="#" class="hover:text-gold transition">The Team</a></li>
+        <li><a href="#" class="hover:text-gold transition">Our Values</a></li>
+        <li><a href="#" class="hover:text-gold transition">The History</a></li>
+      </ul>
     </div>
+
+    <!-- Top Brands -->
+    <div>
+      <h4 class="font-semibold text-lg mb-3">Useful Links</h4>
+      <ul class="space-y-2">
+        <li><a href="#" class="hover:text-gold transition">Privacy Policy</a></li>
+        <li><a href="#" class="hover:text-gold transition">Insurance</a></li>
+        <li><a href="#" class="hover:text-gold transition">Terms & Conditions</a></li>
+        <li><a href="#" class="hover:text-gold transition">Cookies</a></li>
+        <li><a href="#" class="hover:text-gold transition">Complaints</a></li>
+        <li><a href="#" class="hover:text-gold transition">FAQ</a></li>
+      </ul>
+    </div>
+
+    <!-- Opening Times -->
+    <div>
+      <h4 class="flex items-center gap-2 font-semibold text-lg mb-4">
+        Opening Times
+      </h4>
+      <ul class="space-y-1 font-medium text-sm">
+        <li class="flex justify-between">
+          <span>Monday</span><span>08:00 - 18:00</span>
+        </li>
+        <li class="flex justify-between">
+          <span>Tuesday</span><span>08:00 - 18:00</span>
+        </li>
+        <li class="flex justify-between">
+          <span>Wednesday</span><span>08:00 - 18:00</span>
+        </li>
+        <li class="flex justify-between">
+          <span>Thursday</span><span>08:00 - 18:00</span>
+        </li>
+        <li class="flex justify-between">
+          <span>Friday</span><span>08:00 - 18:00</span>
+        </li>
+        <li class="flex justify-between">
+          <span>Saturday</span><span>08:00 - 18:00</span>
+        </li>
+        <li class="flex justify-between">
+          <span>Sunday</span><span class="text-neutral-500">Appointment Only</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="border-t border-neutral-300 pt-6 mt-8 bg">
+    <div class="max-w-screen-xl mx-auto px-6 flex flex-col sm:flex-row justify-between text-xs text-neutral-500 gap-4">
+
+      <!-- Left Side (Legal Text) -->
+      <div class="space-y-1">
+        <p>Tier One Automotive Ltd is a company registered in England and Wales.</p>
+        <p>Company registration number: 08879100</p>
+        <p>
+          <a href="#" class="underline hover:text-[#b59f61] transition">Cookies</a> |
+          <a href="#" class="underline hover:text-[#b59f61] transition">Privacy Policy</a>
+        </p>
+      </div>
+
+      <!-- Right Side (Credit) -->
+      <div class="text-sm font-medium">
+        © 2025 Designed & Powered by
+        <a href="https://alexlovelock.dev" class="underline hover:text-[#b59f61] transition">Alex
+          Lovelock</a>
+      </div>
+
+    </div>
+  </div>
 </footer>
 <script>
-    lucide.createIcons();
+  lucide.createIcons();
 </script>
 
 </html>
