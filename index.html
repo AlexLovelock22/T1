@@ -7,6 +7,7 @@
     <title>Tier One Automotive</title>
     <link href="output.css" rel="stylesheet" />
     <link href="styles.css" rel="stylesheet" />
+    <script src="navbar.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,38 +39,112 @@
         </video>
 
         <!-- Navbar -->
-        <nav
-            class="h-24 px-4 sm:px-8 sticky top-0 z-50 bg-black/40 backdrop-blur-md border-b border-white/10 shadow-lg">
-            <div class="max-w-screen-xl mx-auto h-full flex items-center justify-between relative">
+        <nav class="h-24 w-full absolute top-0 left-0 bg-black/40 backdrop-blur-md border-b border-white/10 shadow-lg">
+            <div class="max-w-screen-xl mx-auto h-full flex items-center justify-between px-4 sm:px-8 relative">
                 <!-- Left Icons -->
                 <div class="flex items-center gap-4">
-                    <button class="p-2 rounded-full hover:bg-white/10 transition-colors" aria-label="Call">
-                        <i data-lucide="phone" class="w-5 h-5 text-white"></i>
-                    </button>
-                    <button class="p-2 rounded-full hover:bg-white/10 transition-colors" aria-label="Email">
-                        <i data-lucide="mail" class="w-5 h-5 text-white"></i>
-                    </button>
+                    <a href="contactus.html" aria-label="Call">
+                        <button class="p-2 rounded-full hover:bg-white/10 transition-colors">
+                            <i data-lucide="phone" class="w-5 h-5 text-white"></i>
+                        </button>
+                    </a>
+                    <a href="contactus.html" aria-label="Email">
+                        <button class="p-2 rounded-full hover:bg-white/10 transition-colors">
+                            <i data-lucide="mail" class="w-5 h-5 text-white"></i>
+                        </button>
+                    </a>
                 </div>
 
-                <!-- Right Icons -->
-                <div class="flex items-center gap-4">
-                    <button class="p-2 rounded-full hover:bg-white/10 transition-colors" aria-label="Search">
-                        <i data-lucide="search" class="w-5 h-5 text-white"></i>
-                    </button>
-                    <button class="p-2 rounded-full hover:bg-white/10 transition-colors" aria-label="Filter">
-                        <i data-lucide="filter" class="w-5 h-5 text-white"></i>
-                    </button>
-                </div>
+               <!-- Right Icons -->
+      <div class="flex items-center gap-2">
+        <!-- Search Toggle -->
+        <div id="search-container" class="relative flex items-center">
+          <!-- Search Icon Button -->
+          <button id="toggle-search" class="p-2 rounded-full hover:bg-white/10 transition-colors" aria-label="Search">
+            <i data-lucide="search" class="w-5 h-5 text-white"></i>
+          </button>
+
+          <!-- Expanding Form -->
+          <div id="search-box"
+            class="absolute right-0 top-1/2 -translate-y-1/2 bg-[#2A2E35] text-white rounded-full overflow-hidden px-4 py-2 flex items-center gap-1 large-shadow transform scale-x-0 opacity-0 transition-all duration-300 origin-right z-50">
+
+            <!-- Make Dropdown -->
+            <div class="relative">
+              <select class="bg-transparent text-white appearance-none pr-6 pl-1 py-1 rounded focus:outline-none">
+                <option class="bg-[#2A2E35]">Make</option>
+                <option class="bg-[#2A2E35]">Audi</option>
+                <option class="bg-[#2A2E35]">BMW</option>
+              </select>
+              <i data-lucide="chevron-down"
+                class="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 text-white"></i>
+            </div>
+
+            <!-- Model Dropdown -->
+            <div class="relative">
+              <select class="bg-[transparent] text-white appearance-none pr-6 pl-3 py-1 rounded focus:outline-none">
+                <option class="bg-[#2A2E35]">Model</option>
+                <option class="bg-[#2A2E35]">M3</option>
+                <option class="bg-[#2A2E35]">RS5</option>
+              </select>
+              <i data-lucide="chevron-down"
+                class="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 text-white "></i>
+            </div>
+
+            <!-- Search Button -->
+            <button class="text-white pl-3">
+              <i data-lucide="search" class="w-5 h-5"></i>
+            </button>
+          </div>
+        </div>
+        <button class="p-2 rounded-full hover:bg-white/10 transition-colors" aria-label="Filter">
+          <i data-lucide="menu" class="w-5 h-5 text-white"></i>
+        </button>
+      </div>
 
                 <!-- Center Logo -->
                 <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                    <a href="/" aria-label="Home">
+                    <a href="index2.html" aria-label="Home">
                         <img src="Images/T1White.png" alt="TierOne Logo"
                             class="h-16 sm:h-20 object-contain hover:opacity-90 transition-opacity duration-200" />
                     </a>
                 </div>
             </div>
         </nav>
+
+        <!-- Overlay -->
+        <div id="menu-overlay" class="fixed inset-0 bg-black/70 z-90 hidden"></div>
+
+        <!-- Slide-in Menu -->
+        <div id="side-menu"
+            class="fixed top-0 right-0 h-full w-96 bg-[#0f1012] text-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out shadow-lg">
+            <div class="flex items-center justify-between px-6 h-24 border-b border-white/10">
+                <img src="Images/T1White.png" alt="Tier One Logo" class="h-16 object-contain" />
+                <button id="close-menu" class="text-white" aria-label="Close">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <ul class="pl-3 pt-4 tracking-wide uppercase text-lg tracking-[0.15rem]">
+                <li><a href="index2.html" class="block px-3 py-2 rounded transition duration-200 transform hover:translate-x-2 hover:bg-[#1a1b1e] hover:text-gold">Home</a></li>
+                <li><a href="stock.html" class="block px-3 py-2 rounded transition duration-200 transform hover:translate-x-2 hover:bg-[#1a1b1e] hover:text-gold">View Stock</a></li>
+                <li><a href="sellyourcar.html" class="block px-3 py-2 rounded transition duration-200 transform hover:translate-x-2 hover:bg-[#1a1b1e] hover:text-gold">Sell My Car</a></li>
+                <li><a href="preparation.html" class="block px-3 py-2 rounded transition duration-200 transform hover:translate-x-2 hover:bg-[#1a1b1e] hover:text-gold">Preparation</a></li>
+                <li><a href="finance.html" class="block px-3 py-2 rounded transition duration-200 transform hover:translate-x-2 hover:bg-[#1a1b1e] hover:text-gold">Finance</a></li>
+                <li><a href="warranty.html" class="block px-3 py-2 rounded transition duration-200 transform hover:translate-x-2 hover:bg-[#1a1b1e] hover:text-gold">Warranty</a></li>
+                <li><a href="previouslysold.html" class="block px-3 py-2 rounded transition duration-200 transform hover:translate-x-2 hover:bg-[#1a1b1e] hover:text-gold">Previously Sold</a></li>
+                <li><a href="sourcing.html" class="block px-3 py-2 rounded transition duration-200 transform hover:translate-x-2 hover:bg-[#1a1b1e] hover:text-gold">Vehicle Sourcing</a></li>
+            </ul>
+
+            <div class="absolute bottom-6 left-0 w-full px-6 border-t border-white/10 pt-6 flex gap-4 justify-start">
+                <a href="https://instagram.com" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"
+                        class="w-7 h-7 rounded-md">
+                </a>
+                <a href="https://facebook.com" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+                        alt="Facebook" class="w-7 h-7">
+                </a>
+            </div>
+        </div>
 
         <!-- CTA BUTTON GROUP -->
         <div
@@ -98,610 +173,519 @@
     </section>
 
     <!-- Tagline -->
-    <section class="bg-gold text-white py-12 text-center text-2xl tracking-wide">
-        <p>Driven by passion. Defined by precision.</p>
-    </section>
+    <div class="flex justify-center items-center pt-16 pb-8 bg-dark-blue">
+        <h2 class="text-white text-3xl font-light tracking-[0.4em]">SERVICES</h2>
+    </div>
+    <div class="w-full grid grid-cols-1 md:grid-cols-4 px-6 gap-8 py-8 bg-dark-blue">
 
-
-    <div class="bg-[#F4F3ED] py-6">
-        <div class=" mx-auto px-4">
-            <!-- New Arrivals Heading -->
-            <div class="text-center">
-                <h2 class="text-2xl font-semibold text-gray-900 tracking-wide py-8">New Arrivals</h2>
-            </div>
-            <div class="embla p-6">
-
-
-                <div class="embla__container gap-4 px-4">
-
-                    <!-- Old slide, blank. Replace it when changing card structure so you can just edit 1 at once. (Aim to have 7 cards atleast when testing) -->
-                    <!-- <div class="embla__slide bg-gray-200 flex items-center justify-center text-center h-[24rem]">Slide 5</div> -->
-
-                    <div
-                        class="embla__slide bg-white rounded-lg shadow overflow-hidden h-[24rem] flex flex-col relative">
-                        <!-- Background logo -->
-                        <img src="Images/PorscheLogoMasked.png" alt="Porsche Logo"
-                            class="absolute -bottom-4 -right-2 w-52 opacity-60 pointer-events-none select-none z-0" />
-
-                        <!-- Top grid -->
-                        <div class="grid grid-cols-3 grid-rows-2 gap-2 flex-grow z-10">
-                            <div
-                                class="col-span-2 row-span-2 bg-gray-300 bg-[url('https://img.cdn.dragon2000.net/C2846/U737/IMG_34382-medium.jpg')] bg-cover bg-center">
-                            </div>
-                            <div
-                                class="col-span-1 row-span-1 bg-gray-200 bg-[url('https://img.cdn.dragon2000.net/C2846/U737/IMG_34375-medium.jpg')] bg-cover bg-center">
-                            </div>
-                            <div
-                                class="col-span-1 row-span-1 bg-gray-400 bg-[url('https://img.cdn.dragon2000.net/C2846/U737/IMG_34372-medium.jpg')] bg-cover bg-center">
-                            </div>
-                        </div>
-
-                        <!-- Bottom text -->
-                        <div class="p-4 pt-6 space-y-2 z-10">
-                            <h3 class="text-sm font-semibold uppercase truncate">Porsche Cayman 981 GT4</h3>
-                            <div class="text-xs text-gray-500">3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6 (385 ps)</div>
-
-                            <div class="grid grid-cols-2 gap-2 text-sm mt-2">
-                                <div class="flex items-center space-x-2">
-                                    <i data-lucide="calendar" class="w-4 h-4 text-gray-500"></i>
-                                    <span>2015</span>
-                                </div>
-                                <div class="flex items-center space-x-2">
-                                    <i data-lucide="gauge" class="w-4 h-4 text-gray-500"></i>
-                                    <span>29,500</span>
-                                </div>
-                                <div class="flex items-center space-x-2">
-                                    <i data-lucide="droplet" class="w-4 h-4 text-gray-500"></i>
-                                    <span>Guards Red</span>
-                                </div>
-                            </div>
-
-                            <div class="mt-4 flex items-center justify-between">
-                                <div class="text-lg font-bold">£57, 980</div>
-                                <button
-                                    class="px-4 py-1 border border-black text-sm font-medium rounded-md hover:bg-black hover:text-white transition">
-                                    Details
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="embla__slide bg-white rounded-lg shadow overflow-hidden h-[24rem] flex flex-col relative">
-                        <!-- Background logo -->
-                        <img src="Images/PorscheLogoMasked.png" alt="Porsche Logo"
-                            class="absolute -bottom-4 -right-2 w-52 opacity-60 pointer-events-none select-none z-0" />
-
-                        <!-- Top grid -->
-                        <div class="grid grid-cols-3 grid-rows-2 gap-2 flex-grow z-10">
-                            <div
-                                class="col-span-2 row-span-2 bg-gray-300 bg-[url('https://img.cdn.dragon2000.net/C2846/U737/IMG_34382-medium.jpg')] bg-cover bg-center">
-                            </div>
-                            <div
-                                class="col-span-1 row-span-1 bg-gray-200 bg-[url('https://img.cdn.dragon2000.net/C2846/U737/IMG_34375-medium.jpg')] bg-cover bg-center">
-                            </div>
-                            <div
-                                class="col-span-1 row-span-1 bg-gray-400 bg-[url('https://img.cdn.dragon2000.net/C2846/U737/IMG_34372-medium.jpg')] bg-cover bg-center">
-                            </div>
-                        </div>
-
-                        <!-- Bottom text -->
-                        <div class="p-4 pt-6 space-y-2 z-10">
-                            <h3 class="text-sm font-semibold uppercase truncate">Porsche Cayman 981 GT4</h3>
-                            <div class="text-xs text-gray-500">3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6 (385 ps)</div>
-
-                            <div class="grid grid-cols-2 gap-2 text-sm mt-2">
-                                <div class="flex items-center space-x-2">
-                                    <i data-lucide="calendar" class="w-4 h-4 text-gray-500"></i>
-                                    <span>2015</span>
-                                </div>
-                                <div class="flex items-center space-x-2">
-                                    <i data-lucide="gauge" class="w-4 h-4 text-gray-500"></i>
-                                    <span>29,500</span>
-                                </div>
-                                <div class="flex items-center space-x-2">
-                                    <i data-lucide="droplet" class="w-4 h-4 text-gray-500"></i>
-                                    <span>Guards Red</span>
-                                </div>
-                            </div>
-
-                            <div class="mt-4 flex items-center justify-between">
-                                <div class="text-lg font-bold">£57, 980</div>
-                                <button
-                                    class="px-4 py-1 border border-black text-sm font-medium rounded-md hover:bg-black hover:text-white transition">
-                                    Details
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="embla__slide bg-white rounded-lg shadow overflow-hidden h-[24rem] flex flex-col relative">
-                        <!-- Background logo -->
-                        <img src="Images/PorscheLogoMasked.png" alt="Porsche Logo"
-                            class="absolute -bottom-4 -right-2 w-52 opacity-60 pointer-events-none select-none z-0" />
-
-                        <!-- Top grid -->
-                        <div class="grid grid-cols-3 grid-rows-2 gap-2 flex-grow z-10">
-                            <div
-                                class="col-span-2 row-span-2 bg-gray-300 bg-[url('https://img.cdn.dragon2000.net/C2846/U737/IMG_34382-medium.jpg')] bg-cover bg-center">
-                            </div>
-                            <div
-                                class="col-span-1 row-span-1 bg-gray-200 bg-[url('https://img.cdn.dragon2000.net/C2846/U737/IMG_34375-medium.jpg')] bg-cover bg-center">
-                            </div>
-                            <div
-                                class="col-span-1 row-span-1 bg-gray-400 bg-[url('https://img.cdn.dragon2000.net/C2846/U737/IMG_34372-medium.jpg')] bg-cover bg-center">
-                            </div>
-                        </div>
-
-                        <!-- Bottom text -->
-                        <div class="p-4 pt-6 space-y-2 z-10">
-                            <h3 class="text-sm font-semibold uppercase truncate">Porsche Cayman 981 GT4</h3>
-                            <div class="text-xs text-gray-500">3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6 (385 ps)</div>
-
-                            <div class="grid grid-cols-2 gap-2 text-sm mt-2">
-                                <div class="flex items-center space-x-2">
-                                    <i data-lucide="calendar" class="w-4 h-4 text-gray-500"></i>
-                                    <span>2015</span>
-                                </div>
-                                <div class="flex items-center space-x-2">
-                                    <i data-lucide="gauge" class="w-4 h-4 text-gray-500"></i>
-                                    <span>29,500</span>
-                                </div>
-                                <div class="flex items-center space-x-2">
-                                    <i data-lucide="droplet" class="w-4 h-4 text-gray-500"></i>
-                                    <span>Guards Red</span>
-                                </div>
-                            </div>
-
-                            <div class="mt-4 flex items-center justify-between">
-                                <div class="text-lg font-bold">£57, 980</div>
-                                <button
-                                    class="px-4 py-1 border border-black text-sm font-medium rounded-md hover:bg-black hover:text-white transition">
-                                    Details
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="embla__slide bg-white rounded-lg shadow overflow-hidden h-[24rem] flex flex-col relative">
-                        <!-- Background logo -->
-                        <img src="Images/PorscheLogoMasked.png" alt="Porsche Logo"
-                            class="absolute -bottom-4 -right-2 w-52 opacity-60 pointer-events-none select-none z-0" />
-
-                        <!-- Top grid -->
-                        <div class="grid grid-cols-3 grid-rows-2 gap-2 flex-grow z-10">
-                            <div
-                                class="col-span-2 row-span-2 bg-gray-300 bg-[url('https://img.cdn.dragon2000.net/C2846/U737/IMG_34382-medium.jpg')] bg-cover bg-center">
-                            </div>
-                            <div
-                                class="col-span-1 row-span-1 bg-gray-200 bg-[url('https://img.cdn.dragon2000.net/C2846/U737/IMG_34375-medium.jpg')] bg-cover bg-center">
-                            </div>
-                            <div
-                                class="col-span-1 row-span-1 bg-gray-400 bg-[url('https://img.cdn.dragon2000.net/C2846/U737/IMG_34372-medium.jpg')] bg-cover bg-center">
-                            </div>
-                        </div>
-
-                        <!-- Bottom text -->
-                        <div class="p-4 pt-6 space-y-2 z-10">
-                            <h3 class="text-sm font-semibold uppercase truncate">Porsche Cayman 981 GT4</h3>
-                            <div class="text-xs text-gray-500">3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6 (385 ps)</div>
-
-                            <div class="grid grid-cols-2 gap-2 text-sm mt-2">
-                                <div class="flex items-center space-x-2">
-                                    <i data-lucide="calendar" class="w-4 h-4 text-gray-500"></i>
-                                    <span>2015</span>
-                                </div>
-                                <div class="flex items-center space-x-2">
-                                    <i data-lucide="gauge" class="w-4 h-4 text-gray-500"></i>
-                                    <span>29,500</span>
-                                </div>
-                                <div class="flex items-center space-x-2">
-                                    <i data-lucide="droplet" class="w-4 h-4 text-gray-500"></i>
-                                    <span>Guards Red</span>
-                                </div>
-                            </div>
-
-                            <div class="mt-4 flex items-center justify-between">
-                                <div class="text-lg font-bold">£57, 980</div>
-                                <button
-                                    class="px-4 py-1 border border-black text-sm font-medium rounded-md hover:bg-black hover:text-white transition">
-                                    Details
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="embla__slide bg-white rounded-lg shadow overflow-hidden h-[24rem] flex flex-col relative">
-                        <!-- Background logo -->
-                        <img src="Images/PorscheLogoMasked.png" alt="Porsche Logo"
-                            class="absolute -bottom-4 -right-2 w-52 opacity-60 pointer-events-none select-none z-0" />
-
-                        <!-- Top grid -->
-                        <div class="grid grid-cols-3 grid-rows-2 gap-2 flex-grow z-10">
-                            <div
-                                class="col-span-2 row-span-2 bg-gray-300 bg-[url('https://img.cdn.dragon2000.net/C2846/U737/IMG_34382-medium.jpg')] bg-cover bg-center">
-                            </div>
-                            <div
-                                class="col-span-1 row-span-1 bg-gray-200 bg-[url('https://img.cdn.dragon2000.net/C2846/U737/IMG_34375-medium.jpg')] bg-cover bg-center">
-                            </div>
-                            <div
-                                class="col-span-1 row-span-1 bg-gray-400 bg-[url('https://img.cdn.dragon2000.net/C2846/U737/IMG_34372-medium.jpg')] bg-cover bg-center">
-                            </div>
-                        </div>
-
-                        <!-- Bottom text -->
-                        <div class="p-4 pt-6 space-y-2 z-10">
-                            <h3 class="text-sm font-semibold uppercase truncate">Porsche Cayman 981 GT4</h3>
-                            <div class="text-xs text-gray-500">3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6 (385 ps)</div>
-
-                            <div class="grid grid-cols-2 gap-2 text-sm mt-2">
-                                <div class="flex items-center space-x-2">
-                                    <i data-lucide="calendar" class="w-4 h-4 text-gray-500"></i>
-                                    <span>2015</span>
-                                </div>
-                                <div class="flex items-center space-x-2">
-                                    <i data-lucide="gauge" class="w-4 h-4 text-gray-500"></i>
-                                    <span>29,500</span>
-                                </div>
-                                <div class="flex items-center space-x-2">
-                                    <i data-lucide="droplet" class="w-4 h-4 text-gray-500"></i>
-                                    <span>Guards Red</span>
-                                </div>
-                            </div>
-
-                            <div class="mt-4 flex items-center justify-between">
-                                <div class="text-lg font-bold">£57, 980</div>
-                                <button
-                                    class="px-4 py-1 border border-black text-sm font-medium rounded-md hover:bg-black hover:text-white transition">
-                                    Details
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="embla__slide bg-white rounded-lg shadow overflow-hidden h-[24rem] flex flex-col relative">
-                        <!-- Background logo -->
-                        <img src="Images/PorscheLogoMasked.png" alt="Porsche Logo"
-                            class="absolute -bottom-4 -right-2 w-52 opacity-60 pointer-events-none select-none z-0" />
-
-                        <!-- Top grid -->
-                        <div class="grid grid-cols-3 grid-rows-2 gap-2 flex-grow z-10">
-                            <div
-                                class="col-span-2 row-span-2 bg-gray-300 bg-[url('https://img.cdn.dragon2000.net/C2846/U737/IMG_34382-medium.jpg')] bg-cover bg-center">
-                            </div>
-                            <div
-                                class="col-span-1 row-span-1 bg-gray-200 bg-[url('https://img.cdn.dragon2000.net/C2846/U737/IMG_34375-medium.jpg')] bg-cover bg-center">
-                            </div>
-                            <div
-                                class="col-span-1 row-span-1 bg-gray-400 bg-[url('https://img.cdn.dragon2000.net/C2846/U737/IMG_34372-medium.jpg')] bg-cover bg-center">
-                            </div>
-                        </div>
-
-                        <!-- Bottom text -->
-                        <div class="p-4 pt-6 space-y-2 z-10">
-                            <h3 class="text-sm font-semibold uppercase truncate">Porsche Cayman 981 GT4</h3>
-                            <div class="text-xs text-gray-500">3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6 (385 ps)</div>
-
-                            <div class="grid grid-cols-2 gap-2 text-sm mt-2">
-                                <div class="flex items-center space-x-2">
-                                    <i data-lucide="calendar" class="w-4 h-4 text-gray-500"></i>
-                                    <span>2015</span>
-                                </div>
-                                <div class="flex items-center space-x-2">
-                                    <i data-lucide="gauge" class="w-4 h-4 text-gray-500"></i>
-                                    <span>29,500</span>
-                                </div>
-                                <div class="flex items-center space-x-2">
-                                    <i data-lucide="droplet" class="w-4 h-4 text-gray-500"></i>
-                                    <span>Guards Red</span>
-                                </div>
-                            </div>
-
-                            <div class="mt-4 flex items-center justify-between">
-                                <div class="text-lg font-bold">£57, 980</div>
-                                <button
-                                    class="px-4 py-1 border border-black text-sm font-medium rounded-md hover:bg-black hover:text-white transition">
-                                    Details
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="embla__slide bg-white rounded-lg shadow overflow-hidden h-[24rem] flex flex-col relative">
-                        <!-- Background logo -->
-                        <img src="Images/PorscheLogoMasked.png" alt="Porsche Logo"
-                            class="absolute -bottom-4 -right-2 w-52 opacity-60 pointer-events-none select-none z-0" />
-
-                        <!-- Top grid -->
-                        <div class="grid grid-cols-3 grid-rows-2 gap-2 flex-grow z-10">
-                            <div
-                                class="col-span-2 row-span-2 bg-gray-300 bg-[url('https://img.cdn.dragon2000.net/C2846/U737/IMG_34382-medium.jpg')] bg-cover bg-center">
-                            </div>
-                            <div
-                                class="col-span-1 row-span-1 bg-gray-200 bg-[url('https://img.cdn.dragon2000.net/C2846/U737/IMG_34375-medium.jpg')] bg-cover bg-center">
-                            </div>
-                            <div
-                                class="col-span-1 row-span-1 bg-gray-400 bg-[url('https://img.cdn.dragon2000.net/C2846/U737/IMG_34372-medium.jpg')] bg-cover bg-center">
-                            </div>
-                        </div>
-
-                        <!-- Bottom text -->
-                        <div class="p-4 pt-6 space-y-2 z-10">
-                            <h3 class="text-sm font-semibold uppercase truncate">Porsche Cayman 981 GT4</h3>
-                            <div class="text-xs text-gray-500">3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6 (385 ps)</div>
-
-                            <div class="grid grid-cols-2 gap-2 text-sm mt-2">
-                                <div class="flex items-center space-x-2">
-                                    <i data-lucide="calendar" class="w-4 h-4 text-gray-500"></i>
-                                    <span>2015</span>
-                                </div>
-                                <div class="flex items-center space-x-2">
-                                    <i data-lucide="gauge" class="w-4 h-4 text-gray-500"></i>
-                                    <span>29,500</span>
-                                </div>
-                                <div class="flex items-center space-x-2">
-                                    <i data-lucide="droplet" class="w-4 h-4 text-gray-500"></i>
-                                    <span>Guards Red</span>
-                                </div>
-                            </div>
-
-                            <div class="mt-4 flex items-center justify-between">
-                                <div class="text-lg font-bold">£57, 980</div>
-                                <button
-                                    class="px-4 py-1 border border-black text-sm font-medium rounded-md hover:bg-black hover:text-white transition">
-                                    Details
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-
-                <div class="mt-4 flex justify-center">
-                    <button
-                        class="px-4 py-1 text-2xl transition mt-2 text-center flex items-center justify-center space-x-2 group ">
-                        View All Stock
-                        <i data-lucide="chevron-right"
-                            class="w-8 h-8 transform transition-transform group-hover:translate-x-1 gold"></i>
-                    </button>
-                </div>
+        <!-- Finance Card -->
+        <div class="relative max-h-[600px] overflow-hidden shadow-lg group">
+            <img src="Images/red.png"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                alt="Finance" />
+            <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-end items-center p-6 space-y-2">
+                <div data-lucide="handshake" class="text-white w-10 h-10"></div>
+                <div class="text-white text-4xl font-semibold">Finance</div>
+                <a href="finance.html" class="text-white text-lg underline">See More</a>
             </div>
         </div>
 
+        <!-- Sell Your Car Card -->
+        <div class="relative max-h-[600px] overflow-hidden shadow-lg group">
+            <img src="Images/yellow.png"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                alt="Sell Your Car" />
+            <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-end items-center p-6 space-y-2">
+                <div data-lucide="hand-coins" class="text-white w-10 h-10"></div>
+                <div class="text-white text-4xl font-semibold">Sell Your Car</div>
+                <a href="sellyourcar.html" class="text-white text-lg underline">See More</a>
+            </div>
+        </div>
+
+        <!-- Preparation Card -->
+        <div class="relative max-h-[600px] overflow-hidden shadow-lg group">
+            <img src="Images/blue.png"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                alt="Preparation" />
+            <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-end items-center p-6 space-y-2">
+                <div data-lucide="wrench" class="text-white w-10 h-10"></div>
+                <div class="text-white text-4xl font-semibold">Preparation</div>
+                <a href="preparation.html" class="text-white text-lg underline">See More</a>
+            </div>
+        </div>
+        <div class="relative max-h-[600px] overflow-hidden shadow-lg group">
+            <img src="Images/green.png"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                alt="Finance" />
+            <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-end items-center p-6 space-y-2">
+                <div data-lucide="handshake" class="text-white w-10 h-10"></div>
+                <div class="text-white text-4xl font-semibold">Warranty</div>
+                <a href="warranty.html" class="text-white text-lg underline">See More</a>
+            </div>
+        </div>
+    </div>
 
 
 
-
-        <!-- Content Section -->
-        <section class="relative w-full bg-white text-black pt-28 pb-40 overflow-hidden">
-            <div class="grid grid-cols-1 lg:grid-cols-2 items-center relative z-10">
-                <!-- Text Content -->
-                <div class="relative px-6 sm:px-12 lg:px-20 flex gap-10 items-start">
-                    <div class="hidden lg:flex flex-col gap-8 pt-8 text-sm text-gray-600">
-                        <div class="text-left">
-                            <div class="text-2xl font-semibold text-black">320+</div>
-                            <div class="mt-1">Vehicles in Stock</div>
-                        </div>
-                        <div class="text-left">
-                            <div class="text-2xl font-semibold text-black">12 Years</div>
-                            <div class="mt-1">Industry Expertise</div>
-                        </div>
-                        <div class="text-left">
-                            <div class="text-2xl font-semibold text-black">5★</div>
-                            <div class="mt-1">Customer Satisfaction</div>
-                        </div>
+    <section class="relative w-full bg-dark-blue-light text-gray-300 overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-2 items-center relative z-10">
+            <!-- Text Content -->
+            <div class="relative px-6 sm:px-12 lg:px-20 flex gap-10 items-start">
+                <div class="hidden lg:flex flex-col gap-8 pt-8 text-xl">
+                    <div class="text-left">
+                        <div class="text-xl font-semibold ">320+</div>
+                        <div class="mt-1">Vehicles in Stock</div>
                     </div>
-                    <div class="max-w-xl space-y-6 border-l-4 border-[#b6a26c] pl-6 bg-white/90 py-8 px-6">
-                        <h2 class="text-5xl font-bold text-black leading-tight">
-                            Precision. Performance. <br class="hidden md:block" />Prestige.
-                        </h2>
-                        <p class="text-lg text-gray-700">
-                            Tier One Automotive was founded by Alex Pope after over a decade of experience in one of
-                            the
-                            UK’s most respected independent dealerships.
-                        </p>
-                        <p class="text-lg text-gray-700">
-                            Our curated range is hand-selected and obsessively prepared — tailored for discerning
-                            clients
-                            who value service, excellence, and discretion.
-                        </p>
-                        <p class="text-lg font-semibold text-black">
-                            Kings Langley showroom — 5 minutes off the M25. Nationwide delivery available.
-                        </p>
+                    <div class="text-left">
+                        <div class="text-xl font-semibold ">12 Years</div>
+                        <div class="mt-1">Industry Expertise</div>
+                    </div>
+                    <div class="text-left">
+                        <div class="text-xl font-semibold ">5★</div>
+                        <div class="mt-1">Customer Satisfaction</div>
                     </div>
                 </div>
-                <!-- Image -->
-                <div class="clipped-img overflow-hidden relative">
-                    <img src="Images/McLaren.png" alt="Tier One Jaguar"
-                        class="w-full h-full object-cover object-center shadow-xl rounded-md" />
+                <div class="max-w-3xl space-y-6 border-l-4 border-[#b6a26c] pl-6 py-8 px-6">
+                    <h2 class="text-4xl font-bold leading-tight">
+                        Precision. Performance. <br class="hidden md:block" />Prestige.
+                    </h2>
+                    <p class="text-xl ">
+                        Tier One Automotive was founded by Alex Pope after over a decade of experience in one of
+                        the
+                        UK’s most respected independent dealerships.
+                    </p>
+                    <p class="text-xl">
+                        Our curated range is hand-selected and obsessively prepared — tailored for discerning
+                        clients
+                        who value service, excellence, and discretion.
+                    </p>
+                    <p class="text-xl font-semibold ">
+                        Kings Langley showroom — 5 minutes off the M25. Nationwide delivery available.
+                    </p>
                 </div>
             </div>
-        </section>
-
-        <section class="relative bg-cover bg-center bg-no-repeat py-20 text-white"
-            style="background-image: url('/Images/your-background.jpg');">
-            <div class="absolute inset-0 bg-[#F4F3ED]"></div>
-
-            <div class="relative mx-auto px-6 flex flex-wrap justify-center gap-12 z-10">
-
-
-                <!-- Finance Card -->
-                <a href="#"
-                    class="relative group w-[32rem] overflow-hidden rounded-md min-h-[40rem] text-center shadow-lg flex flex-col justify-between">
-                    <!-- Background image -->
-                    <div class="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-700 ease-in-out group-hover:scale-110"
-                        style="background-image: url('https://wallpaper.forfun.com/fetch/5b/5bb89660083ec8b879c5d39d5e61c02b.jpeg');">
-                    </div>
-
-                    <!-- Dark overlay -->
-                    <div
-                        class="absolute inset-0 bg-black/30 transition-opacity duration-200 opacity-0 group-hover:opacity-50">
-                    </div>
-
-                    <!-- Text content -->
-                    <span class="relative z-10 text-xl font-semibold mt-auto tracking-wide pb-4">Finance</span>
-                </a>
-
-                <!-- Sell Card -->
-                <a href="sellyourcar.html"
-                    class="relative group w-[32rem] overflow-hidden rounded-md min-h-[36rem] text-center shadow-lg flex flex-col justify-between">
-                    <!-- Background image -->
-                    <div class="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-700 ease-in-out group-hover:scale-110"
-                        style="background-image: url('https://w0.peakpx.com/wallpaper/470/207/HD-wallpaper-yellow-porsche-car-hypercar-supercar-rich-luxury.jpg');">
-                    </div>
-
-                    <!-- Dark overlay -->
-                    <div
-                        class="absolute inset-0 bg-black/30 transition-opacity duration-200 opacity-0 group-hover:opacity-50">
-                    </div>
-
-                    <!-- Text content -->
-                    <span class="relative z-10 text-xl font-semibold mt-auto tracking-wide pb-4">Sell Your Car</span>
-                </a>
-
-                <!-- Preparation Card -->
-                <a href="#"
-                    class="relative group w-[32rem] overflow-hidden rounded-md min-h-[36rem] text-center shadow-lg flex flex-col justify-between">
-                    <!-- Background image -->
-                    <div class="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-700 ease-in-out group-hover:scale-110"
-                        style="background-image: url('https://gvelondon.com/wp-content/uploads/2025/02/Untitled-design8.png');">
-                    </div>
-
-                    <!-- Dark overlay -->
-                    <div
-                        class="absolute inset-0 bg-black/30 transition-opacity duration-200 opacity-0 group-hover:opacity-50">
-                    </div>
-
-                    <!-- Text content -->
-                    <span class="relative z-10 text-xl font-semibold mt-auto tracking-wide pb-4">Preparation</span>
-                </a>
-
+            <!-- Image -->
+            <div class="clipped-img overflow-hidden relative">
+                <img src="Images/McLaren.png" alt="Tier One Jaguar"
+                    class="w-full h-full object-cover object-center -mb-1" />
             </div>
-        </section>
-
-
-        <footer class="bg-[#f7f6f3] text-[#333] text-sm pt-16 pb-8 border-t border-neutral-200">
-            <div class="max-w-screen-xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-10">
-
-                <!-- Social -->
-                <div>
-                    <img src="https://d2465b52a51d8d05e9bb-6ab01a951f137332ea1d08f23dcb3881.ssl.cf3.rackcdn.com/2018/05/tier-one-logo-min.png"
-                        alt="Tier One Logo" class="h-20 mb-4">
-
-                    <div class="space-y-3 text-sm">
-                        <!-- Facebook -->
-                        <a href="https://facebook.com" target="_blank"
-                            class="flex items-center gap-2 hover:opacity-80 transition">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
-                                alt="Facebook" class="w-5 h-5" />
-                            <span>Facebook</span>
-                        </a>
-
-                        <!-- Instagram -->
-                        <a href="https://instagram.com" target="_blank"
-                            class="flex items-center gap-2 hover:opacity-80 transition">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
-                                alt="Instagram" class="w-5 h-5 rounded-md" />
-                            <span>Instagram</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- About -->
-                <div>
-                    <h4 class="font-semibold text-lg mb-3 text-[#111]">About</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-gold transition">Our Story</a></li>
-                        <li><a href="#" class="hover:text-gold transition">The Team</a></li>
-                        <li><a href="#" class="hover:text-gold transition">Our Values</a></li>
-                        <li><a href="#" class="hover:text-gold transition">The History</a></li>
-                    </ul>
-                </div>
-
-                <!-- Top Brands -->
-                <div>
-                    <h4 class="font-semibold text-lg mb-3 text-[#111]">Useful Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-gold transition">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-gold transition">Insurance</a></li>
-                        <li><a href="#" class="hover:text-gold transition">Terms & Conditions</a></li>
-                        <li><a href="#" class="hover:text-gold transition">Cookies</a></li>
-                        <li><a href="#" class="hover:text-gold transition">Complaints</a></li>
-                        <li><a href="#" class="hover:text-gold transition">FAQ</a></li>
-                    </ul>
-                </div>
-
-                <!-- Opening Times -->
-                <div>
-                    <h4 class="flex items-center gap-2 font-semibold text-lg mb-4 text-[#111]">
-                        Opening Times
-                    </h4>
-                    <ul class="space-y-1 font-medium text-sm">
-                        <li class="flex justify-between">
-                            <span>Monday</span><span>08:00 - 18:00</span>
-                        </li>
-                        <li class="flex justify-between">
-                            <span>Tuesday</span><span>08:00 - 18:00</span>
-                        </li>
-                        <li class="flex justify-between">
-                            <span>Wednesday</span><span>08:00 - 18:00</span>
-                        </li>
-                        <li class="flex justify-between">
-                            <span>Thursday</span><span>08:00 - 18:00</span>
-                        </li>
-                        <li class="flex justify-between">
-                            <span>Friday</span><span>08:00 - 18:00</span>
-                        </li>
-                        <li class="flex justify-between">
-                            <span>Saturday</span><span>08:00 - 18:00</span>
-                        </li>
-                        <li class="flex justify-between">
-                            <span>Sunday</span><span class="text-neutral-500">Appointment Only</span>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-
-            <div class="border-t border-neutral-300 pt-6 mt-8">
-                <div
-                    class="max-w-screen-xl mx-auto px-6 flex flex-col sm:flex-row justify-between text-xs text-neutral-500 gap-4">
-
-                    <!-- Left Side (Legal Text) -->
-                    <div class="space-y-1">
-                        <p>Tier One Automotive Ltd is a company registered in England and Wales.</p>
-                        <p>Company registration number: 08879100</p>
-                        <p>
-                            <a href="#" class="underline hover:text-[#b59f61] transition">Cookies</a> |
-                            <a href="#" class="underline hover:text-[#b59f61] transition">Privacy Policy</a>
-                        </p>
-                    </div>
-
-                    <!-- Right Side (Credit) -->
-                    <div class="text-sm font-medium">
-                        © 2025 Designed & Powered by
-                        <a href="https://alexlovelock.dev" class="underline hover:text-[#b59f61] transition">Alex
-                            Lovelock</a>
-                    </div>
-
-                </div>
-            </div>
-        </footer>
-
-
-        <script>
-            lucide.createIcons();
-        </script>
-
-        <script>
-            const emblaNode = document.querySelector('.embla');
-            const options = { loop: true };
-            const plugins = [EmblaCarouselAutoplay({ delay: 3000 })];
-
-            const embla = EmblaCarousel(emblaNode, options, plugins);
-        </script>
+        </div>
+    </section>
 </body>
 
-</html>
+<!-- Carousel Markup -->
+<div class="bg-dark-blue pt-6 pb-16">
+    <!-- Centered heading container -->
+    <div class="flex justify-center items-center h-24 pb-4">
+        <h2 class="text-white text-3xl font-light tracking-[0.4em]">FEATURED STOCK</h2>
+    </div>
+
+    <div class="embla">
+        <div class="embla__viewport text-white">
+            <div class="embla__container">
+                <div class="embla__slide">
+                    <div class="card flex flex-col  rounded-lg shadow-md overflow-hidden">
+
+                        <div class="h-[240px]">
+                            <img src="https://img.cdn.dragon2000.net/C2846/U737/IMG_34382-medium.jpg"
+                                alt="Porsche Cayman GT4" class="w-full h-full object-cover object-[center_-110px]" />
+                        </div>
+
+                        <div class="h-[195px] flex flex-col justify-between p-4 text-md">
+                            <div>
+                                <div class="text-xl font-semibold leading-tight text-left">PORSCHE CAYMAN 981 GT4</div>
+                                <div class="text-lg text-gray-300 text-left">3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6
+                                    (385ps)</div>
+
+                                <div class="flex justify-between text-lg mt-3">
+                                    <div class="flex items-center gap-1">
+                                        <i data-lucide="calendar" class="w-4 h-4"></i> 2015
+                                    </div>
+                                    <div class="flex items-center gap-1">
+                                        <i data-lucide="gauge" class="w-4 h-4"></i> 29,500
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-1 mt-1">
+                                    <i data-lucide="droplet" class="w-4 h-4"></i> Guards Red
+                                </div>
+                            </div>
+
+                            <div class="flex justify-between items-center mt-1">
+                                <div class="text-lg font-bold text-white">£57,980</div>
+                                <button
+                                    class="text-md border border-white px-5 py-2 rounded hover:bg-white hover:text-[#2E3A44] transition">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="embla__slide">
+                    <div class="card flex flex-col  rounded-lg shadow-md overflow-hidden">
+                        <div class="h-[240px]">
+                            <img src="https://img.cdn.dragon2000.net/C2846/U737/IMG_34382-medium.jpg"
+                                alt="Porsche Cayman GT4" class="w-full h-full object-cover object-[center_-110px]" />
+                        </div>
+
+                        <div class="h-[195px] flex flex-col justify-between p-4 text-md">
+                            <div>
+                                <div class="text-xl font-semibold leading-tight text-left">PORSCHE CAYMAN 981 GT4</div>
+                                <div class="text-lg text-gray-300 text-left">3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6
+                                    (385ps)</div>
+
+                                <div class="flex justify-between text-lg mt-3">
+                                    <div class="flex items-center gap-1">
+                                        <i data-lucide="calendar" class="w-4 h-4"></i> 2015
+                                    </div>
+                                    <div class="flex items-center gap-1">
+                                        <i data-lucide="gauge" class="w-4 h-4"></i> 29,500
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-1 mt-1">
+                                    <i data-lucide="droplet" class="w-4 h-4"></i> Guards Red
+                                </div>
+                            </div>
+
+                            <div class="flex justify-between items-center mt-1">
+                                <div class="text-lg font-bold">£57,980</div>
+                                <button
+                                    class="text-md border border-white px-5 py-2 rounded hover:bg-white hover:text-[#2E3A44] transition">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="embla__slide">
+                    <div class="card flex flex-col  rounded-lg shadow-md overflow-hidden">
+                        <div class="h-[240px]">
+                            <img src="https://img.cdn.dragon2000.net/C2846/U737/IMG_34382-medium.jpg"
+                                alt="Porsche Cayman GT4" class="w-full h-full object-cover object-[center_-110px]" />
+                        </div>
+
+                        <div class="h-[195px] flex flex-col justify-between p-4 text-md">
+                            <div>
+                                <div class="text-xl font-semibold leading-tight text-left">PORSCHE CAYMAN 981 GT4</div>
+                                <div class="text-lg text-gray-300 text-left">3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6
+                                    (385ps)</div>
+
+                                <div class="flex justify-between text-lg mt-3">
+                                    <div class="flex items-center gap-1">
+                                        <i data-lucide="calendar" class="w-4 h-4"></i> 2015
+                                    </div>
+                                    <div class="flex items-center gap-1">
+                                        <i data-lucide="gauge" class="w-4 h-4"></i> 29,500
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-1 mt-1">
+                                    <i data-lucide="droplet" class="w-4 h-4"></i> Guards Red
+                                </div>
+                            </div>
+
+                            <div class="flex justify-between items-center mt-1">
+                                <div class="text-lg font-bold">£57,980</div>
+                                <button
+                                    class="text-md border border-white px-5 py-2 rounded hover:bg-white hover:text-[#2E3A44] transition">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="embla__slide">
+                    <div class="card flex flex-col  rounded-lg shadow-md overflow-hidden">
+                        <div class="h-[240px]">
+                            <img src="https://img.cdn.dragon2000.net/C2846/U737/IMG_34382-medium.jpg"
+                                alt="Porsche Cayman GT4" class="w-full h-full object-cover object-[center_-110px]" />
+                        </div>
+
+                        <div class="h-[195px] text-white flex flex-col justify-between p-4 text-md">
+                            <div>
+                                <div class="text-xl font-semibold leading-tight text-left">PORSCHE CAYMAN 981 GT4</div>
+                                <div class="text-lg text-gray-300 text-left">3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6
+                                    (385ps)</div>
+
+                                <div class="flex justify-between text-lg mt-3">
+                                    <div class="flex items-center gap-1">
+                                        <i data-lucide="calendar" class="w-4 h-4"></i> 2015
+                                    </div>
+                                    <div class="flex items-center gap-1">
+                                        <i data-lucide="gauge" class="w-4 h-4"></i> 29,500
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-1 mt-1">
+                                    <i data-lucide="droplet" class="w-4 h-4"></i> Guards Red
+                                </div>
+                            </div>
+
+                            <div class="flex justify-between items-center mt-1">
+                                <div class="text-lg font-bold">£57,980</div>
+                                <button
+                                    class="text-md border border-white px-5 py-2 rounded hover:bg-white hover:text-[#2E3A44] transition">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="embla__slide">
+                    <div class="card flex flex-col  rounded-lg shadow-md overflow-hidden">
+                        <div class="h-[240px]">
+                            <img src="https://img.cdn.dragon2000.net/C2846/U737/IMG_34382-medium.jpg"
+                                alt="Porsche Cayman GT4" class="w-full h-full object-cover object-[center_-110px]" />
+                        </div>
+
+                        <div class="h-[195px] flex flex-col justify-between p-4 text-md">
+                            <div>
+                                <div class="text-xl font-semibold leading-tight text-left">PORSCHE CAYMAN 981 GT4</div>
+                                <div class="text-lg text-gray-300 text-left">3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6
+                                    (385ps)</div>
+
+                                <div class="flex justify-between text-lg mt-3">
+                                    <div class="flex items-center gap-1">
+                                        <i data-lucide="calendar" class="w-4 h-4"></i> 2015
+                                    </div>
+                                    <div class="flex items-center gap-1">
+                                        <i data-lucide="gauge" class="w-4 h-4"></i> 29,500
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-1 mt-1">
+                                    <i data-lucide="droplet" class="w-4 h-4"></i> Guards Red
+                                </div>
+                            </div>
+
+                            <div class="flex justify-between items-center mt-1">
+                                <div class="text-lg font-bold">£57,980</div>
+                                <button
+                                    class="text-md border border-white px-5 py-2 rounded hover:bg-white hover:text-[#2E3A44] transition">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="embla__slide">
+                    <div class="card flex flex-col  rounded-lg shadow-md overflow-hidden">
+                        <div class="h-[240px]">
+                            <img src="https://img.cdn.dragon2000.net/C2846/U737/IMG_34382-medium.jpg"
+                                alt="Porsche Cayman GT4" class="w-full h-full object-cover object-[center_-110px]" />
+                        </div>
+
+                        <div class="h-[195px] flex flex-col justify-between p-4 text-md">
+                            <div>
+                                <div class="text-xl font-semibold leading-tight text-left">PORSCHE CAYMAN 981 GT4</div>
+                                <div class="text-lg text-gray-300 text-left">3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6
+                                    (385ps)</div>
+
+                                <div class="flex justify-between text-lg mt-3">
+                                    <div class="flex items-center gap-1">
+                                        <i data-lucide="calendar" class="w-4 h-4"></i> 2015
+                                    </div>
+                                    <div class="flex items-center gap-1">
+                                        <i data-lucide="gauge" class="w-4 h-4"></i> 29,500
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center gap-1 mt-1">
+                                    <i data-lucide="droplet" class="w-4 h-4"></i> Guards Red
+                                </div>
+                            </div>
+
+                            <div class="flex justify-between items-center mt-1">
+                                <div class="text-lg font-bold">£57,980</div>
+                                <button
+                                    class="text-md border border-white px-5 py-2 rounded hover:bg-white hover:text-[#2E3A44] transition">
+                                    Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pt-12 flex justify-center">
+        <button class="text-white text-3xl font-light tracking-[0.2em]">
+            View All Stock
+        </button>
+        <i data-lucide="chevron-right"
+            class="w-10 h-10 transform transition-transform group-hover:translate-x-1 text-white" stroke-width="1"></i>
+
+    </div>
+</div>
+
+<div class="bg-[#1a1c21] py-10">
+    <div class="w-[82%] mx-auto grid grid-cols-1 md:grid-cols-3">
+
+        <!-- Card 1 -->
+        <a href="#" class="relative group h-96 w-full overflow-hidden">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                style="background-image: url('https://hips.hearstapps.com/hmg-prod/images/2025-aston-martin-vanquish-120-66d091bddd098.jpg?crop=1xw:1xh;center,top&resize=980:*');">
+            </div>
+            <div class="absolute inset-0 bg-black/40 transition group-hover:bg-black/20"></div>
+            <div class="absolute bottom-4 left-4 text-white z-10">
+                <h3 class="text-2xl font-bold">PREVIOUSLY SOLD</h3>
+                <p class="text-lg">Click to view our previously sold stock</p>
+            </div>
+        </a>
+
+        <!-- Card 2 -->
+        <a href="#" class="relative group h-96 w-full overflow-hidden">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                style="background-image: url('https://preview.redd.it/2uo14andpql21.jpg?width=640&crop=smart&auto=webp&s=d0c9104b37dc1b4f1693517ad0abe2f184d2f805');">
+            </div>
+            <div class="absolute inset-0 bg-black/40 transition group-hover:bg-black/20"></div>
+            <div class="absolute bottom-4 left-4 text-white z-10">
+                <h3 class="text-2xl font-bold">PREVIOUSLY SOLD E92 M3’s</h3>
+                <p class="text-lg">Click to view our previously sold E92 M3s</p>
+            </div>
+        </a>
+
+        <!-- Card 3 -->
+        <a href="#" class="relative group h-96 w-full overflow-hidden">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                style="background-image: url('https://c4.wallpaperflare.com/wallpaper/989/29/290/audi-cars-r8-cars-audi-hd-art-wallpaper-preview.jpg');">
+            </div>
+            <div class="absolute inset-0 bg-black/40 transition group-hover:bg-black/20"></div>
+            <div class="absolute bottom-4 left-4 text-white z-10">
+                <h3 class="text-2xl font-bold">VEHICLE SOURCING</h3>
+                <p class="text-lg">Find out more about our vehicle sourcing</p>
+            </div>
+        </a>
+
+    </div>
+</div>
+
+<footer class="bg-[#16181c] text-[#333] text-sm pt-16 pb-8 text-white">
+    <div class="max-w-screen-xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-10">
+
+        <!-- Social -->
+        <div>
+            <img src="Images/T1White.png" alt="Tier One Logo" class="h-20 mb-4">
+
+            <div class="space-y-3 text-sm">
+                <!-- Facebook -->
+                <a href="https://facebook.com" target="_blank"
+                    class="flex items-center gap-2 hover:opacity-80 transition">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+                        alt="Facebook" class="w-5 h-5" />
+                    <span>Facebook</span>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://instagram.com" target="_blank"
+                    class="flex items-center gap-2 hover:opacity-80 transition">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"
+                        class="w-5 h-5 rounded-md" />
+                    <span>Instagram</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- About -->
+        <div>
+            <h4 class="font-semibold text-lg mb-3">About</h4>
+            <ul class="space-y-2">
+                <li><a href="#" class="hover:text-gold transition">Our Story</a></li>
+                <li><a href="#" class="hover:text-gold transition">The Team</a></li>
+                <li><a href="#" class="hover:text-gold transition">Our Values</a></li>
+                <li><a href="#" class="hover:text-gold transition">The History</a></li>
+            </ul>
+        </div>
+
+        <!-- Top Brands -->
+        <div>
+            <h4 class="font-semibold text-lg mb-3">Useful Links</h4>
+            <ul class="space-y-2">
+                <li><a href="#" class="hover:text-gold transition">Privacy Policy</a></li>
+                <li><a href="#" class="hover:text-gold transition">Insurance</a></li>
+                <li><a href="#" class="hover:text-gold transition">Terms & Conditions</a></li>
+                <li><a href="#" class="hover:text-gold transition">Cookies</a></li>
+                <li><a href="#" class="hover:text-gold transition">Complaints</a></li>
+                <li><a href="#" class="hover:text-gold transition">FAQ</a></li>
+            </ul>
+        </div>
+
+        <!-- Opening Times -->
+        <div>
+            <h4 class="flex items-center gap-2 font-semibold text-lg mb-4">
+                Opening Times
+            </h4>
+            <ul class="space-y-1 font-medium text-sm">
+                <li class="flex justify-between">
+                    <span>Monday</span><span>08:00 - 18:00</span>
+                </li>
+                <li class="flex justify-between">
+                    <span>Tuesday</span><span>08:00 - 18:00</span>
+                </li>
+                <li class="flex justify-between">
+                    <span>Wednesday</span><span>08:00 - 18:00</span>
+                </li>
+                <li class="flex justify-between">
+                    <span>Thursday</span><span>08:00 - 18:00</span>
+                </li>
+                <li class="flex justify-between">
+                    <span>Friday</span><span>08:00 - 18:00</span>
+                </li>
+                <li class="flex justify-between">
+                    <span>Saturday</span><span>08:00 - 18:00</span>
+                </li>
+                <li class="flex justify-between">
+                    <span>Sunday</span><span class="text-neutral-500">Appointment Only</span>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="border-t border-neutral-300 pt-6 mt-8 bg">
+        <div
+            class="max-w-screen-xl mx-auto px-6 flex flex-col sm:flex-row justify-between text-xs text-neutral-500 gap-4">
+
+            <!-- Left Side (Legal Text) -->
+            <div class="space-y-1">
+                <p>Tier One Automotive Ltd is a company registered in England and Wales.</p>
+                <p>Company registration number: 08879100</p>
+                <p>
+                    <a href="#" class="underline hover:text-[#b59f61] transition">Cookies</a> |
+                    <a href="#" class="underline hover:text-[#b59f61] transition">Privacy Policy</a>
+                </p>
+            </div>
+
+            <!-- Right Side (Credit) -->
+            <div class="text-sm font-medium">
+                © 2025 Designed & Powered by
+                <a href="https://alexlovelock.dev" class="underline hover:text-[#b59f61] transition">Alex
+                    Lovelock</a>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+
+<!-- Embla Script -->
+<script src="https://cdn.jsdelivr.net/npm/embla-carousel@8/embla-carousel.umd.js"></script>
+<script>
+    const embla = EmblaCarousel(document.querySelector('.embla__viewport'), {
+        loop: true,
+        align: 'start',
+        slidesToScroll: 1,
+        containScroll: 'trimSnaps',
+    });
+
+    setInterval(() => {
+        embla.scrollNext();
+    }, 4000);
+</script>
+
+<script>
+    lucide.createIcons();
+</script>
