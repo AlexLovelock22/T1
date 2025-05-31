@@ -2138,11 +2138,6 @@ video {
     padding-right: 2rem;
   }
 
-  .lg\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
   .lg\:text-5xl {
     font-size: 3rem;
     line-height: 1;
@@ -2159,8 +2154,9 @@ video {
     padding-right: 3rem;
   }
 
-  .xl\:text-\[1\.75rem\] {
-    font-size: 1.75rem;
+  .xl\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -2169,13 +2165,18 @@ video {
     max-width: 72rem;
   }
 
-  .\32xl\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
+  .\32xl\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
   }
 
-  .\32xl\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
+  .\32xl\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .\32xl\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
