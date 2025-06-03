@@ -61,8 +61,8 @@
 .embla {
   width: 100%;
   max-width: 90%;
-  margin: 0 auto;
-  overflow: hidden;
+margin: 0 auto;
+    overflow: hidden;
 }
 
 .embla__viewport {
@@ -98,4 +98,15 @@
 
 .large-shadow {
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.featured-clip{
+  clip-path: polygon(0 0, 100% 0, 100% 96%, 0% 100%); 
+}
+
+/* Hide elements when scaling pages down to 1366 resolution */
+@media screen and (max-width: 1570px) {
+  .hide-1366 {
+    display: none !important;
+  }
 }

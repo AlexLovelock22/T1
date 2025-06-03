@@ -796,6 +796,10 @@ video {
   display: none;
 }
 
+.aspect-\[6\.5\/8\] {
+  aspect-ratio: 6.5/8;
+}
+
 .h-10 {
   height: 2.5rem;
 }
@@ -840,14 +844,6 @@ video {
   height: 24rem;
 }
 
-.h-\[195px\] {
-  height: 195px;
-}
-
-.h-\[240px\] {
-  height: 240px;
-}
-
 .h-\[40vh\] {
   height: 40vh;
 }
@@ -872,8 +868,8 @@ video {
   height: 100vh;
 }
 
-.max-h-\[600px\] {
-  max-height: 600px;
+.min-h-\[220px\] {
+  min-height: 220px;
 }
 
 .min-h-\[450px\] {
@@ -1023,6 +1019,12 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.select-none {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
 .resize-y {
   resize: vertical;
 }
@@ -1039,6 +1041,10 @@ video {
 
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .grid-cols-\[2\%_16\%_82\%\] {
@@ -1214,6 +1220,11 @@ video {
   border-color: rgb(182 162 108 / var(--tw-border-opacity));
 }
 
+.border-gray-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(75 85 99 / var(--tw-border-opacity));
+}
+
 .border-gray-700 {
   --tw-border-opacity: 1;
   border-color: rgb(55 65 81 / var(--tw-border-opacity));
@@ -1240,6 +1251,11 @@ video {
 .bg-\[\#0f1012\] {
   --tw-bg-opacity: 1;
   background-color: rgb(15 16 18 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#121519\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(18 21 25 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#16181c\] {
@@ -1368,11 +1384,6 @@ video {
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.object-\[center_-110px\] {
-  -o-object-position: center -110px;
-     object-position: center -110px;
 }
 
 .object-center {
@@ -1627,15 +1638,15 @@ video {
 }
 
 .text-fluid-base {
-  font-size: clamp(0.95rem, 0.7vw, 1.2rem);
+  font-size: clamp(0.7rem, 0.85vw, 1.2rem);
 }
 
 .text-fluid-lg {
-  font-size: clamp(1.05rem, 0.8vw, 1.4rem);
+  font-size: clamp(0.8rem, 1vw, 1.4rem);
 }
 
 .text-fluid-xl {
-  font-size: clamp(1.25rem, 1.5vw, 2.5rem);
+  font-size: clamp(1rem, 1.75vw, 2.5rem);
 }
 
 .text-lg {
@@ -2031,6 +2042,10 @@ video {
 
   .sm\:flex-row {
     flex-direction: row;
+  }
+
+  .sm\:gap-4 {
+    gap: 1rem;
   }
 
   .sm\:space-x-4 > :not([hidden]) ~ :not([hidden]) {
