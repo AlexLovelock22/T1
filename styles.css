@@ -75,7 +75,13 @@ margin: 0 auto;
 }
 
 .embla__slide {
-  min-width: 25%; /* 4 cards per view */
+  min-width: 25%;
+}
+
+@media screen and (max-width: 1570px) {
+  .embla__slide {
+    min-width: 33.3333%; /* 3 cards per view on smaller screens */
+  }
 }
 
 .card {
@@ -107,6 +113,12 @@ margin: 0 auto;
 /* Hide elements when scaling pages down to 1366 resolution */
 @media screen and (max-width: 1570px) {
   .hide-1366 {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 1570px) {
+  .hide-1080 {
     display: none !important;
   }
 }

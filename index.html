@@ -198,50 +198,91 @@
     <div class="w-full grid grid-cols-1 md:grid-cols-4 px-6 gap-8 sm:gap-4 py-8 bg-dark-blue">
 
         <!-- Finance Card -->
-        <div class="relative aspect-[6.5/8] overflow-hidden shadow-lg group">
+        <div class="relative aspect-[6.5/8] overflow-hidden shadow-lg group max-1366:cursor-pointer">
             <img src="Images/red.png"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 alt="Finance" />
-            <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-end items-center p-6 space-y-2">
-                <div data-lucide="handshake" class="text-white w-10 h-10"></div>
-                <div class="text-white text-4xl font-semibold">Finance</div>
-                <a href="finance.html" class="text-white text-lg underline">See More</a>
+            <div
+                class="absolute inset-0 bg-black bg-opacity-30 max-1366:group-hover:bg-opacity-60 transition-all duration-300 z-10">
+            </div>
+
+            <!-- Mobile "See More" (fade in center) -->
+            <a href="finance.html"
+                class="absolute inset-0 flex items-center justify-center text-white text-lg underline opacity-0 max-1366:opacity-0 max-1366:group-hover:opacity-100 transition-opacity duration-300 delay-300 z-20">
+                See More
+            </a>
+
+            <!-- Bottom Content -->
+            <div class="absolute inset-0 flex flex-col justify-end items-center p-6 max-1366:p-3 space-y-2 z-20">
+                <div data-lucide="handshake" class="text-white w-icon-fluid h-icon-fluid"></div>
+                <div class="text-white text-fluid-xl font-semibold">Finance</div>
+                <a href="finance.html" class="hide-1366 text-white text-lg underline">See More</a>
             </div>
         </div>
 
         <!-- Sell Your Car Card -->
-        <div class="relative aspect-[6.5/8] overflow-hidden shadow-lg group">
+        <div class="relative aspect-[6.5/8] overflow-hidden shadow-lg group max-1366:cursor-pointer">
             <img src="Images/yellow.png"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 alt="Sell Your Car" />
-            <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-end items-center p-6 space-y-2">
-                <div data-lucide="hand-coins" class="text-white w-10 h-10"></div>
-                <div class="text-white text-4xl font-semibold">Sell Your Car</div>
-                <a href="sellyourcar.html" class="text-white text-lg underline">See More</a>
+            <div
+                class="absolute inset-0 bg-black bg-opacity-30 max-1366:group-hover:bg-opacity-60 transition-all duration-300 z-10">
+            </div>
+
+            <a href="sellyourcar.html"
+                class="absolute inset-0 flex items-center justify-center text-white text-lg underline opacity-0 max-1366:opacity-0 max-1366:group-hover:opacity-100 transition-opacity duration-300 delay-300 z-20">
+                See More
+            </a>
+
+            <div class="absolute inset-0 flex flex-col justify-end items-center p-6 max-1366:p-3 space-y-2 z-20">
+                <div data-lucide="hand-coins" class="text-white w-icon-fluid h-icon-fluid"></div>
+                <div class="text-white text-fluid-xl font-semibold">Sell Your Car</div>
+                <a href="sellyourcar.html" class="hide-1366 text-white text-lg underline">See More</a>
             </div>
         </div>
 
         <!-- Preparation Card -->
-        <div class="relative aspect-[6.5/8] overflow-hidden shadow-lg group">
+        <div class="relative aspect-[6.5/8] overflow-hidden shadow-lg group max-1366:cursor-pointer">
             <img src="Images/blue.png"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 alt="Preparation" />
-            <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-end items-center p-6 space-y-2">
-                <div data-lucide="wrench" class="text-white w-10 h-10"></div>
-                <div class="text-white text-4xl font-semibold">Preparation</div>
-                <a href="preparation.html" class="text-white text-lg underline">See More</a>
+            <div
+                class="absolute inset-0 bg-black bg-opacity-30 max-1366:group-hover:bg-opacity-60 transition-all duration-300 z-10">
+            </div>
+
+            <a href="preparation.html"
+                class="absolute inset-0 flex items-center justify-center text-white text-lg underline opacity-0 max-1366:opacity-0 max-1366:group-hover:opacity-100 transition-opacity duration-300 delay-300 z-20">
+                See More
+            </a>
+
+            <div class="absolute inset-0 flex flex-col justify-end items-center p-6 max-1366:p-3 space-y-2 z-20">
+                <div data-lucide="wrench" class="text-white w-icon-fluid h-icon-fluid"></div>
+                <div class="text-white text-fluid-xl font-semibold">Preparation</div>
+                <a href="preparation.html" class="hide-1366 text-white text-lg underline">See More</a>
             </div>
         </div>
-        <div class="relative aspect-[6.5/8] overflow-hidden shadow-lg group">
+
+        <!-- Warranty Card -->
+        <div class="relative aspect-[6.5/8] overflow-hidden shadow-lg group max-1366:cursor-pointer">
             <img src="Images/green.png"
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                alt="Finance" />
-            <div class="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-end items-center p-6 space-y-2">
-                <div data-lucide="handshake" class="text-white w-10 h-10"></div>
-                <div class="text-white text-4xl font-semibold">Warranty</div>
-                <a href="warranty.html" class="text-white text-lg underline">See More</a>
+                alt="Warranty" />
+            <div
+                class="absolute inset-0 bg-black bg-opacity-30 max-1366:group-hover:bg-opacity-60 transition-all duration-300 z-10">
+            </div>
+
+            <a href="warranty.html"
+                class="absolute inset-0 flex items-center justify-center text-white text-lg underline opacity-0 max-1366:opacity-0 max-1366:group-hover:opacity-100 transition-opacity duration-300 delay-300 z-20">
+                See More
+            </a>
+
+            <div class="absolute inset-0 flex flex-col justify-end items-center p-6 max-1366:p-3 space-y-2 z-20">
+                <div data-lucide="handshake" class="text-white w-icon-fluid h-icon-fluid"></div>
+                <div class="text-white text-fluid-xl font-semibold">Warranty</div>
+                <a href="warranty.html" class="hide-1366 text-white text-lg underline">See More</a>
             </div>
         </div>
+
     </div>
 
 
@@ -314,6 +355,7 @@
     <div class="embla select-none">
         <div class="embla__viewport text-white">
             <div class="embla__container">
+
                 <div class="embla__slide">
                     <div class="card flex flex-col rounded-lg shadow-md overflow-hidden bg-[#121519] text-white">
 
@@ -328,30 +370,39 @@
                         <div class="flex flex-col p-4 fluid-base text-left flex-1">
                             <div>
                                 <div class="font-semibold leading-tight text-fluid-lg">PORSCHE CAYMAN 981 GT4 </div>
-                                <div class="text-gray-300">3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6 (385ps) </div>
+                                <div class="text-gray-300 text-fluid-base">3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6
+                                    (385ps) </div>
 
-                                <div class="border-t border-gray-600 mt-2"></div>
+                                <div class="border-t border-gray-600 mt-2 "></div>
                                 <div class="grid grid-cols-2 gap-4 mt-3">
-                                    <div class="flex items-center gap-1">
+                                    <div class="flex items-center gap-1 text-fluid-md">
                                         <i data-lucide="calendar" class="w-4 h-4"></i> 2015
                                     </div>
-                                    <div class="flex items-center gap-1">
+                                    <div class="flex items-center gap-1 text-fluid-md">
                                         <i data-lucide="gauge" class="w-4 h-4"></i> 29,500
                                     </div>
-                                    <div class="flex items-center gap-1">
+                                    <div class="flex items-center gap-1 text-fluid-md">
                                         <i data-lucide="droplet" class="w-4 h-4"></i> Guards Red
                                     </div>
-                                    <div class="flex items-center gap-1">
+                                    <div class="flex items-center gap-1 text-fluid-md">
                                         <i data-lucide="settings " class="w-4 h-4"></i> Manual
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- CTA -->
-                            <div class="flex justify-between items-center mt-auto pt-4">
-                                <div class="text-lg font-bold">£57,980</div>
+                            <!-- 1080+ -->
+                            <div class="hide-1366 flex justify-between items-center mt-auto pt-4">
+                                <div class="text-fluid-md font-bold">£57,980</div>
                                 <button
-                                    class="text-sm border border-white px-5 py-2 rounded hover:bg-white hover:text-[#2E3A44] transition">
+                                    class="border border-white px-5 py-2 rounded hover:bg-white hover:text-[#2E3A44] transition">
+                                    Details
+                                </button>
+                            </div>
+                            <!-- 1080- -->
+                            <div class="hide-1080 flex justify-between items-center mt-auto pt-4">
+                                <div class="text-fluid-md font-bold">£57,980</div>
+                                <button
+                                    class="border border-white px-2 py-1 rounded hover:bg-white hover:text-[#2E3A44] transition">
                                     Details
                                 </button>
                             </div>
@@ -372,30 +423,39 @@
                         <div class="flex flex-col p-4 fluid-base text-left flex-1">
                             <div>
                                 <div class="font-semibold leading-tight text-fluid-lg">PORSCHE CAYMAN 981 GT4 </div>
-                                <div class="text-gray-300">3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6 (385ps) </div>
+                                <div class="text-gray-300 text-fluid-base">3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6
+                                    (385ps) </div>
 
-                                <div class="border-t border-gray-600 mt-2"></div>
+                                <div class="border-t border-gray-600 mt-2 "></div>
                                 <div class="grid grid-cols-2 gap-4 mt-3">
-                                    <div class="flex items-center gap-1">
+                                    <div class="flex items-center gap-1 text-fluid-md">
                                         <i data-lucide="calendar" class="w-4 h-4"></i> 2015
                                     </div>
-                                    <div class="flex items-center gap-1">
+                                    <div class="flex items-center gap-1 text-fluid-md">
                                         <i data-lucide="gauge" class="w-4 h-4"></i> 29,500
                                     </div>
-                                    <div class="flex items-center gap-1">
+                                    <div class="flex items-center gap-1 text-fluid-md">
                                         <i data-lucide="droplet" class="w-4 h-4"></i> Guards Red
                                     </div>
-                                    <div class="flex items-center gap-1">
+                                    <div class="flex items-center gap-1 text-fluid-md">
                                         <i data-lucide="settings " class="w-4 h-4"></i> Manual
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- CTA -->
-                            <div class="flex justify-between items-center mt-auto pt-4">
-                                <div class="text-lg font-bold">£57,980</div>
+                            <!-- 1080+ -->
+                            <div class="hide-1366 flex justify-between items-center mt-auto pt-4">
+                                <div class="text-fluid-md font-bold">£57,980</div>
                                 <button
-                                    class="text-sm border border-white px-5 py-2 rounded hover:bg-white hover:text-[#2E3A44] transition">
+                                    class="border border-white px-5 py-2 rounded hover:bg-white hover:text-[#2E3A44] transition">
+                                    Details
+                                </button>
+                            </div>
+                            <!-- 1080- -->
+                            <div class="hide-1080 flex justify-between items-center mt-auto pt-4">
+                                <div class="text-fluid-md font-bold">£57,980</div>
+                                <button
+                                    class="border border-white px-2 py-1 rounded hover:bg-white hover:text-[#2E3A44] transition">
                                     Details
                                 </button>
                             </div>
@@ -416,30 +476,39 @@
                         <div class="flex flex-col p-4 fluid-base text-left flex-1">
                             <div>
                                 <div class="font-semibold leading-tight text-fluid-lg">PORSCHE CAYMAN 981 GT4 </div>
-                                <div class="text-gray-300">3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6 (385ps) </div>
+                                <div class="text-gray-300 text-fluid-base">3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6
+                                    (385ps) </div>
 
-                                <div class="border-t border-gray-600 mt-2"></div>
+                                <div class="border-t border-gray-600 mt-2 "></div>
                                 <div class="grid grid-cols-2 gap-4 mt-3">
-                                    <div class="flex items-center gap-1">
+                                    <div class="flex items-center gap-1 text-fluid-md">
                                         <i data-lucide="calendar" class="w-4 h-4"></i> 2015
                                     </div>
-                                    <div class="flex items-center gap-1">
+                                    <div class="flex items-center gap-1 text-fluid-md">
                                         <i data-lucide="gauge" class="w-4 h-4"></i> 29,500
                                     </div>
-                                    <div class="flex items-center gap-1">
+                                    <div class="flex items-center gap-1 text-fluid-md">
                                         <i data-lucide="droplet" class="w-4 h-4"></i> Guards Red
                                     </div>
-                                    <div class="flex items-center gap-1">
+                                    <div class="flex items-center gap-1 text-fluid-md">
                                         <i data-lucide="settings " class="w-4 h-4"></i> Manual
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- CTA -->
-                            <div class="flex justify-between items-center mt-auto pt-4">
-                                <div class="text-lg font-bold">£57,980</div>
+                            <!-- 1080+ -->
+                            <div class="hide-1366 flex justify-between items-center mt-auto pt-4">
+                                <div class="text-fluid-md font-bold">£57,980</div>
                                 <button
-                                    class="text-sm border border-white px-5 py-2 rounded hover:bg-white hover:text-[#2E3A44] transition">
+                                    class="border border-white px-5 py-2 rounded hover:bg-white hover:text-[#2E3A44] transition">
+                                    Details
+                                </button>
+                            </div>
+                            <!-- 1080- -->
+                            <div class="hide-1080 flex justify-between items-center mt-auto pt-4">
+                                <div class="text-fluid-md font-bold">£57,980</div>
+                                <button
+                                    class="border border-white px-2 py-1 rounded hover:bg-white hover:text-[#2E3A44] transition">
                                     Details
                                 </button>
                             </div>
@@ -460,30 +529,39 @@
                         <div class="flex flex-col p-4 fluid-base text-left flex-1">
                             <div>
                                 <div class="font-semibold leading-tight text-fluid-lg">PORSCHE CAYMAN 981 GT4 </div>
-                                <div class="text-gray-300">3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6 (385ps) </div>
+                                <div class="text-gray-300 text-fluid-base">3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6
+                                    (385ps) </div>
 
-                                <div class="border-t border-gray-600 mt-2"></div>
+                                <div class="border-t border-gray-600 mt-2 "></div>
                                 <div class="grid grid-cols-2 gap-4 mt-3">
-                                    <div class="flex items-center gap-1">
+                                    <div class="flex items-center gap-1 text-fluid-md">
                                         <i data-lucide="calendar" class="w-4 h-4"></i> 2015
                                     </div>
-                                    <div class="flex items-center gap-1">
+                                    <div class="flex items-center gap-1 text-fluid-md">
                                         <i data-lucide="gauge" class="w-4 h-4"></i> 29,500
                                     </div>
-                                    <div class="flex items-center gap-1">
+                                    <div class="flex items-center gap-1 text-fluid-md">
                                         <i data-lucide="droplet" class="w-4 h-4"></i> Guards Red
                                     </div>
-                                    <div class="flex items-center gap-1">
+                                    <div class="flex items-center gap-1 text-fluid-md">
                                         <i data-lucide="settings " class="w-4 h-4"></i> Manual
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- CTA -->
-                            <div class="flex justify-between items-center mt-auto pt-4">
-                                <div class="text-lg font-bold">£57,980</div>
+                            <!-- 1080+ -->
+                            <div class="hide-1366 flex justify-between items-center mt-auto pt-4">
+                                <div class="text-fluid-md font-bold">£57,980</div>
                                 <button
-                                    class="text-sm border border-white px-5 py-2 rounded hover:bg-white hover:text-[#2E3A44] transition">
+                                    class="border border-white px-5 py-2 rounded hover:bg-white hover:text-[#2E3A44] transition">
+                                    Details
+                                </button>
+                            </div>
+                            <!-- 1080- -->
+                            <div class="hide-1080 flex justify-between items-center mt-auto pt-4">
+                                <div class="text-fluid-md font-bold">£57,980</div>
+                                <button
+                                    class="border border-white px-2 py-1 rounded hover:bg-white hover:text-[#2E3A44] transition">
                                     Details
                                 </button>
                             </div>
@@ -504,74 +582,39 @@
                         <div class="flex flex-col p-4 fluid-base text-left flex-1">
                             <div>
                                 <div class="font-semibold leading-tight text-fluid-lg">PORSCHE CAYMAN 981 GT4 </div>
-                                <div class="text-gray-300">3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6 (385ps) </div>
+                                <div class="text-gray-300 text-fluid-base">3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6
+                                    (385ps) </div>
 
-                                <div class="border-t border-gray-600 mt-2"></div>
+                                <div class="border-t border-gray-600 mt-2 "></div>
                                 <div class="grid grid-cols-2 gap-4 mt-3">
-                                    <div class="flex items-center gap-1">
+                                    <div class="flex items-center gap-1 text-fluid-md">
                                         <i data-lucide="calendar" class="w-4 h-4"></i> 2015
                                     </div>
-                                    <div class="flex items-center gap-1">
+                                    <div class="flex items-center gap-1 text-fluid-md">
                                         <i data-lucide="gauge" class="w-4 h-4"></i> 29,500
                                     </div>
-                                    <div class="flex items-center gap-1">
+                                    <div class="flex items-center gap-1 text-fluid-md">
                                         <i data-lucide="droplet" class="w-4 h-4"></i> Guards Red
                                     </div>
-                                    <div class="flex items-center gap-1">
+                                    <div class="flex items-center gap-1 text-fluid-md">
                                         <i data-lucide="settings " class="w-4 h-4"></i> Manual
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- CTA -->
-                            <div class="flex justify-between items-center mt-auto pt-4">
-                                <div class="text-lg font-bold">£57,980</div>
+                            <!-- 1080+ -->
+                            <div class="hide-1366 flex justify-between items-center mt-auto pt-4">
+                                <div class="text-fluid-md font-bold">£57,980</div>
                                 <button
-                                    class="text-sm border border-white px-5 py-2 rounded hover:bg-white hover:text-[#2E3A44] transition">
+                                    class="border border-white px-5 py-2 rounded hover:bg-white hover:text-[#2E3A44] transition">
                                     Details
                                 </button>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="embla__slide">
-                    <div class="card flex flex-col rounded-lg shadow-md overflow-hidden bg-[#121519] text-white">
-
-                        <!-- Full-size uncropped image -->
-                        <div class="w-full overflow-hidden featured-clip">
-                            <img src="https://img.cdn.dragon2000.net/C2846/U737/IMG_34382-medium.jpg"
-                                alt="Porsche Cayman GT4" class="w-full h-auto block" />
-                        </div>
-
-
-                        <!-- Text Content -->
-                        <div class="flex flex-col p-4 fluid-base text-left flex-1">
-                            <div>
-                                <div class="font-semibold leading-tight text-fluid-lg">PORSCHE CAYMAN 981 GT4 </div>
-                                <div class="text-gray-300">3.8 981 GT4 Coupe 2dr Petrol Manual Euro 6 (385ps) </div>
-
-                                <div class="border-t border-gray-600 mt-2"></div>
-                                <div class="grid grid-cols-2 gap-4 mt-3">
-                                    <div class="flex items-center gap-1">
-                                        <i data-lucide="calendar" class="w-4 h-4"></i> 2015
-                                    </div>
-                                    <div class="flex items-center gap-1">
-                                        <i data-lucide="gauge" class="w-4 h-4"></i> 29,500
-                                    </div>
-                                    <div class="flex items-center gap-1">
-                                        <i data-lucide="droplet" class="w-4 h-4"></i> Guards Red
-                                    </div>
-                                    <div class="flex items-center gap-1">
-                                        <i data-lucide="settings " class="w-4 h-4"></i> Manual
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- CTA -->
-                            <div class="flex justify-between items-center mt-auto pt-4">
-                                <div class="text-lg font-bold">£57,980</div>
+                            <!-- 1080- -->
+                            <div class="hide-1080 flex justify-between items-center mt-auto pt-4">
+                                <div class="text-fluid-md font-bold">£57,980</div>
                                 <button
-                                    class="text-sm border border-white px-5 py-2 rounded hover:bg-white hover:text-[#2E3A44] transition">
+                                    class="border border-white px-2 py-1 rounded hover:bg-white hover:text-[#2E3A44] transition">
                                     Details
                                 </button>
                             </div>
@@ -597,38 +640,40 @@
     <div class="w-[82%] mx-auto grid grid-cols-1 md:grid-cols-3">
 
         <!-- Card 1 -->
-        <a href="#" class="relative group h-96 w-full overflow-hidden">
+        <a href="#" class="relative group aspect-[16/9] w-full overflow-hidden">
+
             <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                 style="background-image: url('https://hips.hearstapps.com/hmg-prod/images/2025-aston-martin-vanquish-120-66d091bddd098.jpg?crop=1xw:1xh;center,top&resize=980:*');">
             </div>
             <div class="absolute inset-0 bg-black/40 transition group-hover:bg-black/20"></div>
             <div class="absolute bottom-4 left-4 text-white z-10">
-                <h3 class="text-2xl font-bold">PREVIOUSLY SOLD</h3>
-                <p class="text-lg">Click to view our previously sold stock</p>
+                <h3 class="text-fluid-lg font-bold">PREVIOUSLY SOLD</h3>
+                <p class="ttext-fluid-md">Click to view our previously sold stock</p>
             </div>
         </a>
 
         <!-- Card 2 -->
-        <a href="#" class="relative group h-96 w-full overflow-hidden">
+        <a href="#" class="relative group aspect-[16/9] w-full overflow-hidden">
+
             <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                 style="background-image: url('https://preview.redd.it/2uo14andpql21.jpg?width=640&crop=smart&auto=webp&s=d0c9104b37dc1b4f1693517ad0abe2f184d2f805');">
             </div>
             <div class="absolute inset-0 bg-black/40 transition group-hover:bg-black/20"></div>
             <div class="absolute bottom-4 left-4 text-white z-10">
-                <h3 class="text-2xl font-bold">PREVIOUSLY SOLD E92 M3’s</h3>
-                <p class="text-lg">Click to view our previously sold E92 M3s</p>
+                <h3 class="text-fluid-lg font-bold">PREVIOUSLY SOLD E92 M3’s</h3>
+                <p class="text-fluid-md">Click to view our previously sold E92 M3s</p>
             </div>
         </a>
 
         <!-- Card 3 -->
-        <a href="#" class="relative group h-96 w-full overflow-hidden">
+        <a href="#" class="relative group aspect-[16/9] w-full overflow-hidden">
             <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                 style="background-image: url('https://c4.wallpaperflare.com/wallpaper/989/29/290/audi-cars-r8-cars-audi-hd-art-wallpaper-preview.jpg');">
             </div>
             <div class="absolute inset-0 bg-black/40 transition group-hover:bg-black/20"></div>
             <div class="absolute bottom-4 left-4 text-white z-10">
-                <h3 class="text-2xl font-bold">VEHICLE SOURCING</h3>
-                <p class="text-lg">Find out more about our vehicle sourcing</p>
+                <h3 class="text-fluid-lg font-bold">VEHICLE SOURCING</h3>
+                <p class="text-fluid-md">Find out more about our vehicle sourcing</p>
             </div>
         </a>
 
