@@ -122,3 +122,18 @@ margin: 0 auto;
     display: none !important;
   }
 }
+
+.clip-diagonal {
+  clip-path: polygon(0 15%, 100% 0, 100% 85%, 0% 100%);
+}
+
+
+
+@media (min-width: 768px) {
+  .md\:clip-none {
+    clip-path: none !important;
+  }
+  .md\:mt-0 {
+    margin-top: 0 !important;
+  }
+}

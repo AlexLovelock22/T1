@@ -191,98 +191,145 @@
         </div>
     </section>
 
+
     <!-- Tagline -->
-    <div class="flex justify-center items-center pt-16 pb-8 bg-dark-blue">
+    <div class="flex justify-center items-center pt-8 pb-5 md:pt-16 md:pb-8 bg-dark-blue">
         <h2 class="text-white text-3xl font-light tracking-[0.4em]">SERVICES</h2>
     </div>
-    <div class="w-full grid grid-cols-1 md:grid-cols-4 px-6 gap-8 sm:gap-4 py-8 bg-dark-blue">
 
-        <!-- Finance Card -->
-        <div class="relative aspect-[6.5/8] overflow-hidden shadow-lg group max-1366:cursor-pointer">
-            <img src="Images/red.png"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                alt="Finance" />
+    <!-- Card Grid Container -->
+    <div class="bg-dark-blue py-4 md:py-8">
+        <div class="w-full md:w-[98%] mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 sm:gap-4">
+            <!-- Finance Card -->
             <div
-                class="absolute inset-0 bg-black bg-opacity-30 max-1366:group-hover:bg-opacity-60 transition-all duration-300 z-10">
+                class="relative aspect-[8/5] md:aspect-[6.5/8] overflow-hidden shadow-lg group max-1366:cursor-pointer clip-diagonal md:clip-none -mt-14 first:mt-0 md:mt-0">
+
+                <img src="Images/red.png"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    alt="Finance" />
+
+                <!-- Overlay -->
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-30 max-1366:group-hover:bg-opacity-60 transition-all duration-300 z-10">
+                </div>
+
+                <!-- Mobile "See More" hover -->
+                <a href="finance.html"
+                    class="absolute inset-0 flex items-center justify-center text-white text-lg underline opacity-0 max-1366:opacity-0 max-1366:group-hover:opacity-100 transition-opacity duration-300 delay-300 z-20">
+                    See More
+                </a>
+
+                <!-- Content block -->
+                <div class="absolute inset-0 z-20">
+
+                    <!-- Desktop version -->
+                    <div class="hidden md:flex absolute inset-0 flex-col justify-end items-center p-6 space-y-2">
+                        <div data-lucide="handshake" class="text-white w-icon-fluid h-icon-fluid"></div>
+                        <div class="text-white text-fluid-xl font-semibold">Finance</div>
+                        <a href="finance.html" class="text-white text-lg underline">See More</a>
+                    </div>
+
+                    <!-- Mobile version -->
+                    <div class="md:hidden absolute inset-0 flex items-center justify-center">
+                        <div class="text-white text-4xl font-light">Finance</div>
+                    </div>
+
+                </div>
             </div>
 
-            <!-- Mobile "See More" (fade in center) -->
-            <a href="finance.html"
-                class="absolute inset-0 flex items-center justify-center text-white text-lg underline opacity-0 max-1366:opacity-0 max-1366:group-hover:opacity-100 transition-opacity duration-300 delay-300 z-20">
-                See More
-            </a>
+            <!-- Sell Your Car Card -->
+            <div
+                class="relative aspect-[8/5] md:aspect-[6.5/8] overflow-hidden shadow-lg group max-1366:cursor-pointer clip-diagonal md:clip-none -mt-14 first:mt-0 md:mt-0">
+                <img src="Images/yellow.png"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    alt="Sell Your Car" />
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-30 max-1366:group-hover:bg-opacity-60 transition-all duration-300 z-10">
+                </div>
 
-            <!-- Bottom Content -->
-            <div class="absolute inset-0 flex flex-col justify-end items-center p-6 max-1366:p-3 space-y-2 z-20">
-                <div data-lucide="handshake" class="text-white w-icon-fluid h-icon-fluid"></div>
-                <div class="text-white text-fluid-xl font-semibold">Finance</div>
-                <a href="finance.html" class="hide-1366 text-white text-lg underline">See More</a>
+                <a href="sellyourcar.html"
+                    class="absolute inset-0 flex items-center justify-center text-white text-lg underline opacity-0 max-1366:opacity-0 max-1366:group-hover:opacity-100 transition-opacity duration-300 delay-300 z-20">
+                    See More
+                </a>
+                <!-- Content block -->
+                <div class="absolute inset-0 z-20">
+
+                    <!-- Desktop version -->
+                    <div class="hidden md:flex absolute inset-0 flex-col justify-end items-center p-6 space-y-2">
+                        <div data-lucide="hand-coins" class="text-white w-icon-fluid h-icon-fluid"></div>
+                        <div class="text-white text-fluid-xl font-semibold">Sell Your Car</div>
+                        <a href="sellyourcar.html" class="text-white text-lg underline">See More</a>
+                    </div>
+
+                    <!-- Mobile version -->
+                    <div class="md:hidden absolute inset-0 flex items-center justify-center">
+                        <div class="text-white text-4xl font-light">Sell Your Car</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Preparation Card -->
+            <div
+                class="relative aspect-[8/5] md:aspect-[6.5/8] overflow-hidden shadow-lg group max-1366:cursor-pointer clip-diagonal md:clip-none -mt-14 first:mt-0 md:mt-0">
+                <img src="Images/blue.png"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    alt="Preparation" />
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-30 max-1366:group-hover:bg-opacity-60 transition-all duration-300 z-10">
+                </div>
+
+                <a href="preparation.html"
+                    class="absolute inset-0 flex items-center justify-center text-white text-lg underline opacity-0 max-1366:opacity-0 max-1366:group-hover:opacity-100 transition-opacity duration-300 delay-300 z-20">
+                    See More
+                </a>
+
+                <!-- Content block -->
+                <div class="absolute inset-0 z-20">
+                    <!-- Desktop version -->
+                    <div class="hidden md:flex absolute inset-0 flex-col justify-end items-center p-6 space-y-2">
+                        <div data-lucide="wrench" class="text-white w-icon-fluid h-icon-fluid"></div>
+                        <div class="text-white text-fluid-xl font-semibold">Preparation</div>
+                        <a href="preparation.html" class="text-white text-lg underline">See More</a>
+                    </div>
+
+                    <!-- Mobile version -->
+                    <div class="md:hidden absolute inset-0 flex items-center justify-center">
+                        <div class="text-white text-4xl font-light">Preparation</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Warranty Card -->
+            <div
+                class="relative aspect-[8/5] md:aspect-[6.5/8] overflow-hidden shadow-lg group max-1366:cursor-pointer clip-diagonal md:clip-none -mt-14 first:mt-0 md:mt-0">
+                <img src="Images/green.png"
+                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    alt="Warranty" />
+                <div
+                    class="absolute inset-0 bg-black bg-opacity-30 max-1366:group-hover:bg-opacity-60 transition-all duration-300 z-10">
+                </div>
+
+                <a href="warranty.html"
+                    class="absolute inset-0 flex items-center justify-center text-white text-lg underline opacity-0 max-1366:opacity-0 max-1366:group-hover:opacity-100 transition-opacity duration-300 delay-300 z-20">
+                    See More
+                </a>
+
+                <!-- Content block -->
+                <div class="absolute inset-0 z-20">
+                    <!-- Desktop version -->
+                    <div class="hidden md:flex absolute inset-0 flex-col justify-end items-center p-6 space-y-2">
+                        <div data-lucide="handshake" class="text-white w-icon-fluid h-icon-fluid"></div>
+                        <div class="text-white text-fluid-xl font-semibold">Warranty</div>
+                        <a href="warranty.html" class="text-white text-lg underline">See More</a>
+                    </div>
+
+                    <!-- Mobile version -->
+                    <div class="md:hidden absolute inset-0 flex items-center justify-center">
+                        <div class="text-white text-4xl font-light">Warranty</div>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <!-- Sell Your Car Card -->
-        <div class="relative aspect-[6.5/8] overflow-hidden shadow-lg group max-1366:cursor-pointer">
-            <img src="Images/yellow.png"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                alt="Sell Your Car" />
-            <div
-                class="absolute inset-0 bg-black bg-opacity-30 max-1366:group-hover:bg-opacity-60 transition-all duration-300 z-10">
-            </div>
-
-            <a href="sellyourcar.html"
-                class="absolute inset-0 flex items-center justify-center text-white text-lg underline opacity-0 max-1366:opacity-0 max-1366:group-hover:opacity-100 transition-opacity duration-300 delay-300 z-20">
-                See More
-            </a>
-
-            <div class="absolute inset-0 flex flex-col justify-end items-center p-6 max-1366:p-3 space-y-2 z-20">
-                <div data-lucide="hand-coins" class="text-white w-icon-fluid h-icon-fluid"></div>
-                <div class="text-white text-fluid-xl font-semibold">Sell Your Car</div>
-                <a href="sellyourcar.html" class="hide-1366 text-white text-lg underline">See More</a>
-            </div>
-        </div>
-
-        <!-- Preparation Card -->
-        <div class="relative aspect-[6.5/8] overflow-hidden shadow-lg group max-1366:cursor-pointer">
-            <img src="Images/blue.png"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                alt="Preparation" />
-            <div
-                class="absolute inset-0 bg-black bg-opacity-30 max-1366:group-hover:bg-opacity-60 transition-all duration-300 z-10">
-            </div>
-
-            <a href="preparation.html"
-                class="absolute inset-0 flex items-center justify-center text-white text-lg underline opacity-0 max-1366:opacity-0 max-1366:group-hover:opacity-100 transition-opacity duration-300 delay-300 z-20">
-                See More
-            </a>
-
-            <div class="absolute inset-0 flex flex-col justify-end items-center p-6 max-1366:p-3 space-y-2 z-20">
-                <div data-lucide="wrench" class="text-white w-icon-fluid h-icon-fluid"></div>
-                <div class="text-white text-fluid-xl font-semibold">Preparation</div>
-                <a href="preparation.html" class="hide-1366 text-white text-lg underline">See More</a>
-            </div>
-        </div>
-
-        <!-- Warranty Card -->
-        <div class="relative aspect-[6.5/8] overflow-hidden shadow-lg group max-1366:cursor-pointer">
-            <img src="Images/green.png"
-                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                alt="Warranty" />
-            <div
-                class="absolute inset-0 bg-black bg-opacity-30 max-1366:group-hover:bg-opacity-60 transition-all duration-300 z-10">
-            </div>
-
-            <a href="warranty.html"
-                class="absolute inset-0 flex items-center justify-center text-white text-lg underline opacity-0 max-1366:opacity-0 max-1366:group-hover:opacity-100 transition-opacity duration-300 delay-300 z-20">
-                See More
-            </a>
-
-            <div class="absolute inset-0 flex flex-col justify-end items-center p-6 max-1366:p-3 space-y-2 z-20">
-                <div data-lucide="handshake" class="text-white w-icon-fluid h-icon-fluid"></div>
-                <div class="text-white text-fluid-xl font-semibold">Warranty</div>
-                <a href="warranty.html" class="hide-1366 text-white text-lg underline">See More</a>
-            </div>
-        </div>
-
     </div>
 
 
@@ -317,15 +364,19 @@
                     <p class="text-fluid-base">
                         Tier One Automotive was founded by Alex Pope after over a decade of experience in one of the
                         UK’s most
-                        respected independent dealerships. Built on a foundation of trust, integrity, and an obsession
+                        respected independent dealerships. Built on a foundation of trust, integrity, and an
+                        obsession
                         with excellence,
-                        we offer a distinctly personal and professional approach to the luxury car buying experience.
+                        we offer a distinctly personal and professional approach to the luxury car buying
+                        experience.
                     </p>
 
                     <p class="text-fluid-base">
-                        Our curated range is hand-selected and obsessively prepared — tailored for discerning clients
+                        Our curated range is hand-selected and obsessively prepared — tailored for discerning
+                        clients
                         who value
-                        service, excellence, and discretion. From sourcing to presentation, every vehicle we offer meets
+                        service, excellence, and discretion. From sourcing to presentation, every vehicle we offer
+                        meets
                         the highest
                         standards of mechanical performance, cosmetic finish, and provenance.
                     </p>
@@ -339,7 +390,7 @@
             <!-- Image -->
             <div class="clipped-img overflow-hidden relative">
                 <img src="Images/McLaren.png" alt="Tier One McLaren"
-                    class="w-full h-full object-cover object-center -mb-1" />
+                    class="w-full h-full object-cover object-center -mb-1 " />
             </div>
         </div>
     </section>
