@@ -1912,10 +1912,6 @@ video {
   transition-duration: 150ms;
 }
 
-.delay-300 {
-  transition-delay: 300ms;
-}
-
 .duration-200 {
   transition-duration: 200ms;
 }
@@ -2162,9 +2158,8 @@ video {
     padding-right: 1.5rem;
   }
 
-  .md\:py-8 {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+  .md\:pb-16 {
+    padding-bottom: 4rem;
   }
 
   .md\:pb-8 {
@@ -2173,6 +2168,14 @@ video {
 
   .md\:pt-16 {
     padding-top: 4rem;
+  }
+
+  .md\:pt-8 {
+    padding-top: 2rem;
+  }
+
+  .md\:pb-4 {
+    padding-bottom: 1rem;
   }
 
   .md\:text-4xl {
@@ -2279,15 +2282,7 @@ video {
     cursor: pointer;
   }
 
-  .max-1366\:opacity-0 {
-    opacity: 0;
-  }
-
-  .group:hover .max-1366\:group-hover\:bg-opacity-60 {
-    --tw-bg-opacity: 0.6;
-  }
-
-  .group:hover .max-1366\:group-hover\:opacity-100 {
-    opacity: 1;
+  .group:hover .max-1366\:group-hover\:bg-opacity-40 {
+    --tw-bg-opacity: 0.4;
   }
 }

@@ -198,8 +198,10 @@
     </div>
 
     <!-- Card Grid Container -->
-    <div class="bg-dark-blue py-4 md:py-8">
-        <div class="w-full md:w-[98%] mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 sm:gap-4">
+    <div class="bg-dark-blue pt-4 pb-8 md:pt-8 md:pb-16">
+
+
+        <div class="w-full md:w-[98%] mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 sm:gap-4 pb-4">
             <!-- Finance Card -->
             <div
                 class="relative aspect-[8/5] md:aspect-[6.5/8] overflow-hidden shadow-lg group max-1366:cursor-pointer clip-diagonal md:clip-none -mt-14 first:mt-0 md:mt-0">
@@ -208,195 +210,165 @@
                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     alt="Finance" />
 
-                <!-- Overlay -->
                 <div
-                    class="absolute inset-0 bg-black bg-opacity-30 max-1366:group-hover:bg-opacity-60 transition-all duration-300 z-10">
+                    class="absolute inset-0 bg-black bg-opacity-30 max-1366:group-hover:bg-opacity-40 transition-all duration-300 z-10">
                 </div>
 
-                <!-- Mobile "See More" hover -->
-                <a href="finance.html"
-                    class="absolute inset-0 flex items-center justify-center text-white text-lg underline opacity-0 max-1366:opacity-0 max-1366:group-hover:opacity-100 transition-opacity duration-300 delay-300 z-20">
-                    See More
-                </a>
-
-                <!-- Content block -->
                 <div class="absolute inset-0 z-20">
-
-                    <!-- Desktop version -->
                     <div class="hidden md:flex absolute inset-0 flex-col justify-end items-center p-6 space-y-2">
                         <div data-lucide="handshake" class="text-white w-icon-fluid h-icon-fluid"></div>
                         <div class="text-white text-fluid-xl font-semibold">Finance</div>
                         <a href="finance.html" class="text-white text-lg underline">See More</a>
                     </div>
-
-                    <!-- Mobile version -->
                     <div class="md:hidden absolute inset-0 flex items-center justify-center">
                         <div class="text-white text-4xl font-light">Finance</div>
                     </div>
-
                 </div>
 
-                <!-- Mobile full-card clickable overlay -->
-                <a href="finance.html" class="md:hidden absolute inset-0 z-30"></a>
+                <a href="finance.html" class="absolute inset-0 z-30"></a>
             </div>
-
             <!-- Sell Your Car Card -->
             <div
                 class="relative aspect-[8/5] md:aspect-[6.5/8] overflow-hidden shadow-lg group max-1366:cursor-pointer clip-diagonal md:clip-none -mt-14 first:mt-0 md:mt-0">
+
                 <img src="Images/yellow.png"
                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     alt="Sell Your Car" />
+
                 <div
-                    class="absolute inset-0 bg-black bg-opacity-30 max-1366:group-hover:bg-opacity-60 transition-all duration-300 z-10">
+                    class="absolute inset-0 bg-black bg-opacity-30 max-1366:group-hover:bg-opacity-40 transition-all duration-300 z-10">
                 </div>
 
-                <a href="sellyourcar.html"
-                    class="absolute inset-0 flex items-center justify-center text-white text-lg underline opacity-0 max-1366:opacity-0 max-1366:group-hover:opacity-100 transition-opacity duration-300 delay-300 z-20">
-                    See More
-                </a>
-                <!-- Content block -->
                 <div class="absolute inset-0 z-20">
-
-                    <!-- Desktop version -->
                     <div class="hidden md:flex absolute inset-0 flex-col justify-end items-center p-6 space-y-2">
                         <div data-lucide="hand-coins" class="text-white w-icon-fluid h-icon-fluid"></div>
                         <div class="text-white text-fluid-xl font-semibold">Sell Your Car</div>
                         <a href="sellyourcar.html" class="text-white text-lg underline">See More</a>
                     </div>
-
-                    <!-- Mobile version -->
                     <div class="md:hidden absolute inset-0 flex items-center justify-center">
                         <div class="text-white text-4xl font-light">Sell Your Car</div>
                     </div>
                 </div>
+
+                <a href="sellyourcar.html" class="absolute inset-0 z-30"></a>
             </div>
 
             <!-- Preparation Card -->
             <div
                 class="relative aspect-[8/5] md:aspect-[6.5/8] overflow-hidden shadow-lg group max-1366:cursor-pointer clip-diagonal md:clip-none -mt-14 first:mt-0 md:mt-0">
+
                 <img src="Images/blue.png"
                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     alt="Preparation" />
+
                 <div
-                    class="absolute inset-0 bg-black bg-opacity-30 max-1366:group-hover:bg-opacity-60 transition-all duration-300 z-10">
+                    class="absolute inset-0 bg-black bg-opacity-30 max-1366:group-hover:bg-opacity-40 transition-all duration-300 z-10">
                 </div>
 
-                <a href="preparation.html"
-                    class="absolute inset-0 flex items-center justify-center text-white text-lg underline opacity-0 max-1366:opacity-0 max-1366:group-hover:opacity-100 transition-opacity duration-300 delay-300 z-20">
-                    See More
-                </a>
-
-                <!-- Content block -->
                 <div class="absolute inset-0 z-20">
-                    <!-- Desktop version -->
                     <div class="hidden md:flex absolute inset-0 flex-col justify-end items-center p-6 space-y-2">
                         <div data-lucide="wrench" class="text-white w-icon-fluid h-icon-fluid"></div>
                         <div class="text-white text-fluid-xl font-semibold">Preparation</div>
                         <a href="preparation.html" class="text-white text-lg underline">See More</a>
                     </div>
-
-                    <!-- Mobile version -->
                     <div class="md:hidden absolute inset-0 flex items-center justify-center">
                         <div class="text-white text-4xl font-light">Preparation</div>
                     </div>
                 </div>
+
+                <a href="preparation.html" class="absolute inset-0 z-30"></a>
             </div>
 
             <!-- Warranty Card -->
             <div
                 class="relative aspect-[8/5] md:aspect-[6.5/8] overflow-hidden shadow-lg group max-1366:cursor-pointer clip-diagonal md:clip-none -mt-14 first:mt-0 md:mt-0">
+
                 <img src="Images/green.png"
                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     alt="Warranty" />
+
                 <div
-                    class="absolute inset-0 bg-black bg-opacity-30 max-1366:group-hover:bg-opacity-60 transition-all duration-300 z-10">
+                    class="absolute inset-0 bg-black bg-opacity-30 max-1366:group-hover:bg-opacity-40 transition-all duration-300 z-10">
                 </div>
 
-                <a href="warranty.html"
-                    class="absolute inset-0 flex items-center justify-center text-white text-lg underline opacity-0 max-1366:opacity-0 max-1366:group-hover:opacity-100 transition-opacity duration-300 delay-300 z-20">
-                    See More
-                </a>
-
-                <!-- Content block -->
                 <div class="absolute inset-0 z-20">
-                    <!-- Desktop version -->
                     <div class="hidden md:flex absolute inset-0 flex-col justify-end items-center p-6 space-y-2">
-                        <div data-lucide="handshake" class="text-white w-icon-fluid h-icon-fluid"></div>
+                        <div data-lucide="shield-check" class="text-white w-icon-fluid h-icon-fluid"></div>
                         <div class="text-white text-fluid-xl font-semibold">Warranty</div>
                         <a href="warranty.html" class="text-white text-lg underline">See More</a>
                     </div>
-
-                    <!-- Mobile version -->
                     <div class="md:hidden absolute inset-0 flex items-center justify-center">
                         <div class="text-white text-4xl font-light">Warranty</div>
                     </div>
                 </div>
+
+                <a href="warranty.html" class="absolute inset-0 z-30"></a>
             </div>
+
         </div>
-    </div>
 
 
 
-    <section class="relative w-full bg-dark-blue-light text-gray-300 overflow-hidden">
-        <div class="grid grid-cols-1 lg:grid-cols-2 items-center relative z-10">
-            <!-- Text Content -->
-            <div class="relative px-6 sm:px-12 lg:px-20 flex gap-10 items-start">
-                <!-- Stats Column -->
-                <div class="hide-1366 lg:flex flex-col justify-between text-center text-sm md:text-base xl:text-base py-8 pt-3"
-                    style="min-height: 440px;">
-                    <div>
-                        <div class="font-semibold text-fluid-lg">320+</div>
-                        <div class="mt-1">Vehicles in Stock</div>
+        <section class="relative w-full bg-dark-blue-light text-gray-300 overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-2 items-center relative z-10">
+                <!-- Text Content -->
+                <div class="relative px-6 sm:px-12 lg:px-20 flex gap-10 items-start">
+                    <!-- Stats Column -->
+                    <div class="hide-1366 lg:flex flex-col justify-between text-center text-sm md:text-base xl:text-base py-8 pt-3"
+                        style="min-height: 440px;">
+                        <div>
+                            <div class="font-semibold text-fluid-lg">320+</div>
+                            <div class="mt-1">Vehicles in Stock</div>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-fluid-lg">12 Years</div>
+                            <div class="mt-1">Industry Expertise</div>
+                        </div>
+                        <div>
+                            <div class="font-semibold text-fluid-lg">5★</div>
+                            <div class="mt-1">Customer Satisfaction</div>
+                        </div>
                     </div>
-                    <div>
-                        <div class="font-semibold text-fluid-lg">12 Years</div>
-                        <div class="mt-1">Industry Expertise</div>
-                    </div>
-                    <div>
-                        <div class="font-semibold text-fluid-lg">5★</div>
-                        <div class="mt-1">Customer Satisfaction</div>
+
+                    <!-- Main Text Block -->
+                    <div class="max-w-3xl space-y-5 border-l-4 border-[#b6a26c] pl-6 py-8 px-4">
+                        <h2 class="text-fluid-xl font-bold leading-tight">
+                            Precision. Performance. <br class="hidden md:block" />Prestige.
+                        </h2>
+
+                        <p class="text-fluid-base">
+                            Tier One Automotive was founded by Alex Pope after over a decade of experience in one of the
+                            UK’s most
+                            respected independent dealerships. Built on a foundation of trust, integrity, and an
+                            obsession
+                            with excellence,
+                            we offer a distinctly personal and professional approach to the luxury car buying
+                            experience.
+                        </p>
+
+                        <p class="text-fluid-base">
+                            Our curated range is hand-selected and obsessively prepared — tailored for discerning
+                            clients
+                            who value
+                            service, excellence, and discretion. From sourcing to presentation, every vehicle we offer
+                            meets
+                            the highest
+                            standards of mechanical performance, cosmetic finish, and provenance.
+                        </p>
+
+                        <p class="text-fluid-base font-semibold">
+                            Kings Langley showroom — 5 minutes off the M25. Nationwide delivery available.
+                        </p>
                     </div>
                 </div>
 
-                <!-- Main Text Block -->
-                <div class="max-w-3xl space-y-5 border-l-4 border-[#b6a26c] pl-6 py-8 px-4">
-                    <h2 class="text-fluid-xl font-bold leading-tight">
-                        Precision. Performance. <br class="hidden md:block" />Prestige.
-                    </h2>
-
-                    <p class="text-fluid-base">
-                        Tier One Automotive was founded by Alex Pope after over a decade of experience in one of the
-                        UK’s most
-                        respected independent dealerships. Built on a foundation of trust, integrity, and an
-                        obsession
-                        with excellence,
-                        we offer a distinctly personal and professional approach to the luxury car buying
-                        experience.
-                    </p>
-
-                    <p class="text-fluid-base">
-                        Our curated range is hand-selected and obsessively prepared — tailored for discerning
-                        clients
-                        who value
-                        service, excellence, and discretion. From sourcing to presentation, every vehicle we offer
-                        meets
-                        the highest
-                        standards of mechanical performance, cosmetic finish, and provenance.
-                    </p>
-
-                    <p class="text-fluid-base font-semibold">
-                        Kings Langley showroom — 5 minutes off the M25. Nationwide delivery available.
-                    </p>
+                <!-- Image -->
+                <div class="clipped-img overflow-hidden relative">
+                    <img src="Images/McLaren.png" alt="Tier One McLaren"
+                        class="w-full h-full object-cover object-center -mb-1 " />
                 </div>
             </div>
-
-            <!-- Image -->
-            <div class="clipped-img overflow-hidden relative">
-                <img src="Images/McLaren.png" alt="Tier One McLaren"
-                    class="w-full h-full object-cover object-center -mb-1 " />
-            </div>
-        </div>
-    </section>
+        </section>
 </body>
 
 <!-- Carousel Markup -->
