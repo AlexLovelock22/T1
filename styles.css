@@ -75,14 +75,21 @@ margin: 0 auto;
 }
 
 .embla__slide {
-  min-width: 25%;
+  min-width: 25%; /* Default: 4 per view */
 }
 
 @media screen and (max-width: 1570px) {
   .embla__slide {
-    min-width: 33.3333%; /* 3 cards per view on smaller screens */
+    min-width: 33.3333%; /* 3 per view */
   }
 }
+
+@media screen and (max-width: 768px) {
+  .embla__slide {
+    min-width: 100%; /* 1 per view on mobile */
+  }
+}
+
 
 .card {
   margin: 10px;
@@ -110,6 +117,7 @@ margin: 0 auto;
   clip-path: polygon(0 0, 100% 0, 100% 96%, 0% 100%); 
 }
 
+
 /* Hide elements when scaling pages down to 1366 resolution */
 @media screen and (max-width: 1570px) {
   .hide-1366 {
@@ -125,6 +133,10 @@ margin: 0 auto;
 
 .clip-diagonal {
   clip-path: polygon(0 15%, 100% 0, 100% 85%, 0% 100%);
+}
+
+.clip-buffer {
+  clip-path: polygon(0 85%, 100% 0, 100% 100%, 0 100%);
 }
 
 
