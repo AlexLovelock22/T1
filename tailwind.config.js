@@ -4,13 +4,13 @@ module.exports = {
   theme: {
     extend: {
       fontSize: {
-        'fluid-base': 'clamp(0.7rem, 0.85vw, 1.2rem)',  
-        'fluid-md': 'clamp(0.75rem, 1vw, 1.4rem)', 
-        'fluid-lg':   'clamp(0.8rem, 1vw, 1.9rem)',     
-        'fluid-xl':   'clamp(1rem, 1.75vw, 2.5rem)',    
+        'fluid-base': 'clamp(0.7rem, 0.85vw, 1.2rem)',
+        'fluid-md': 'clamp(0.75rem, 1vw, 1.4rem)',
+        'fluid-lg': 'clamp(0.8rem, 1vw, 1.9rem)',
+        'fluid-xl': 'clamp(1rem, 1.75vw, 2.5rem)',
       },
       width: {
-        'icon-fluid': 'clamp(1.5rem, 2vw, 2.25rem)', 
+        'icon-fluid': 'clamp(1.5rem, 2vw, 2.25rem)',
       },
       height: {
         'icon-fluid': 'clamp(1.5rem, 2vw, 2.25rem)',
@@ -18,8 +18,16 @@ module.exports = {
       screens: {
         'max-1366': { max: '1570px' }, // matches your CSS logic
       },
-    }
-    
-  },
-  plugins: [],
+      animation: {
+        'fade-up': 'fade-up 0.6s ease-out both',
+      },
+      keyframes: {
+        'fade-up': {
+          '0%': { opacity: 0, transform: 'translateY(20px)' },
+          '100%': { opacity: 1, transform: 'translateY(0)' },
+        }
+      },
+    },
+    plugins: [],
+  }
 }

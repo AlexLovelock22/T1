@@ -165,35 +165,71 @@
             </div>
         </div>
 
-        <!-- CTA BUTTON GROUP -->
-        <div
-            class="absolute top-[78%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90%] md:w-[70%] z-40 text-lg">
-            <div
-                class="flex flex-col sm:flex-row items-center justify-between max-w-5xl mx-auto px-4 sm:px-8 py-4 
-          rounded-xl bg-black/40 backdrop-blur-md border border-white/10 shadow-lg space-y-2 sm:space-y-0 sm:space-x-4">
-                <button class="flex items-center justify-center gap-2 w-full sm:w-1/3 py-3 px-4 rounded-lg 
-          text-white font-medium tracking-wide hover:bg-white/10 transition-all group">
-                    <i data-lucide="search" class="w-5 h-5 group-hover:scale-105 transition-transform"></i>
-                    <span>Search</span>
-                </button>
-                <div class="hidden sm:block h-6 w-px bg-white/20"></div>
-                <button class="flex items-center justify-center gap-2 w-full sm:w-1/3 py-3 px-4 rounded-lg 
-          text-white font-medium tracking-wide hover:bg-white/10 transition-all group">
-                    <span>View Stock</span>
-                </button>
-                <div class="hidden sm:block h-6 w-px bg-white/20"></div>
-                <button class="flex items-center justify-center gap-2 w-full sm:w-1/3 py-3 px-4 rounded-lg 
-          text-white font-medium tracking-wide hover:bg-white/10 transition-all group">
-                    <span>Sell Your Car</span>
-                    <i data-lucide="upload" class="w-5 h-5 group-hover:scale-105 transition-transform"></i>
-                </button>
+        <!-- CTA SEARCH & ACTIONS BLOCK -->
+        <div class="absolute top-[78%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-40 w-full px-4">
+            <div class="bg-black/50 backdrop-blur-md rounded-md px-4 py-4 max-w-3xl mx-auto text-white space-y-4">
+
+                <!-- Top Row: Search -->
+                <div class="flex flex-col sm:flex-row sm:items-center gap-4 w-full sm:justify-center">
+                    <select
+                        class="bg-transparent border-b border-white py-2 px-2 focus:outline-none w-[90%] mx-auto sm:w-64 md:w-72">
+
+                        <option>ALL MAKES</option>
+                    </select>
+                    <select
+                        class="bg-transparent border-b border-white py-2 px-2 focus:outline-none w-[90%] mx-auto sm:w-64 md:w-72">
+
+                        <option>ALL MODELS</option>
+                    </select>
+                    <button
+                        class="flex items-center justify-center gap-2 border border-white px-4 py-2 rounded-md hover:bg-white/10 transition w-[90%] mx-auto sm:w-auto">
+                        <i data-lucide="search" class="w-4 h-4"></i>
+                        <span>Search</span>
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-3 w-full mx-auto text-center text-sm sm:text-base divide-x divide-white/10 
+                                animate-fade-up hidden sm:grid">
+                    <a href="#" class="group relative whitespace-nowrap px-4">
+                        <span class="inline-block relative">
+                            View All Stock
+                            <span
+                                class="absolute bottom-0 left-1/2 w-full h-[1px] bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center transform -translate-x-1/2"></span>
+                        </span>
+                    </a>
+                    <a href="#" class="group relative whitespace-nowrap px-4">
+                        <span class="inline-block relative">
+                            Sell Your Car
+                            <span
+                                class="absolute bottom-0 left-1/2 w-full h-[1px] bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center transform -translate-x-1/2"></span>
+                        </span>
+                    </a>
+                    <a href="#" class="group relative whitespace-nowrap px-4">
+                        <span class="inline-block relative">
+                            Finance Options
+                            <span
+                                class="absolute bottom-0 left-1/2 w-full h-[1px] bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-center transform -translate-x-1/2"></span>
+                        </span>
+                    </a>
+                </div>
+
+
+
+
+
+
             </div>
         </div>
+
+
+
+
+
     </section>
 
 
     <!-- Tagline -->
-    <div class="flex justify-center items-center pt-8 pb-5 md:pt-16 md:pb-8 bg-dark-blue">
+    <div class="flex justify-center items-center pt-12 pb-5 md:pt-16 md:pb-8 bg-dark-blue">
         <h2 class="text-white text-3xl font-light tracking-[0.4em]">SERVICES</h2>
     </div>
 
@@ -211,13 +247,13 @@
                     alt="Finance" />
 
                 <div
-                    class="absolute inset-0 bg-black bg-opacity-30 max-1366:group-hover:bg-opacity-40 transition-all duration-300 z-10">
+                    class="absolute inset-0 bg-black bg-opacity-50 md:bg-opacity-30 max-1366:group-hover:bg-opacity-40 transition-all duration-300 z-10">
                 </div>
 
                 <div class="absolute inset-0 z-20">
                     <div class="hidden md:flex absolute inset-0 flex-col justify-end items-center p-6 space-y-2">
                         <div data-lucide="handshake" class="text-white w-icon-fluid h-icon-fluid"></div>
-                        <div class="text-white text-fluid-xl font-semibold">Finance</div>
+                        <div class="text-white text-4xl font-light drop-shadow-lg">Finance</div>
                         <a href="finance.html" class="text-white text-lg underline">See More</a>
                     </div>
                     <div class="md:hidden absolute inset-0 flex items-center justify-center">
@@ -236,7 +272,7 @@
                     alt="Sell Your Car" />
 
                 <div
-                    class="absolute inset-0 bg-black bg-opacity-30 max-1366:group-hover:bg-opacity-40 transition-all duration-300 z-10">
+                    class="absolute inset-0 bg-black bg-opacity-50 md:bg-opacity-30 max-1366:group-hover:bg-opacity-40 transition-all duration-300 z-10">
                 </div>
 
                 <div class="absolute inset-0 z-20">
@@ -262,9 +298,8 @@
                     alt="Preparation" />
 
                 <div
-                    class="absolute inset-0 bg-black bg-opacity-30 max-1366:group-hover:bg-opacity-40 transition-all duration-300 z-10">
+                    class="absolute inset-0 bg-black bg-opacity-50 md:bg-opacity-30 max-1366:group-hover:bg-opacity-40 transition-all duration-300 z-10">
                 </div>
-
                 <div class="absolute inset-0 z-20">
                     <div class="hidden md:flex absolute inset-0 flex-col justify-end items-center p-6 space-y-2">
                         <div data-lucide="wrench" class="text-white w-icon-fluid h-icon-fluid"></div>
@@ -288,7 +323,7 @@
                     alt="Warranty" />
 
                 <div
-                    class="absolute inset-0 bg-black bg-opacity-30 max-1366:group-hover:bg-opacity-40 transition-all duration-300 z-10">
+                    class="absolute inset-0 bg-black bg-opacity-50 md:bg-opacity-30 max-1366:group-hover:bg-opacity-40 transition-all duration-300 z-10">
                 </div>
 
                 <div class="absolute inset-0 z-20">
@@ -434,7 +469,63 @@
                                     </div>
                                     <!-- 1080- -->
                                     <div class="hide-1080 flex justify-between items-center mt-auto pt-4">
+                                        <div class="text-lg sm:text-fluid-md font-bold">£57,980</div>
+
+                                        <button
+                                            class="border border-white px-2 py-1 rounded hover:bg-white hover:text-[#2E3A44] transition">
+                                            Details
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="embla__slide">
+                            <div
+                                class="card flex flex-col rounded-lg shadow-md overflow-hidden bg-[#121519] text-white">
+
+                                <!-- Full-size uncropped image -->
+                                <div class="w-full overflow-hidden featured-clip">
+                                    <img src="https://img.cdn.dragon2000.net/C2846/U737/IMG_34382-medium.jpg"
+                                        alt="Porsche Cayman GT4" class="w-full h-auto block" />
+                                </div>
+
+
+                                <!-- Text Content -->
+                                <div class="flex flex-col p-4 fluid-base text-left flex-1">
+                                    <div>
+                                        <div class="font-semibold leading-tight text-fluid-lg">PORSCHE CAYMAN 981 GT4
+                                        </div>
+                                        <div class="text-gray-300 text-fluid-base">3.8 981 GT4 Coupe 2dr Petrol Manual
+                                            Euro 6
+                                            (385ps) </div>
+
+                                        <div class="border-t border-gray-600 mt-2 "></div>
+                                        <div class="grid grid-cols-2 gap-4 mt-3">
+                                            <div class="flex items-center gap-1 text-fluid-md">
+                                                <i data-lucide="calendar" class="w-4 h-4"></i> 2015
+                                            </div>
+                                            <div class="flex items-center gap-1 text-fluid-md">
+                                                <i data-lucide="gauge" class="w-4 h-4"></i> 29,500
+                                            </div>
+                                            <div class="flex items-center gap-1 text-fluid-md">
+                                                <i data-lucide="droplet" class="w-4 h-4"></i> Guards Red
+                                            </div>
+                                            <div class="flex items-center gap-1 text-fluid-md">
+                                                <i data-lucide="settings " class="w-4 h-4"></i> Manual
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="hide-1366 flex justify-between items-center mt-auto pt-4">
                                         <div class="text-fluid-md font-bold">£57,980</div>
+                                        <button
+                                            class="border border-white px-5 py-2 rounded hover:bg-white hover:text-[#2E3A44] transition">
+                                            Details
+                                        </button>
+                                    </div>
+                                    <div class="hide-1080 flex justify-between items-center mt-auto pt-4">
+                                        <div class="text-lg sm:text-fluid-md font-bold">£57,980</div>
+
                                         <button
                                             class="border border-white px-2 py-1 rounded hover:bg-white hover:text-[#2E3A44] transition">
                                             Details
@@ -490,7 +581,8 @@
                                     </div>
                                     <!-- 1080- -->
                                     <div class="hide-1080 flex justify-between items-center mt-auto pt-4">
-                                        <div class="text-fluid-md font-bold">£57,980</div>
+                                        <div class="text-lg sm:text-fluid-md font-bold">£57,980</div>
+
                                         <button
                                             class="border border-white px-2 py-1 rounded hover:bg-white hover:text-[#2E3A44] transition">
                                             Details
@@ -546,7 +638,8 @@
                                     </div>
                                     <!-- 1080- -->
                                     <div class="hide-1080 flex justify-between items-center mt-auto pt-4">
-                                        <div class="text-fluid-md font-bold">£57,980</div>
+                                        <div class="text-lg sm:text-fluid-md font-bold">£57,980</div>
+
                                         <button
                                             class="border border-white px-2 py-1 rounded hover:bg-white hover:text-[#2E3A44] transition">
                                             Details
@@ -602,63 +695,8 @@
                                     </div>
                                     <!-- 1080- -->
                                     <div class="hide-1080 flex justify-between items-center mt-auto pt-4">
-                                        <div class="text-fluid-md font-bold">£57,980</div>
-                                        <button
-                                            class="border border-white px-2 py-1 rounded hover:bg-white hover:text-[#2E3A44] transition">
-                                            Details
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="embla__slide">
-                            <div
-                                class="card flex flex-col rounded-lg shadow-md overflow-hidden bg-[#121519] text-white">
+                                        <div class="text-lg sm:text-fluid-md font-bold">£57,980</div>
 
-                                <!-- Full-size uncropped image -->
-                                <div class="w-full overflow-hidden featured-clip">
-                                    <img src="https://img.cdn.dragon2000.net/C2846/U737/IMG_34382-medium.jpg"
-                                        alt="Porsche Cayman GT4" class="w-full h-auto block" />
-                                </div>
-
-
-                                <!-- Text Content -->
-                                <div class="flex flex-col p-4 fluid-base text-left flex-1">
-                                    <div>
-                                        <div class="font-semibold leading-tight text-fluid-lg">PORSCHE CAYMAN 981 GT4
-                                        </div>
-                                        <div class="text-gray-300 text-fluid-base">3.8 981 GT4 Coupe 2dr Petrol Manual
-                                            Euro 6
-                                            (385ps) </div>
-
-                                        <div class="border-t border-gray-600 mt-2 "></div>
-                                        <div class="grid grid-cols-2 gap-4 mt-3">
-                                            <div class="flex items-center gap-1 text-fluid-md">
-                                                <i data-lucide="calendar" class="w-4 h-4"></i> 2015
-                                            </div>
-                                            <div class="flex items-center gap-1 text-fluid-md">
-                                                <i data-lucide="gauge" class="w-4 h-4"></i> 29,500
-                                            </div>
-                                            <div class="flex items-center gap-1 text-fluid-md">
-                                                <i data-lucide="droplet" class="w-4 h-4"></i> Guards Red
-                                            </div>
-                                            <div class="flex items-center gap-1 text-fluid-md">
-                                                <i data-lucide="settings " class="w-4 h-4"></i> Manual
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- 1080+ -->
-                                    <div class="hide-1366 flex justify-between items-center mt-auto pt-4">
-                                        <div class="text-fluid-md font-bold">£57,980</div>
-                                        <button
-                                            class="border border-white px-5 py-2 rounded hover:bg-white hover:text-[#2E3A44] transition">
-                                            Details
-                                        </button>
-                                    </div>
-                                    <!-- 1080- -->
-                                    <div class="hide-1080 flex justify-between items-center mt-auto pt-4">
-                                        <div class="text-fluid-md font-bold">£57,980</div>
                                         <button
                                             class="border border-white px-2 py-1 rounded hover:bg-white hover:text-[#2E3A44] transition">
                                             Details
@@ -682,32 +720,37 @@
             </div>
         </div>
 
-        <div class="bg-[#1a1c21] py-10">
-            <div class="w-[82%] mx-auto grid grid-cols-1 md:grid-cols-3">
+        <div class="bg-[#1a1c21] py-4 md:py-10">
+            <div class="w-[94%] md:w-[82%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
 
                 <!-- Card 1 -->
                 <a href="#" class="relative group aspect-[16/9] w-full overflow-hidden">
-
                     <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                         style="background-image: url('https://hips.hearstapps.com/hmg-prod/images/2025-aston-martin-vanquish-120-66d091bddd098.jpg?crop=1xw:1xh;center,top&resize=980:*');">
                     </div>
                     <div class="absolute inset-0 bg-black/40 transition group-hover:bg-black/20"></div>
-                    <div class="absolute bottom-4 left-4 text-white z-10">
-                        <h3 class="text-fluid-lg font-bold">PREVIOUSLY SOLD</h3>
-                        <p class="ttext-fluid-md">Click to view our previously sold stock</p>
+                    <div
+                        class="absolute inset-0 flex items-center justify-center md:items-end md:justify-start p-4 text-white z-10">
+                        <div class="text-center md:text-left w-full">
+                            <h3 class="text-xl sm:text-fluid-lg text-center sm:text-left font-semibold">PREVIOUSLY SOLD
+                            </h3>
+                            <p class="text-fluid-md hidden md:block">Click to view our previously sold stock</p>
+                        </div>
                     </div>
                 </a>
 
                 <!-- Card 2 -->
                 <a href="#" class="relative group aspect-[16/9] w-full overflow-hidden">
-
                     <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
                         style="background-image: url('https://preview.redd.it/2uo14andpql21.jpg?width=640&crop=smart&auto=webp&s=d0c9104b37dc1b4f1693517ad0abe2f184d2f805');">
                     </div>
                     <div class="absolute inset-0 bg-black/40 transition group-hover:bg-black/20"></div>
-                    <div class="absolute bottom-4 left-4 text-white z-10">
-                        <h3 class="text-fluid-lg font-bold">PREVIOUSLY SOLD E92 M3’s</h3>
-                        <p class="text-fluid-md">Click to view our previously sold E92 M3s</p>
+                    <div
+                        class="absolute inset-0 flex items-center justify-center md:items-end md:justify-start p-4 text-white z-10">
+                        <div class="text-center md:text-left w-full font-semibold">
+                            <h3 class="text-xl sm:text-fluid-lg text-center sm:text-left">PREVIOUSLY SOLD E92 M3’s</h3>
+                            <p class="text-fluid-md hidden md:block">Click to view our previously sold E92 M3s</p>
+                        </div>
                     </div>
                 </a>
 
@@ -717,54 +760,77 @@
                         style="background-image: url('https://c4.wallpaperflare.com/wallpaper/989/29/290/audi-cars-r8-cars-audi-hd-art-wallpaper-preview.jpg');">
                     </div>
                     <div class="absolute inset-0 bg-black/40 transition group-hover:bg-black/20"></div>
-                    <div class="absolute bottom-4 left-4 text-white z-10">
-                        <h3 class="text-fluid-lg font-bold">VEHICLE SOURCING</h3>
-                        <p class="text-fluid-md">Find out more about our vehicle sourcing</p>
+                    <div
+                        class="absolute inset-0 flex items-center justify-center md:items-end md:justify-start p-4 text-white z-10">
+                        <div class="text-center md:text-left w-full">
+                            <h3 class="text-xl sm:text-fluid-lg text-center sm:text-left font-semibold">
+                                VEHICLE SOURCING</h3>
+                            <p class="text-fluid-md hidden md:block">Find out more about our vehicle sourcing</p>
+                        </div>
                     </div>
                 </a>
 
             </div>
         </div>
 </body>
-<footer class="bg-[#16181c] text-[#333] text-sm pt-16 pb-8 text-white">
-    <div class="max-w-screen-xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-10">
+<footer class="bg-[#16181c] text-[#333] text-sm pt-8 sm:pt-16 pb-8 text-white">
+    <div class="max-w-screen-xl mx-auto px-6 grid grid-cols-1 md:grid-cols-5 gap-10 mb-10">
 
-        <!-- Social -->
-        <div>
-            <img src="Images/T1White.png" alt="Tier One Logo" class="h-20 mb-4">
-
-            <div class="space-y-3 text-sm">
-                <!-- Facebook -->
+        <!-- Logo and Social -->
+        <div class="space-y-4 col-span-1">
+            <img src="Images/T1White.png" alt="Tier One Logo" class="h-24 md:h-20 mx-auto md:mx-0">
+            <div class="hidden md:block space-y-3 text-sm">
                 <a href="https://facebook.com" target="_blank"
                     class="flex items-center gap-2 hover:opacity-80 transition">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
-                        alt="Facebook" class="w-5 h-5" />
+                        class="w-5 h-5" />
                     <span>Facebook</span>
                 </a>
-
-                <!-- Instagram -->
                 <a href="https://instagram.com" target="_blank"
                     class="flex items-center gap-2 hover:opacity-80 transition">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
                         class="w-5 h-5 rounded-md" />
                     <span>Instagram</span>
                 </a>
             </div>
         </div>
 
-        <!-- About -->
-        <div>
-            <h4 class="font-semibold text-lg mb-3">About</h4>
-            <ul class="space-y-2">
-                <li><a href="#" class="hover:text-gold transition">Our Story</a></li>
-                <li><a href="#" class="hover:text-gold transition">The Team</a></li>
-                <li><a href="#" class="hover:text-gold transition">Our Values</a></li>
-                <li><a href="#" class="hover:text-gold transition">The History</a></li>
-            </ul>
+        <!-- Mobile: Contact Info + Links -->
+        <div class="md:hidden col-span-1">
+            <div class="flex justify-between gap-10">
+                <!-- Left Column -->
+                <div class="space-y-5 text-sm">
+                    <div>
+                        <p class="font-semibold">Opening Times</p>
+                        <p>Mon to Sat : 09:00 - 18:00</p>
+                        <p>Sunday : Appointment Only</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold">Give us a call</p>
+                        <p>Phone No</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold">Send us an email</p>
+                        <p>email</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold">Find us here</p>
+                        <p>Address</p>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="space-y-2 text-right text-sm">
+                    <p><a href="#" class="hover:text-gold transition">View Stock</a></p>
+                    <p><a href="#" class="hover:text-gold transition">Warranty</a></p>
+                    <p><a href="#" class="hover:text-gold transition">Finance</a></p>
+                    <p><a href="#" class="hover:text-gold transition">Preparation</a></p>
+                </div>
+            </div>
         </div>
 
-        <!-- Top Brands -->
-        <div>
+        <!-- Useful Links: now start in column 4 -->
+        <div class="hidden md:block md:col-start-4 md:col-span-1">
             <h4 class="font-semibold text-lg mb-3">Useful Links</h4>
             <ul class="space-y-2">
                 <li><a href="#" class="hover:text-gold transition">Privacy Policy</a></li>
@@ -776,43 +842,45 @@
             </ul>
         </div>
 
-        <!-- Opening Times -->
-        <div>
-            <h4 class="flex items-center gap-2 font-semibold text-lg mb-4">
-                Opening Times
-            </h4>
-            <ul class="space-y-1 font-medium text-sm">
-                <li class="flex justify-between">
-                    <span>Monday</span><span>08:00 - 18:00</span>
-                </li>
-                <li class="flex justify-between">
-                    <span>Tuesday</span><span>08:00 - 18:00</span>
-                </li>
-                <li class="flex justify-between">
-                    <span>Wednesday</span><span>08:00 - 18:00</span>
-                </li>
-                <li class="flex justify-between">
-                    <span>Thursday</span><span>08:00 - 18:00</span>
-                </li>
-                <li class="flex justify-between">
-                    <span>Friday</span><span>08:00 - 18:00</span>
-                </li>
-                <li class="flex justify-between">
-                    <span>Saturday</span><span>08:00 - 18:00</span>
-                </li>
-                <li class="flex justify-between">
-                    <span>Sunday</span><span class="text-neutral-500">Appointment Only</span>
-                </li>
+        <!-- Opening Times: now column 5 -->
+        <div class="hidden md:block md:col-start-5 md:col-span-1">
+            <h4 class="font-semibold text-lg mb-3">Opening Times</h4>
+            <ul class="space-y-1 text-sm font-medium">
+                <li class="flex justify-between"><span>Monday</span><span>08:00 - 18:00</span></li>
+                <li class="flex justify-between"><span>Tuesday</span><span>08:00 - 18:00</span></li>
+                <li class="flex justify-between"><span>Wednesday</span><span>08:00 - 18:00</span></li>
+                <li class="flex justify-between"><span>Thursday</span><span>08:00 - 18:00</span></li>
+                <li class="flex justify-between"><span>Friday</span><span>08:00 - 18:00</span></li>
+                <li class="flex justify-between"><span>Saturday</span><span>08:00 - 18:00</span></li>
+                <li class="flex justify-between"><span>Sunday</span><span class="text-neutral-500">Appointment
+                        Only</span></li>
             </ul>
         </div>
-
     </div>
 
-    <div class="border-t border-neutral-300 pt-6 mt-8 bg">
+    <!-- Mobile Social Icons -->
+    <div class="md:hidden text-center space-y-3 mt-4">
+        <p class="text-white">Follow Us</p>
+        <!-- Include Lucide via CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/lucide@latest"></script>
+
+        <div class="flex justify-center gap-4">
+            <a href="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" class="text-white text-xl">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="w-6 h-6">
+            </a>
+            <a href="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" class="text-white text-xl">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="w-6 h-6">
+            </a>
+            <a href="https://en.wikipedia.org/wiki/File:X_logo.jpg" class="text-white text-xl">
+                <img src="https://cdn.cms-twdigitalassets.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.2560.png" alt="Twitter" class="w-6 h-6 invert">
+            </a>
+        </div>
+    </div>
+
+    <!-- Legal -->
+    <div class="border-t border-neutral-300 pt-6 mt-8">
         <div
             class="max-w-screen-xl mx-auto px-6 flex flex-col sm:flex-row justify-between text-xs text-neutral-500 gap-4">
-
-            <!-- Left Side (Legal Text) -->
             <div class="space-y-1">
                 <p>Tier One Automotive Ltd is a company registered in England and Wales.</p>
                 <p>Company registration number: 08879100</p>
@@ -821,18 +889,13 @@
                     <a href="#" class="underline hover:text-[#b59f61] transition">Privacy Policy</a>
                 </p>
             </div>
-
-            <!-- Right Side (Credit) -->
             <div class="text-sm font-medium">
                 © 2025 Designed & Powered by
-                <a href="https://alexlovelock.dev" class="underline hover:text-[#b59f61] transition">Alex
-                    Lovelock</a>
+                <a href="https://alexlovelock.dev" class="underline hover:text-[#b59f61] transition">Alex Lovelock</a>
             </div>
-
         </div>
     </div>
 </footer>
-
 
 <!-- Embla Script -->
 <script src="https://cdn.jsdelivr.net/npm/embla-carousel@8/embla-carousel.umd.js"></script>

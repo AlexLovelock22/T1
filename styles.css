@@ -113,6 +113,10 @@ margin: 0 auto;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
+.giant-shadow {
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 1);
+}
+
 .featured-clip{
   clip-path: polygon(0 0, 100% 0, 100% 96%, 0% 100%); 
 }
