@@ -932,12 +932,12 @@ video {
   width: 24rem;
 }
 
-.w-\[82\%\] {
-  width: 82%;
-}
-
 .w-\[90\%\] {
   width: 90%;
+}
+
+.w-\[94\%\] {
+  width: 94%;
 }
 
 .w-\[99\%\] {
@@ -950,14 +950,6 @@ video {
 
 .w-icon-fluid {
   width: clamp(1.5rem, 2vw, 2.25rem);
-}
-
-.w-\[96\%\] {
-  width: 96%;
-}
-
-.w-\[94\%\] {
-  width: 94%;
 }
 
 .min-w-\[20px\] {
@@ -1169,10 +1161,6 @@ video {
 
 .gap-8 {
   gap: 2rem;
-}
-
-.gap-3 {
-  gap: 0.75rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -1525,11 +1513,6 @@ video {
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-}
-
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
 }
 
 .py-12 {
@@ -1936,11 +1919,6 @@ video {
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
-.drop-shadow-lg {
-  --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
 .invert {
   --tw-invert: invert(100%);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -2212,10 +2190,6 @@ video {
     grid-column: span 1 / span 1;
   }
 
-  .md\:col-start-3 {
-    grid-column-start: 3;
-  }
-
   .md\:col-start-4 {
     grid-column-start: 4;
   }
@@ -2249,6 +2223,18 @@ video {
     aspect-ratio: 6.5/8;
   }
 
+  .md\:h-24 {
+    height: 6rem;
+  }
+
+  .md\:h-auto {
+    height: auto;
+  }
+
+  .md\:h-28 {
+    height: 7rem;
+  }
+
   .md\:h-20 {
     height: 5rem;
   }
@@ -2257,12 +2243,12 @@ video {
     width: 18rem;
   }
 
-  .md\:w-\[98\%\] {
-    width: 98%;
-  }
-
   .md\:w-\[82\%\] {
     width: 82%;
+  }
+
+  .md\:w-\[98\%\] {
+    width: 98%;
   }
 
   .md\:max-w-\[1300px\] {
@@ -2344,10 +2330,6 @@ video {
     text-align: left;
   }
 
-  .md\:text-right {
-    text-align: right;
-  }
-
   .md\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -2375,6 +2357,10 @@ video {
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .md\:font-semibold {
+    font-weight: 600;
   }
 }
 
