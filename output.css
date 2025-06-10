@@ -2127,20 +2127,20 @@ video {
     width: 66.666667%;
   }
 
-  .sm\:w-64 {
-    width: 16rem;
+  .sm\:w-5 {
+    width: 1.25rem;
   }
 
-  .sm\:w-auto {
-    width: auto;
+  .sm\:w-64 {
+    width: 16rem;
   }
 
   .sm\:w-96 {
     width: 24rem;
   }
 
-  .sm\:w-5 {
-    width: 1.25rem;
+  .sm\:w-auto {
+    width: auto;
   }
 
   .sm\:grid-cols-2 {

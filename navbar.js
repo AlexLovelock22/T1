@@ -1,24 +1,28 @@
-document.addEventListener("DOMContentLoaded", () => {
-    // === Side menu toggle ===
-    const openBtn = document.querySelector('[aria-label="Filter"]');
-    const closeBtn = document.getElementById("close-menu");
+function initNavbar() {
+    const toggle = document.querySelector("#toggle-search");
+    const box = document.querySelector("#search-box");
     const overlay = document.getElementById("menu-overlay");
     const menu = document.getElementById("side-menu");
+    const openMenuBtn = document.querySelector('[aria-label="Filter"]');
+    const closeMenuBtn = document.getElementById("close-menu");
 
-    openBtn?.addEventListener("click", () => {
-        overlay?.classList.remove("hidden");
-        menu?.classList.remove("translate-x-full");
-    });
+    // === Side menu toggle ===
+    if (openMenuBtn && closeMenuBtn && overlay && menu) {
+        openMenuBtn.addEventListener("click", () => {
+            menu.classList.remove("translate-x-full");
+            overlay.classList.remove("hidden");
+        });
 
-    closeBtn?.addEventListener("click", () => {
-        overlay?.classList.add("hidden");
-        menu?.classList.add("translate-x-full");
-    });
+        closeMenuBtn.addEventListener("click", () => {
+            menu.classList.add("translate-x-full");
+            overlay.classList.add("hidden");
+        });
 
-    overlay?.addEventListener("click", () => {
-        overlay?.classList.add("hidden");
-        menu?.classList.add("translate-x-full");
-    });
+        overlay.addEventListener("click", () => {
+            menu.classList.add("translate-x-full");
+            overlay.classList.add("hidden");
+        });
+    }
 
     // === Search pill logic ===
     const searchToggle = document.getElementById("toggle-search");
@@ -60,6 +64,16 @@ document.addEventListener("DOMContentLoaded", () => {
         window.location.href = "/Stock/View";
     });
 
+    // === CTA load-in animation ===
+    const cta = document.getElementById("cta-wrapper");
+    if (cta) {
+        cta.classList.add("opacity-0", "translate-y-6", "transition-all", "duration-1000");
+        setTimeout(() => {
+            cta.classList.remove("opacity-0", "translate-y-6");
+            cta.classList.add("opacity-100", "translate-y-0");
+        }, 100);
+    }
+
     // === Initial icon render ===
     lucide.createIcons();
-});
+}

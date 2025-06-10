@@ -22,113 +22,7 @@
 
 <body class="bg-[#202329] text-white exo2">
 
-  <!-- Navbar -->
-  <nav class="z-50 h-24 w-full absolute top-0 left-0 bg-black/40 backdrop-blur-md border-b border-white/10 shadow-lg">
-    <div class="max-w-screen-xl mx-auto h-full flex items-center justify-between px-4 sm:px-8 relative">
-      <!-- Left Icons -->
-      <div class="flex items-center gap-4">
-        <a href="contactus.html" aria-label="Call">
-          <button class="p-2 rounded-full hover:bg-white/10 transition-colors">
-            <i data-lucide="phone" class="w-5 h-5 text-white"></i>
-          </button>
-        </a>
-        <a href="contactus.html" aria-label="Email">
-          <button class="p-2 rounded-full hover:bg-white/10 transition-colors">
-            <i data-lucide="mail" class="w-5 h-5 text-white"></i>
-          </button>
-        </a>
-      </div>
-
-      <!-- Right Icons -->
-      <div class="flex items-center gap-2">
-        <!-- Search Toggle -->
-        <div id="search-container" class="relative flex items-center">
-          <!-- Search Icon Button -->
-          <button id="toggle-search" class="p-2 rounded-full hover:bg-white/10 transition-colors" aria-label="Search">
-            <i data-lucide="search" class="w-5 h-5 text-white"></i>
-          </button>
-
-          <!-- Expanding Form -->
-          <div id="search-box"
-            class="absolute right-0 top-1/2 -translate-y-1/2 bg-[#2A2E35] text-white rounded-full overflow-hidden px-4 py-2 flex items-center gap-1 large-shadow transform scale-x-0 opacity-0 transition-all duration-300 origin-right z-50">
-
-            <!-- Make Dropdown -->
-            <div class="relative">
-              <select class="bg-transparent text-white appearance-none pr-6 pl-1 py-1 rounded focus:outline-none">
-                <option class="bg-[#2A2E35]">Make</option>
-                <option class="bg-[#2A2E35]">Audi</option>
-                <option class="bg-[#2A2E35]">BMW</option>
-              </select>
-              <i data-lucide="chevron-down"
-                class="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 text-white"></i>
-            </div>
-
-            <!-- Model Dropdown -->
-            <div class="relative">
-              <select class="bg-[transparent] text-white appearance-none pr-6 pl-3 py-1 rounded focus:outline-none">
-                <option class="bg-[#2A2E35]">Model</option>
-                <option class="bg-[#2A2E35]">M3</option>
-                <option class="bg-[#2A2E35]">RS5</option>
-              </select>
-              <i data-lucide="chevron-down"
-                class="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 text-white "></i>
-            </div>
-
-            <!-- Search Button -->
-            <button class="text-white pl-3">
-              <i data-lucide="search" class="w-5 h-5"></i>
-            </button>
-          </div>
-        </div>
-        <button class="p-2 rounded-full hover:bg-white/10 transition-colors" aria-label="Filter">
-          <i data-lucide="menu" class="w-5 h-5 text-white"></i>
-        </button>
-      </div>
-
-      <!-- Center Logo -->
-      <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-        <a href="index.html" aria-label="Home">
-          <img src="Images/T1White.png" alt="TierOne Logo"
-            class="h-16 sm:h-20 object-contain hover:opacity-90 transition-opacity duration-200" />
-        </a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Overlay -->
-  <div id="menu-overlay" class="z-50 fixed inset-0 bg-black/70  hidden"></div>
-
-  <div id="side-menu"
-        class="fixed top-0 right-0 h-full w-96 bg-[#0f1012] text-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out shadow-lg">
-        <div class="flex items-center justify-between px-6 h-24 border-b border-white/10">
-            <img src="Images/T1White.png" alt="Tier One Logo" class="h-16 object-contain" />
-            <button id="close-menu" class="text-white" aria-label="Close">
-                <i data-lucide="x" class="w-6 h-6"></i>
-            </button>
-        </div>
-        <ul class="pl-3 pt-4 tracking-wide uppercase text-lg tracking-[0.15rem]">
-            <li><a href="index.html" class="block px-3 py-2 rounded transition duration-200 transform hover:translate-x-2 hover:bg-[#1a1b1e] hover:text-gold">Home</a></li>
-            <li><a href="stock.html" class="block px-3 py-2 rounded transition duration-200 transform hover:translate-x-2 hover:bg-[#1a1b1e] hover:text-gold">View Stock</a></li>
-            <li><a href="sellyourcar.html" class="block px-3 py-2 rounded transition duration-200 transform hover:translate-x-2 hover:bg-[#1a1b1e] hover:text-gold">Sell My Car</a></li>
-            <li><a href="preparation.html" class="block px-3 py-2 rounded transition duration-200 transform hover:translate-x-2 hover:bg-[#1a1b1e] hover:text-gold">Preparation</a></li>
-            <li><a href="finance.html" class="block px-3 py-2 rounded transition duration-200 transform hover:translate-x-2 hover:bg-[#1a1b1e] hover:text-gold">Finance</a></li>
-            <li><a href="warranty.html" class="block px-3 py-2 rounded transition duration-200 transform hover:translate-x-2 hover:bg-[#1a1b1e] hover:text-gold">Warranty</a></li>
-            <li><a href="previouslysold.html" class="block px-3 py-2 rounded transition duration-200 transform hover:translate-x-2 hover:bg-[#1a1b1e] hover:text-gold">Previously Sold</a></li>
-            <li><a href="sourcing.html" class="block px-3 py-2 rounded transition duration-200 transform hover:translate-x-2 hover:bg-[#1a1b1e] hover:text-gold">Vehicle Sourcing</a></li>
-        </ul>
-
-        <div class="absolute bottom-6 left-0 w-full px-6 border-t border-white/10 pt-6 flex gap-4 justify-start">
-            <a href="https://instagram.com" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"
-                    class="w-7 h-7 rounded-md">
-            </a>
-            <a href="https://facebook.com" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
-                    alt="Facebook" class="w-7 h-7">
-            </a>
-        </div>
-    </div>
-  </div>
+  
 
   <!-- Hero Section -->
   <section class="relative w-full h-screen overflow-hidden -mt-24">
@@ -138,7 +32,7 @@
         src="https://wallpapercat.com/w/full/0/2/b/1709811-3000x1395-desktop-dual-screen-ferrari-812-superfast-wallpaper.jpg"
         alt="Hero Image" class="w-full h-full object-cover" />
     </div>
-
+    <div include-html="navbar.html"></div>
     <!-- Dark overlay -->
     <div
       class="absolute inset-0 z-10 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.85)_0%,rgba(0,0,0,0.6)_70%,rgba(0,0,0,0.2)_80%,transparent_100%)]">
@@ -575,109 +469,6 @@
 
 
 
-<footer class="bg-[#16181c] text-[#333] text-sm pt-16 pb-8 text-white">
-  <div class="max-w-screen-xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-10">
-
-    <!-- Social -->
-    <div>
-      <img src="Images/T1White.png" alt="Tier One Logo" class="h-20 mb-4">
-
-      <div class="space-y-3 text-sm">
-        <!-- Facebook -->
-        <a href="https://facebook.com" target="_blank" class="flex items-center gap-2 hover:opacity-80 transition">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"
-            class="w-5 h-5" />
-          <span>Facebook</span>
-        </a>
-
-        <!-- Instagram -->
-        <a href="https://instagram.com" target="_blank" class="flex items-center gap-2 hover:opacity-80 transition">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"
-            class="w-5 h-5 rounded-md" />
-          <span>Instagram</span>
-        </a>
-      </div>
-    </div>
-
-    <!-- About -->
-    <div>
-      <h4 class="font-semibold text-lg mb-3">About</h4>
-      <ul class="space-y-2">
-        <li><a href="#" class="hover:text-gold transition">Our Story</a></li>
-        <li><a href="#" class="hover:text-gold transition">The Team</a></li>
-        <li><a href="#" class="hover:text-gold transition">Our Values</a></li>
-        <li><a href="#" class="hover:text-gold transition">The History</a></li>
-      </ul>
-    </div>
-
-    <!-- Top Brands -->
-    <div>
-      <h4 class="font-semibold text-lg mb-3">Useful Links</h4>
-      <ul class="space-y-2">
-        <li><a href="#" class="hover:text-gold transition">Privacy Policy</a></li>
-        <li><a href="#" class="hover:text-gold transition">Insurance</a></li>
-        <li><a href="#" class="hover:text-gold transition">Terms & Conditions</a></li>
-        <li><a href="#" class="hover:text-gold transition">Cookies</a></li>
-        <li><a href="#" class="hover:text-gold transition">Complaints</a></li>
-        <li><a href="#" class="hover:text-gold transition">FAQ</a></li>
-      </ul>
-    </div>
-
-    <!-- Opening Times -->
-    <div>
-      <h4 class="flex items-center gap-2 font-semibold text-lg mb-4">
-        Opening Times
-      </h4>
-      <ul class="space-y-1 font-medium text-sm">
-        <li class="flex justify-between">
-          <span>Monday</span><span>08:00 - 18:00</span>
-        </li>
-        <li class="flex justify-between">
-          <span>Tuesday</span><span>08:00 - 18:00</span>
-        </li>
-        <li class="flex justify-between">
-          <span>Wednesday</span><span>08:00 - 18:00</span>
-        </li>
-        <li class="flex justify-between">
-          <span>Thursday</span><span>08:00 - 18:00</span>
-        </li>
-        <li class="flex justify-between">
-          <span>Friday</span><span>08:00 - 18:00</span>
-        </li>
-        <li class="flex justify-between">
-          <span>Saturday</span><span>08:00 - 18:00</span>
-        </li>
-        <li class="flex justify-between">
-          <span>Sunday</span><span class="text-neutral-500">Appointment Only</span>
-        </li>
-      </ul>
-    </div>
-
-  </div>
-
-  <div class="border-t border-neutral-300 pt-6 mt-8 bg">
-    <div class="max-w-screen-xl mx-auto px-6 flex flex-col sm:flex-row justify-between text-xs text-neutral-500 gap-4">
-
-      <!-- Left Side (Legal Text) -->
-      <div class="space-y-1">
-        <p>Tier One Automotive Ltd is a company registered in England and Wales.</p>
-        <p>Company registration number: 08879100</p>
-        <p>
-          <a href="#" class="underline hover:text-[#b59f61] transition">Cookies</a> |
-          <a href="#" class="underline hover:text-[#b59f61] transition">Privacy Policy</a>
-        </p>
-      </div>
-
-      <!-- Right Side (Credit) -->
-      <div class="text-sm font-medium">
-        © 2025 Designed & Powered by
-        <a href="https://alexlovelock.dev" class="underline hover:text-[#b59f61] transition">Alex
-          Lovelock</a>
-      </div>
-
-    </div>
-  </div>
-</footer>
 
 <script>
   function showFinanceTab(tabId) {
@@ -695,5 +486,6 @@
 
   lucide.createIcons();
 </script>
-
+<script src="includes.js"></script>
+<div include-html="footer.html"></div>
 </html>
