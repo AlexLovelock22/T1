@@ -28,19 +28,20 @@
     <!-- Full-Width Banner Image 
     Do we like the shadow?
     -->
-    <section class="relative h-[48vh] w-full overflow-hidden z-0 large-shadow">
+    <section class="relative h-[60vh] w-full overflow-hidden z-0 large-shadow px-2 sm:px-4 md:px-6">
+        <!-- Background Image -->
         <img src="Images/sell.png" alt="Vehicle Preparation Banner"
             class="absolute inset-0 w-full h-full object-cover z-[-1]" />
 
-        <!-- Dark Overlay (optional for legibility) -->
-        <div class="absolute inset-0 bg-black/50 z-0"></div>
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0 bg-black/70 z-0"></div>
 
-        <!-- Centered Heading -->
-        <div class="absolute inset-0 flex flex-col items-center justify-center z-10 pt-28">
-            <h1 class="text-3xl md:text-5xl font-light tracking-[0.25em] text-white text-center uppercase">
+        <!-- Centered Content -->
+        <div class="absolute inset-0 flex flex-col items-center justify-center z-10 pt-20 px-4 sm:px-6">
+            <h1 class="text-2xl sm:text-3xl md:text-5xl font-light tracking-[0.25em] text-white text-center uppercase">
                 SELL YOUR CAR
             </h1>
-            <h1 class="text-xl md:text-xl font-light text-white text-center max-w-4xl mt-12">
+            <h1 class="text-md sm:text-xl md:text-xl font-light text-white text-center max-w-4xl mt-12">
                 Here at Tier One, we understand that selling your car is an important decision. That’s why we offer a
                 seamless, professional service that puts your needs first. Whether you’re looking for a quick sale or
                 seeking the best possible value, our expert team ensures that the entire process is efficient, secure,
@@ -50,33 +51,50 @@
         </div>
     </section>
 
-    <h1 class="text-3xl md:text-4xl font-light tracking-[0.25em] text-white text-center uppercase pt-16">
-        Sale Process
+
+
+    <h1 class="text-3xl md:text-4xl font-light tracking-[0.25em] text-white text-center uppercase py-8 sm:py-16">
+        Sales Process
     </h1>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1400px] mx-auto px-6 mt-16 mb-16">
-        <!-- Card 1 -->
-        <div class="bg-[#2A2E35] text-white text-center px-10 py-12 rounded-lg shadow-md">
-            <div
-                class="w-14 h-14 mx-auto mb-6 rounded-full border-2 border-[#A2926C] flex items-center justify-center text-xl font-medium">
-                1
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1600px] mx-auto px-6 mb-6 sm:mb-16">
+
+        <div
+            class="bg-[#2A2E35] text-white text-center px-6 sm:px-10 py-8 sm:py-12 rounded-lg shadow-md max-w-[98%] mx-auto">
+            <!-- Header Section -->
+            <div class="flex flex-row justify-center items-center sm:flex-col sm:items-center sm:text-center mb-6">
+                <div
+                    class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full border-2 border-[#A2926C] flex items-center justify-center text-base sm:text-xl md:text-2xl font-medium mr-4 sm:mr-0">
+                    1
+                </div>
+                <h3
+                    class="uppercase tracking-[0.1em] sm:tracking-[0.2em] text-lg md:text-2xl sm:text-xl font-light text-center mt-0 sm:mt-4">
+                    Outright Purchase
+                </h3>
             </div>
-            <h3 class="uppercase tracking-[0.2em] text-xl font-light mb-4">Outright Purchase</h3>
-            <p class="text-base text-gray-300 leading-relaxed tracking-wide">
+            <!-- Description Section -->
+            <p class="text-sm md:text-lg sm:text-base text-gray-300 leading-relaxed tracking-wide">
                 Our Outright Purchase service offers a quick, hassle-free way to sell your car. After a fast evaluation,
                 we arrange a viewing and instantly transfer the funds, including clearing any outstanding finance. This
                 service ensures a smooth, same-day transaction, leaving you with cleared funds and no complications.
             </p>
         </div>
 
-        <!-- Card 2 -->
-        <div class="bg-[#2A2E35] text-white text-center px-10 py-12 rounded-lg shadow-md">
-            <div
-                class="w-14 h-14 mx-auto mb-6 rounded-full border-2 border-[#A2926C] flex items-center justify-center text-xl font-medium">
-                2
+        <div
+            class="bg-[#2A2E35] text-white text-center px-6 sm:px-10 py-8 sm:py-12 rounded-lg shadow-md max-w-[98%] mx-auto">
+            <!-- Header Section -->
+            <div class="flex flex-row justify-center items-center sm:flex-col sm:items-center sm:text-center mb-6">
+                <div
+                    class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full border-2 border-[#A2926C] flex items-center justify-center text-base sm:text-xl md:text-2xl font-medium mr-4 sm:mr-0">
+                    2
+                </div>
+                <h3
+                    class="uppercase tracking-[0.1em] sm:tracking-[0.2em] text-lg md:text-2xl sm:text-xl font-light text-center mt-0 sm:mt-4">
+                    Sale or Return
+                </h3>
             </div>
-            <h3 class="uppercase tracking-[0.2em] text-xl font-light mb-4">Sale or return</h3>
-            <p class="text-base text-gray-300 leading-relaxed tracking-wide">
+            <!-- Description Section -->
+            <p class="text-sm md:text-lg sm:text-base text-gray-300 leading-relaxed tracking-wide">
                 For those seeking a higher return or who prefer selling privately, our brokerage service handles
                 everything. We provide advertising, finance options, and after-sales care, ensuring a quick, secure
                 sale.
@@ -84,13 +102,21 @@
         </div>
 
         <!-- Card 3 -->
-        <div class="bg-[#2A2E35] text-white text-center px-10 py-12 rounded-lg shadow-md">
-            <div
-                class="w-14 h-14 mx-auto mb-6 rounded-full border-2 border-[#A2926C] flex items-center justify-center text-xl font-medium">
-                3
+        <div
+            class="bg-[#2A2E35] text-white text-center px-6 sm:px-10 py-8 sm:py-12 rounded-lg shadow-md max-w-[98%] mx-auto">
+            <!-- Header Section -->
+            <div class="flex flex-row justify-center items-center sm:flex-col sm:items-center sm:text-center mb-6">
+                <div
+                    class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full border-2 border-[#A2926C] flex items-center justify-center text-base sm:text-xl md:text-2xl font-medium mr-4 sm:mr-0">
+                    3
+                </div>
+                <h3
+                    class="uppercase tracking-[0.1em] sm:tracking-[0.2em] text-lg md:text-2xl sm:text-xl font-light text-center mt-0 sm:mt-4">
+                    Brokerage Service
+                </h3>
             </div>
-            <h3 class="uppercase tracking-[0.2em] text-xl font-light mb-4">Brokerage Service</h3>
-            <p class="text-base text-gray-300 leading-relaxed tracking-wide">
+            <!-- Description Section -->
+            <p class="text-sm md:text-lg sm:text-base text-gray-300 leading-relaxed tracking-wide">
                 Our competitive commission structure ensures you get the best deal. We prepare your car to the highest
                 standard and advertise it on top platforms like Auto-Trader and Facebook Marketplace for maximum
                 exposure.
@@ -99,7 +125,7 @@
     </div>
 
 
-    <section class="bg-dark-blue-light text-white py-28 px-6">
+    <section class="bg-dark-blue-light text-white py-6 sm:py-28 px-6">
         <div class="bg-dark-blue max-w-screen-xl mx-auto px-6 py-12 rounded-md">
             <h2 class="text-center text-3xl tracking-[0.25em] font-light uppercase mb-8">
                 Car Valuation Quote
@@ -128,7 +154,7 @@
                 <div class="mb-6">
                     <p class="text-sm font-light uppercase tracking-wider mb-1">Please select which option of sale you
                         are interested in</p>
-                    <div class="flex flex-wrap gap-6 text-sm">
+                    <div class="flex flex-col sm:flex-row sm:justify-start sm:items-start gap-4">
                         <label class="inline-flex items-center gap-2">
                             <input type="checkbox" class="form-checkbox accent-[#B3A177]" />
                             Outright
@@ -162,7 +188,7 @@
                 <!-- Contact Method -->
                 <div>
                     <p class="text-sm font-light uppercase tracking-wider mb-1 mt-2">Preferred Contact Methods</p>
-                    <div class="flex flex-wrap gap-6 text-sm">
+                    <div class="flex flex-col sm:flex-row sm:justify-start sm:items-start gap-4">
                         <label class="inline-flex items-center gap-2">
                             <input type="checkbox" class="form-checkbox accent-[#B3A177]" />
                             Email
@@ -173,13 +199,13 @@
                         </label>
                         <label class="inline-flex items-center gap-2">
                             <input type="checkbox" class="form-checkbox accent-[#B3A177]" />
-                            WhatsApp/Text
+                            WhatsApp / Text
                         </label>
                     </div>
                 </div>
 
                 <!-- Submit -->
-                <div class="text-center pt-4">
+                <div class="text-center pt-8 sm:pt-4">
                     <button type="submit"
                         class="bg-white text-black font-semibold uppercase tracking-widest px-8 py-3 hover:bg-gray-200 transition">
                         Get My Valuation
@@ -189,91 +215,101 @@
         </div>
     </section>
 
-    <section class="bg-[#1E2126] text-white py-16 px-4">
+    <section class="bg-[#1E2126] text-white py-10 sm:py-16 px-4">
         <div class="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-
-            <!-- Left: Features -->
-            <div class="space-y-8">
-                <h2 class="text-3xl md:text-4xl tracking-[0.25em] uppercase font-light">Sell Safely & Securely</h2>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- Feature -->
-                    <div class="flex items-start gap-4">
-                        <div class="bg-red-600 p-3 rounded-full">
-                            <i data-lucide="calendar-check" class="text-white w-6 h-6"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-lg font-semibold text-white">Seamless Selling Experience</h3>
-                            <p class="text-gray-400 text-sm mt-1">Selling your car is hassle-free with a strong focus on
-                                valuing your time, your vehicle, and the overall quality of ownership.</p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start gap-4">
-                        <div class="bg-red-600 p-3 rounded-full">
-                            <i data-lucide="settings" class="text-white w-6 h-6"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-lg font-semibold text-white">Tailored Service</h3>
-                            <p class="text-gray-400 text-sm mt-1">Accurate, fair valuations with no hidden fees or
-                                delays, reflecting your vehicle’s true worth.</p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start gap-4">
-                        <div class="bg-red-600 p-3 rounded-full">
-                            <i data-lucide="star" class="text-white w-6 h-6"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-lg font-semibold text-white">Driven by Customer Satisfaction</h3>
-                            <p class="text-gray-400 text-sm mt-1">Trusted by car enthusiasts across the UK through
-                                dedication to high-quality service.</p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start gap-4">
-                        <div class="bg-red-600 p-3 rounded-full">
-                            <i data-lucide="shield-check" class="text-white w-6 h-6"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-lg font-semibold text-white">Fast and Secure Payment</h3>
-                            <p class="text-gray-400 text-sm mt-1">Guaranteed payment once inspection is passed, with
-                                finance settled for peace of mind.</p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start gap-4">
-                        <div class="bg-red-600 p-3 rounded-full">
-                            <i data-lucide="repeat" class="text-white w-6 h-6"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-lg font-semibold text-white">Part Exchange & Commission Sales</h3>
-                            <p class="text-gray-400 text-sm mt-1">Flexible selling options tailored to your needs,
-                                including part exchange or consignment.</p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start gap-4">
-                        <div class="bg-red-600 p-3 rounded-full">
-                            <i data-lucide="truck" class="text-white w-6 h-6"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-lg font-semibold text-white">Trusted Transport Options</h3>
-                            <p class="text-gray-400 text-sm mt-1">Enclosed or open transport provided by vetted
-                                professional partners for secure delivery.</p>
-                        </div>
-                    </div>
+          
+          <!-- Left: Features -->
+          <div class="space-y-12">
+            <h2 class="text-3xl md:text-4xl tracking-[0.25em] uppercase font-light text-center">
+              Sell Safely & Securely
+            </h2>
+      
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <!-- Feature Block -->
+              <div class="flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left gap-4">
+                <div class="bg-red-600 p-3 rounded-full">
+                  <i data-lucide="calendar-check" class="text-white w-6 h-6"></i>
                 </div>
+                <div class="max-w-[380px] sm:max-w-none">
+                  <h3 class="text-lg font-semibold">Seamless Selling Experience</h3>
+                  <p class="text-gray-400 text-md mt-1">
+                    Selling your car is hassle-free with a strong focus on valuing your time, your vehicle, and the overall quality of ownership.
+                  </p>
+                </div>
+              </div>
+      
+              <div class="flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left gap-4">
+                <div class="bg-red-600 p-3 rounded-full">
+                  <i data-lucide="settings" class="text-white w-6 h-6"></i>
+                </div>
+                <div class="max-w-[380px] sm:max-w-none">
+                  <h3 class="text-lg font-semibold">Tailored Service</h3>
+                  <p class="text-gray-400 text-md mt-1">
+                    Accurate, fair valuations with no hidden fees or delays, reflecting your vehicle’s true worth.
+                  </p>
+                </div>
+              </div>
+      
+              <div class="flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left gap-4">
+                <div class="bg-red-600 p-3 rounded-full">
+                  <i data-lucide="star" class="text-white w-6 h-6"></i>
+                </div>
+                <div class="max-w-[380px] sm:max-w-none">
+                  <h3 class="text-lg font-semibold">Driven by Customer Satisfaction</h3>
+                  <p class="text-gray-400 text-md mt-1">
+                    Trusted by car enthusiasts across the UK through dedication to high-quality service.
+                  </p>
+                </div>
+              </div>
+      
+              <div class="flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left gap-4">
+                <div class="bg-red-600 p-3 rounded-full">
+                  <i data-lucide="shield-check" class="text-white w-6 h-6"></i>
+                </div>
+                <div class="max-w-[380px] sm:max-w-none">
+                  <h3 class="text-lg font-semibold">Fast and Secure Payment</h3>
+                  <p class="text-gray-400 text-md mt-1">
+                    Guaranteed payment once inspection is passed, with finance settled for peace of mind.
+                  </p>
+                </div>
+              </div>
+      
+              <div class="flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left gap-4">
+                <div class="bg-red-600 p-3 rounded-full">
+                  <i data-lucide="repeat" class="text-white w-6 h-6"></i>
+                </div>
+                <div class="max-w-[380px] sm:max-w-none">
+                  <h3 class="text-lg font-semibold">Part Exchange & Commission Sales</h3>
+                  <p class="text-gray-400 text-md mt-1">
+                    Flexible selling options tailored to your needs, including part exchange or consignment.
+                  </p>
+                </div>
+              </div>
+      
+              <div class="flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left gap-4">
+                <div class="bg-red-600 p-3 rounded-full">
+                  <i data-lucide="repeat" class="text-white w-6 h-6"></i>
+                </div>
+                <div class="max-w-[380px] sm:max-w-none">
+                  <h3 class="text-lg font-semibold">Trusted Transport Options</h3>
+                  <p class="text-gray-400 text-md mt-1">
+                    Enclosed or open transport provided by vetted professional partners for secure delivery.
+                  </p>
+                </div>
+              </div>
             </div>
-
-            <!-- Right: Image -->
-            <div>
-                <img src="https://w0.peakpx.com/wallpaper/431/761/HD-wallpaper-2018-audi-r8-v10-rws-uk-spec-interior-car.jpg"
-                    alt="Luxury Interior" class="rounded-2xl large-shadow w-full h-auto object-cover" />
-            </div>
+          </div>
+      
+          <!-- Right: Image -->
+          <div class="hidden lg:block">
+            <img
+              src="https://w0.peakpx.com/wallpaper/431/761/HD-wallpaper-2018-audi-r8-v10-rws-uk-spec-interior-car.jpg"
+              alt="Luxury Interior"
+              class="rounded-2xl large-shadow w-full h-auto object-cover"
+            />
+          </div>
         </div>
-    </section>
-
+      </section>
 </body>
 
 
